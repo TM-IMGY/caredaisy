@@ -1,0 +1,3 @@
+id,facility_user_id,plan_start_period,plan_end_period,status,fixed_date,delivery_date,certification_status,recognition_date,care_period_start,care_period_end,care_level_name,consent,place,remarks,independence_level,dementia_level,start_date,end_date
+2,2,2020/10/01,テスト作成者,1,,,2,2020/10/01,2020/10/01,2023/09/30,要介護２,,,,,,2020/01/01,2020/12/31
+3,86,2022/04/01,テスト作成者,4,2022/05/01,2022/05/01,2,2022/05/01,2022/05/01,2023/09/30,要介護５,同意者,,,,,2022/05/01,2022/12/31

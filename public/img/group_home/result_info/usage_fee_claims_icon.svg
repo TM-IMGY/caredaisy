@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="26" viewBox="0 0 21 26">
+  <g id="グループ_4080" data-name="グループ 4080" transform="translate(-338 -613)">
+    <g id="グループ_4079" data-name="グループ 4079" transform="translate(-63 -263)">
+      <path id="パス_215" data-name="パス 215" d="M64.377,0h-9.24l-.47.473-6.492,6.54-.47.473V21.638A4.351,4.351,0,0,0,52.036,26H64.377a4.351,4.351,0,0,0,4.329-4.362V4.362A4.35,4.35,0,0,0,64.377,0Z" transform="translate(353.294 876)" fill="#fff"/>
+      <path id="パス_207" data-name="パス 207" d="M64.377,0h-9.24l-.47.473-6.492,6.54-.47.473V21.638A4.351,4.351,0,0,0,52.036,26H64.377a4.351,4.351,0,0,0,4.329-4.362V4.362A4.35,4.35,0,0,0,64.377,0ZM67.1,21.638a2.737,2.737,0,0,1-2.726,2.747H52.036a2.737,2.737,0,0,1-2.727-2.747V8.155h4.22A2.281,2.281,0,0,0,55.8,5.866V1.615h8.575A2.737,2.737,0,0,1,67.1,4.362Z" transform="translate(353.294 876)" fill="#ffa44c"/>
+    </g>
+    <rect id="長方形_2717" data-name="長方形 2717" width="5" height="5" transform="translate(350 617)" fill="#ffca8e"/>
+    <path id="パス_343" data-name="パス 343" d="M13,.5H0v-1H13Z" transform="translate(342 628.5)" fill="#ffa44c"/>
+    <path id="パス_345" data-name="パス 345" d="M13,.5H0v-1H13Z" transform="translate(342 631.5)" fill="#ffa44c"/>
+    <path id="パス_346" data-name="パス 346" d="M13,.5H0v-1H13Z" transform="translate(342 634.5)" fill="#ffa44c"/>
+    <path id="パス_344" data-name="パス 344" d="M13,.5H0v-1H13Z" transform="translate(342 625.5)" fill="#ffa44c"/>
+  </g>
+</svg>

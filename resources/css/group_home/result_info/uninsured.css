@@ -1,0 +1,281 @@
+#un_button_area {
+    margin: 5px;
+}
+#uninsured_item_select {
+    width: 200px;
+}
+#add_new_record{
+  margin-right: 70px;
+  cursor: pointer;
+}
+#add_agreement{
+  margin-left: 30px;
+  cursor: pointer;
+}
+.table_header {
+  background-Color: var(--table-header-color);
+}
+
+.saturday_color {
+    color: blue;
+}
+
+.sunday_color {
+    color: red;
+}
+/* サービス実績テーブル非表示 */
+.un_table_hidden{
+  display: none;
+}
+
+/* サービス実績テーブルのカバー */
+#un_table_cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgb(0,0,0);
+  opacity: 0.5;
+}
+
+#un_table_s_item_form{
+  width: 400px;
+  height: 630px;
+  position: absolute;
+  background-color: rgb(255,255,255);
+  border-radius: 5px;
+}
+
+#validateErrorsUninsuredItem {
+margin: 0 50px;
+}
+
+.item_pulldown_container {
+  margin: 0 50px;
+  text-align: center;
+}
+
+.item_form_row {
+  width: 230px;
+  margin: 5px 10px;
+}
+
+.item_titles {
+  text-align: left;
+}
+
+.item_group_container {
+  margin: 0 50px;
+}
+
+.item_group_table {
+  text-align: left;
+}
+
+.item_sub_container {
+  height: 300px;
+  margin: 30px 50px 0;
+  text-align: center;
+}
+
+.item_input {
+  width: 230px;
+}
+
+/* サービス実績テーブルのメタ情報 */
+#un_table_meta{
+  align-items: center;
+}
+
+.un_table_top_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* サービス実績テーブルのラベルエリア */
+.un_table_lbl_area{
+  display: flex;
+  margin: 20px;
+  font-weight: bold;
+}
+#un_table_submit_btn_area{
+  display: flex;
+}
+.un_submit_btn{
+  margin: 5px 20px;
+  border-width: 0px;
+  padding: 5px 20px;
+  background-color: var(--submit-btn-background);
+  border-radius: 5px;
+  font-weight: bold;
+}
+.un_table_lbl_amount_area{
+  display: flex;
+  margin: 20px 20px 20px 35px;
+}
+.un_table_amount_lbl{
+  display: flex;
+  align-items: center;
+}
+.un_table_amount_lbl:before {
+  background-color: #000;
+  border-radius: 2px;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: -4px;
+  width: 4px;
+}
+.un_table_lbl{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.un_table_lbl_data{
+  padding: 5px 40px 5px 5px;
+}
+
+#un_table_ym{
+  padding: 0;
+}
+/* サービス実績テーブルセル幅 */
+.un_table_trash{width: 50px;}
+.un_table_service_item_name{width: 180px;}
+.un_table_facility_name_kanji{width: 70px;}
+.un_table_unit_number{width: 50px;}
+.un_table_plan_lbl{width: 50px;}
+.un_table_result_lbl{width: 50px;}
+.un_table_date_header{width: 20px;}
+.un_table_dow_header{width: 20px;}
+.un_table_date_daily_rate{width: 20px;}
+.un_table_service_cnt{width: 30px;}
+/* サービス実績テーブル表示方法 */
+.un_table_number_cell{text-align: center;}
+.un_table_trash,
+.un_table_unit_number,
+.un_table_date_header,
+.un_table_date_daily_rate,
+.un_table_service_cnt{
+  text-align: center;
+}
+/* サービス実績テーブルの行(非表示状態) */
+.un_table_record_hidden {
+  display: none;
+}
+
+#un_table_plus_btn {
+  margin: 10px;
+  border-width: 0px;
+  width: max-content;
+  height: max-content;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(70, 70, 70);
+  cursor: pointer;
+}
+/* サービス実績テーブルのサービスコードフォーム */
+#un_table_s_code_form {
+  width: 400px;
+  height: 720px;
+  position: absolute;
+  background-color: rgb(255,255,255);
+  border-radius: 5px;
+}
+
+#item_form_lbl {
+  padding: 10px;
+}
+
+.item_form_btns {
+  text-align: center;
+}
+
+.item_form_btn {
+  margin: 20px 20px;
+  border-width: 0px;
+  padding: 5px 20px;
+  width: max-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#item_form_register {
+  background-color: var(--submit-btn-background);
+}
+
+.un_number_input {
+    width: 30px;
+}
+
+.un_unitcost_input {
+    width: 75px;
+}
+
+.out_date_grey {
+    color: rgb(184,204,228);
+}
+
+#un_calendar_area {
+    overflow: auto;
+    padding-left: 5px;
+    width: 1730px;
+}
+
+.un_col2,
+.un_col3,
+.un_col4,
+.un_col5,
+.un_col6 {
+    padding: 2px;
+}
+
+.un_unitcost_input,
+.un_col5,
+.un_col6 {
+    text-align: right;
+}
+
+.un_col2 {
+  max-width: 44px;
+  min-width: 44px;
+  text-align: center;
+  padding: 0px;
+}
+
+td.caredaisy_table_cell.un_col2 img {
+  padding: 5px 9px 6px 9px;
+  margin: 0 auto;
+  display: block;
+}
+
+.un_col3 {
+  max-width: 110px;
+  min-width: 110px;
+}
+.un_col4 {
+  max-width: 81px;
+  min-width: 81px;
+}
+.un_col5 {
+  max-width: 80px;
+  min-width: 80px;
+}
+.un_col6 {
+  max-width: 90px;
+  min-width: 90px;
+}
+
+.un_cell,
+.header_date,
+.header_dow {
+    max-width: 36px;
+    min-width: 36px;
+    text-align: center;
+    padding: 2px;
+}
+
+.item_group_table td {
+  width: 140px;
+}

@@ -1,0 +1,250 @@
+:root{
+  --caredaisy-contents-background: rgb(250,250,250);
+  --submit-background: rgb(255,237,86);
+  --caredaisy-contents-header-submit-border-color: rgb(238,219,59);
+  --target-year-month-pulldown-border-color: rgb(238,238,238);
+  --search-clear-background: rgb(217,217,217);
+  --customer_table_head_background: rgb(255,255,238);
+  --customer_table_border: rgb(238,238,238);
+  --customer-table-scrollbar-color: rgb(153,153,153);
+  --view-width: 1600px;
+}
+
+body{
+  margin: 0;
+}
+
+#caredaisy_contents{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--caredaisy-contents-background);
+}
+
+#caredaisy_contents_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  width: var(--view-width);
+  box-sizing: border-box;
+  margin: auto;
+}
+
+#caredaisy_contents_header_caption{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#caredaisy_contents_header_submit{
+  font-size: 18px;
+  border-width: 0px;
+  border-bottom: 2px solid var(--caredaisy-contents-header-submit-border-color);
+  padding: 5px 25px 5px 25px;
+  background-color: var(--submit-background);
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#search_ui{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+  width: var(--view-width);
+  box-sizing: border-box;
+  padding: 0px 30px;
+  margin: auto;
+}
+
+#search{
+  display: flex;
+  align-items: flex-end;
+}
+
+.search_input_lbl{
+  font-size: 18px;
+  padding: 5px;
+}
+
+.search_input{
+  font-size: 16px;
+  padding: 5px 15px 5px 5px;
+  border: 1px solid var(--target-year-month-pulldown-border-color);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.search_input_insurer{
+  width: 100px;
+}
+
+.search_button{
+  font-size: 16px;
+  height: max-content;
+  padding: 4px 16px;
+  margin: 5px;
+  border: 0px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#search_submit{
+  background-color: var(--submit-background);
+}
+
+#search_clear{
+  background-color: var(--search-clear-background);
+}
+
+#pagination{
+  padding: 0px 10px;
+  text-align:center;
+}
+
+.pagination_result_lbl{
+  font-size: 18px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.pagination_prev,
+.pagination_link,
+.current,
+.pagination_next
+{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width:30px;
+  height:30px;
+}
+/*ペジネーション部分*/
+.page-item{
+  list-style: none;
+  display:inline;
+  white-space: nowrap;
+}
+strong{
+  font-size: 18px;
+}
+nav{
+  display: inline-block;
+}
+ul.pagination{
+  padding-left: -40px;
+}
+
+.current{
+  background:var(--submit-background);
+  border-radius:100%;
+}
+
+#customer_table{
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+.customer_table_cell{
+  border: 1px solid var(--customer_table_border);
+  padding: 5px;
+  font-size: 18px;
+}
+
+.customer_table_cell_num{
+  text-align: right;
+}
+
+.customer_table_header{
+  background-color: var(--customer_table_head_background);
+  text-align: left;
+}
+
+#customer_table_head,
+#customer_table_body
+{
+  display: block;
+}
+
+#customer_table_body{
+  height: 382px;
+  overflow-y: overlay;
+}
+#customer_table_body::-webkit-scrollbar-thumb {
+  background-color: var(--customer-table-scrollbar-color);
+  border-radius: 5px;
+}
+#customer_table_body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.facility_user{
+  width: 150px;
+}
+.gender{
+  width: 50px;
+}
+.insurer_no{
+  width: 100px;
+}
+.insured_no{
+  width: 120px;
+}
+.care_level{
+  width: 120px;
+}
+.national_insurance{
+  width: 120px;
+}
+.co_payment{
+  width: 170px;
+}
+.expense{
+  width: 140px;
+}
+.total_credits{
+  width: 120px;
+}
+.sum{
+  width: 120px;
+}
+.service_header,
+.service_data
+{
+  width: 200px;
+}
+.service_data{
+  text-align: center;
+}
+.service_data_link{
+  padding: 1px 0px;
+}
+#service_button{
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 2px 22px;
+  border: 1.5px solid rgb(61, 61, 61);
+  border-radius: 5px;
+  cursor: pointer;
+  cursor: hand;
+}
+.customer_table_cell.customer_table_header.insurer_no{
+  text-align: left;
+}
+.customer_table_cell.customer_table_header.insured_no{
+  text-align: left;
+}
+.customer_table_cell.insurer_no{
+  text-align: right;
+}
+.customer_table_cell.insured_no{
+  text-align: right;
+}
+/* #btn_area_submit_btn.yellowbtn{
+} */
+#target_year_month{
+  margin-bottom: 26px;
+}
+.customer_table_cell.customer_table_cell_num.sum{
+  text-align: left;
+}

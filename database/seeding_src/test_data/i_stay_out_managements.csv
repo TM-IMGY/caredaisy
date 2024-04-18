@@ -1,0 +1,4 @@
+id,facility_user_id,start_date,meal_of_the_day_start_morning,meal_of_the_day_start_lunch,meal_of_the_day_start_snack,meal_of_the_day_start_dinner,end_date,meal_of_the_day_end_morning,meal_of_the_day_end_lunch,meal_of_the_day_end_snack,meal_of_the_day_end_dinner,reason_for_stay_out,remarks_reason_for_stay_out,remarks
+1,36,2021/01/01 12:34:00,0,0,0,0,2022/06/01 19:54:00,0,0,0,0,1,32外泊備考,32外泊備考
+2,36,2022/06/02 00:00:00,0,0,0,0,2022/06/02 23:59:00,0,0,0,0,2,32外泊備考,32外泊備考
+3,36,2022/06/03 19:54:00,0,0,0,0,2023/06/30 12:34:00,0,0,0,0,3,32外泊備考,32外泊備考

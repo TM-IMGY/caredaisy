@@ -1,0 +1,148 @@
+/* 全体 */
+.ui-datepicker {
+	padding: .2em .2em 0;
+	border: 1px solid rgb(206,206,206);
+	background-color: rgb(255,251,245);
+	border-radius: 5px;
+	box-shadow: 0 0 5px gray;
+}
+
+.ui-widget-header {
+	border-bottom: 1px solid rgb(206,206,206);
+	background-color: rgb(255,251,245);
+	font-weight: bold;
+	padding: 5px 0;
+	margin-bottom: 5px;
+}
+
+.ui-datepicker table {
+	width: 100%;
+	font-size: .9em;
+	margin: 0 0 .4em;
+} 
+
+/* 矢印と年月 */
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 2.3em;
+	line-height: 1.8em;
+	text-align: center;
+}
+
+/* 矢印 */
+.ui-datepicker-prev,
+.ui-datepicker-next{
+	position: absolute;
+	top: 20px;
+	width: 20px;
+	height: 20px;
+	background-color:rgb(248,128,58);
+	border-radius: 50%;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 13px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 13px;
+}
+
+.ui-datepicker-prev::before,
+.ui-datepicker-next::before{
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-top: solid 3px rgb(255,255,255);
+	border-right: solid 3px rgb(255,255,255);
+	position: absolute;
+	left: 5px;
+	top: 6px;
+}
+
+.ui-datepicker-prev::before {
+	transform: rotate(-135deg);
+	left: 7px;
+}
+.ui-datepicker-next::before {
+	transform: rotate(45deg);
+	left: 4px;
+}
+
+/* Icons */
+.ui-datepicker .ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	left: .5em;
+	top: .3em;
+}
+
+/* 曜日 */
+.ui-datepicker th {
+	background-color: rgb(255,251,245);
+	text-align: center;
+	font-weight: normal;
+	border: 0;
+}
+span[title="土曜日"] {
+	color: rgb(71,100,196);
+}
+span[title="日曜日"] {
+	color: rgb(249,92,92);
+}
+
+/* 日付 */
+.ui-datepicker td {
+	border: 0;
+	padding: 2px;
+}
+
+.ui-datepicker td a {
+	display: block;
+	text-decoration: none;
+	border: 1px solid rgb(206,206,206);
+	border-radius: 5px;
+	background-color:rgb(255,255,255);
+	text-align: center;
+	width: 50px;
+	height: 30px;
+	margin: 0;
+	color: #363636;
+}
+
+.ui-datepicker-calendar .ui-state-hover{
+	border: 1px solid #fbcb09;
+	color: #c77405;
+}
+
+/* 現在日付 */
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid rgb(248,128,58);
+	background-color: rgb(248,191,58);
+	color: #363636;
+}
+
+/* 選択日付 */
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #fbd850;
+	font-weight: bold;
+	color: #eb8f00;
+}
+
+.ui-datepicker-month-col{
+	width: 24%;
+}
+
+#ui-state-ym-default{
+	width: 75px;
+	height: 40px;
+	margin-top: 3%;
+	margin-left: 7%;
+	line-height: 40px;
+}

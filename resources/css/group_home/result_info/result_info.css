@@ -1,0 +1,842 @@
+@charset "utf-8";
+
+:root {
+  --facility-user-menu-width: 330px;
+  --caredaisy-table-header-backgroundColor: rgb(255,255,238);
+  --caredaisy-table-tbody: rgb(153,153,153);
+  --submit-btn-background: rgb(255,237,86);
+  --scode-form-pulldown-border: rgb(220,220,220);
+  --ym-pd-inactive-backcolor:rgb(153,153,153);
+  --fu-table-height: 60%;
+}
+
+/* 共通 */
+/* サブミットボタン */
+.submit_btn{
+  margin: 5px 20px;
+  border-width: 0px;
+  padding: 5px 20px;
+  background-color: var(--submit-btn-background);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* キャンセルボタン */
+.caredaisy_cancel_btn {
+  margin: 5px 20px;
+  border-width: 0px;
+  padding: 5px 20px;
+  width: max-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 利用者メニュー */
+#facility_user_menu{
+  box-sizing: border-box;
+  position: absolute;
+  width: var(--facility-user-menu-width);
+  height: 100%;
+  border-right: 1px solid var(--border-color);
+  background-color: white;
+  box-shadow: 2px 2px 4px #e8e8e8;
+}
+
+.fum_pulldown{
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.ym_pulldown_and_re_billing_btn{
+  display: flex;
+  align-items: baseline;
+}
+
+/* 対象年月プルダウン */
+#year_month_pulldown{
+  width: 190px;
+}
+
+/* データを出力プルダウン */
+#data_export_pulldown{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid var(--border-color);
+  width: 288px;
+  border-radius: 5px;
+  background: linear-gradient(rgb(243, 243, 243), rgb(232, 232, 232));
+  cursor: default;
+}
+#data_export_pulldown:hover #data_export_pulldown_menu {
+  display: block;
+}
+#data_export_pulldown_menu{
+  position: absolute;
+  border: 1px solid var(--border-color);
+  width: 650px;
+  top: 0px;
+  left: 100%;
+  background-color: var(--caredaisy-contents-background);
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
+}
+/*
+#dep_billing,#dep_make_invoice,#dep_pdf_demo_all{
+  font-weight: bold;
+}
+*/
+.dep_menu_row{
+  padding: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+.dep_menu_row:hover {
+  color: rgb(255, 131, 10);
+}
+
+/* 対象年月プルダウン */
+.ym_pulldown_inactive{
+  background-color: var(--ym-pd-inactive-backcolor);
+}
+
+.caredaisy_table {
+  border-collapse: collapse;
+  display: block;
+}
+.caredaisy_table::-webkit-scrollbar{
+  display: none;
+}
+.caredaisy_table_thead {
+  display: block;
+  width: max-content;
+}
+.caredaisy_table_cell {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+}
+.caredaisy_table_tbody {
+  display: block;
+  height: 100%;
+  width: max-content;
+  overflow: overlay;
+}
+.caredaisy_stayout_table_tbody {
+  display: block;
+  height: 110px;
+  width: 966px;
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+.caredaisy_table_tbody::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+.caredaisy_table_tbody::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* 施設利用者テーブル */
+#facility_user_table{
+  display: block;
+  width: 100%;
+  height: var(--fu-table-height);
+}
+#facility_user_tbody {
+  display: block;
+  margin: auto;
+  height: 100%;
+  overflow: overlay;
+}
+#facility_user_tbody::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+#facility_user_tbody::-webkit-scrollbar {
+  width: 5px;
+}
+.facility_user_tr {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  cursor: pointer;
+}
+.facility_user_td:first-child{
+  width: 70%;
+  padding-left: 20px;
+}
+.fu_table_selected_record {
+  background-color: var(--table-select-color);
+}
+.fu_table_selected_cell {
+  color: var(--active-radiobtn-color);
+}
+.fu_table_cell_approved {
+  color: var(--color-green);
+}
+.fu_table_cell_not_approved {
+  color: var(--border-color);
+}
+/* 施設利用者テーブルプラスボタン */
+#fu_table_plus_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-width: 0px;
+  width: 30px;
+  height: 30px;
+  font-size: 2.0rem;
+  background-color: rgb(70, 70, 70);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+/* 施設利用者テーブルの施設利用者選択ポップアップ */
+.fu_table_hidden{
+  display: none;
+}
+.fu_table_active{
+  display: block;
+}
+#fu_table_select_user_popup{
+  position: absolute;
+  width: 432px;
+  height: 576px;
+  top: calc((100% - 576px) / 2);
+  left: calc((100% - 432px) / 2);
+  background-color: #fff;
+  border-radius: 5px;
+}
+#fu_table_select_user_popup_grayout{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgb(0,0,0);
+  opacity: 0.5;
+}
+.fu_table_sup_row{
+  display: flex;
+  justify-content: space-evenly;
+}
+#fu_table_sup_label{
+  width: 300px;
+  height: max-content;
+  margin: 20px;
+  padding: 5px;
+  background-color: rgb(232, 232, 232);
+  border-radius: 5px;
+  text-align: center;
+}
+/* 検索ボックス */
+#fu_table_sup_search_box{
+  border-radius: 5px;
+}
+/* 一括選択ボタンと一括クリアボタン */
+.fu_table_sup_select_btn{
+  margin: 5px 20px;
+  border-width: 0px;
+  padding: 5px;
+  width: max-content;
+  height: max-content;
+  font-size: 1.0rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* 利用者テーブル */
+#fu_table_sup_tbody{
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: overlay;
+}
+#fu_table_sup_tbody::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+#fu_table_sup_tbody::-webkit-scrollbar {
+  width: 5px;
+}
+.fu_table_sup_table_record{
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid #000;
+}
+
+/* 実績情報タブの中身 */
+#service_result_contents {
+  position: absolute;
+  width: calc(100% - var(--facility-user-menu-width));
+  height: 100%;
+  left: var(--facility-user-menu-width);
+}
+#overflow_addition_status3 {
+  /* ↓↓黒の背景部分↓↓ */
+  position: fixed;
+  left: 0;/* 起点指定用 */
+  top: 0;/* 起点指定用 */
+  width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+  height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+  background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+  z-index: 100;        /* ウィンドウの全面に表示 */
+}
+
+#overflow_addition_status3 .conf {
+    /* ↓↓中央白のポップアップ部分↓↓ */
+  background: #FFF;   /* 背景を白色に指定 */
+  padding: 20px;      /* 余白を20pxに指定 */
+  position: absolute; /* 装置位置に指定 */
+  top: 50%;           /* 上から50%の位置に配置 */
+  left: 50%;          /* 左から50%の位置に配置 */
+  transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+}
+.poppu_close_addition_status{
+  /* 閉じるのボタンCSS */
+  /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+  margin: 0 auto;
+  display: block;
+  font-weight: bold;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#side_area {
+    width: 329px;
+    background-color: #fafafa;
+    border-right: 1px solid #e4e4e4;
+    /*height: calc(100vh - 94px);*/
+    position: -webkit-sticky;
+    position: sticky;
+    top: 94px;
+    z-index: 9;
+}
+.side_wrap {
+    /*overflow: hidden;*/
+}
+
+/*▼ドロップ部分*/
+.dropdown_list {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.dropdown_list ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-align: left;
+}
+.dropdown_list ul li {
+    position: relative;
+}
+.dropdown_list ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 7px 15px;
+    transition: all .0s;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    opacity: 1;
+}
+.dropdown_list ul li a:hover {
+    color: #666;
+}
+.dropdown_list ul li.has-child::after {
+    content: '';
+    background-image: url("/img/group_home/result_info/arrow_right.svg") ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 5px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+/*== 2・3階層目の共通設定 */
+
+.dropdown_list li.has-child ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 4;
+    background: #FFFBF5;
+    width: 311px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .0s;
+    box-shadow: rgb(0 0 0 / 16%) 0 1px 4px;
+    padding: 0;
+}
+.dropdown_list li.has-child:hover>ul, .dropdown_list li.has-child ul li:hover>ul, .dropdown_list li.has-child:active>ul, .dropdown_list li.has-child ul li:active>ul {
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown_list li.has-child ul li a {
+    color: #000;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+    border-left: 1px solid #CFCECE;
+    border-right: 1px solid #CFCECE;
+    padding: 15px 15px 15px 37px;
+}
+.dropdown_list li.has-child ul li:first-child a {
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+.dropdown_list li.has-child ul li:last-child a {
+    border-bottom: 1px solid #CFCECE;
+    border-radius: 0 0 5px 5px;
+}
+.dropdown_list li.has-child ul li a:hover, .dropdown_list li.has-child ul li a:active {
+    background: #FFE3B2;
+}
+.dropdown_list li.has-child ul li a .dropdown_list li.has-child ul ul {
+    top: 0;
+    left: 312px;
+    background: #FFE3B2;
+}
+.dropdown_list li.has-child ul ul li a:hover, .dropdown_list li.has-child ul ul li a:active {
+    background: #FFE3B2;
+}
+.dropdown_list li.has-child ul ul li:first-child a {
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+.dropdown_list li.has-child ul ul li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+.dropdown_list.export {
+    background: -webkit-linear-gradient(#f6f6f6 0%, #dcd9d9 100%);
+}
+.csv_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/csv_icon.svg") ;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.export_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/export_icon.svg") ;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.pdf_icon::before {
+    content: '';
+    background: url("/img/group_home/result_info/pdf_icon.svg") ;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.all_user_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/all_user_icon.svg") ;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.select_user_icon::before {
+
+    content: '';
+    background-image: url("/img/group_home/result_info/select_user_icon.svg") ;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.side_content {
+    padding: 15px 7px;
+}
+.side_item_wrap {
+    padding-bottom: 15px;
+}
+.side_wrap {
+    /*overflow: hidden;*/
+}
+.dropdown_list {
+    margin-bottom: 15px;
+}
+.dropdown_list ul {
+    list-style: none;
+    text-align: left;
+}
+.dropdown_list ul li {
+    position: relative;
+}
+.dropdown_list ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 7px 15px;
+    transition: all .0s;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    opacity: 1;
+}
+.dropdown_list ul li a:hover {
+    color: #666;
+}
+.dropdown_list ul li.has-child::after {
+    content: '';
+    background-size: contain;
+    width: 5px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+/*== 2・3階層目の共通設定 */
+
+.dropdown_list li.has-child ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    z-index: 4;
+    background: #FFFBF5;
+    width: 311px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .0s;
+    box-shadow: rgb(0 0 0 / 16%) 0 1px 4px;
+}
+.dropdown_list li.has-child:hover>ul, .dropdown_list li.has-child ul li:hover>ul, .dropdown_list li.has-child:active>ul, .dropdown_list li.has-child ul li:active>ul {
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown_list li.has-child ul li a {
+    color: #000;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+    border-left: 1px solid #CFCECE;
+    border-right: 1px solid #CFCECE;
+    padding: 15px 15px 15px 37px;
+}
+.dropdown_list li.has-child ul li:first-child a {
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+.dropdown_list li.has-child ul li:last-child a {
+    border-bottom: 1px solid #CFCECE;
+    border-radius: 0 0 5px 5px;
+}
+.dropdown_list li.has-child ul li a:hover, .dropdown_list li.has-child ul li a:active {
+    background: #FFE3B2;
+}
+.dropdown_list li.has-child ul li a .dropdown_list li.has-child ul ul {
+    top: 0;
+    left: 312px;
+    background: #FFE3B2;
+}
+.dropdown_list li.has-child ul ul li a:hover, .dropdown_list li.has-child ul ul li a:active {
+    background: #FFE3B2;
+}
+.dropdown_list li.has-child ul ul li:first-child a {
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+}
+.dropdown_list li.has-child ul ul li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+.dropdown_list.export {
+    background: -webkit-linear-gradient(#f6f6f6 0%, #dcd9d9 100%);
+}
+.csv_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/csv_icon.svg") ;
+    width: 21px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.export_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/export_icon.svg") ;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.pdf_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/pdf_icon.svg") ;
+    width: 21px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.list_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/usage_fee_claims_icon.svg");
+    width: 21px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.all_user_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/all_user_icon.svg") ;
+    width: 25px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.select_user_icon::before {
+    content: '';
+    background-image: url("/img/group_home/result_info/select_user_icon.svg") ;
+    width: 22px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.side_content {
+    padding: 15px 7px;
+}
+.side_item_wrap {
+    padding-bottom: 15px;
+}
+
+#fu_table_select_user_popup_grayout {
+    z-index: 10;
+}
+
+#fu_table_select_user_popup {
+    z-index: 10;
+}
+
+#result_registration_cover {
+    z-index: 10;
+}
+
+#un_table_cover {
+    z-index: 10;
+}
+
+#un_table_s_item_form {
+    z-index: 10;
+}
+
+/* 請求書・領収書の発行日モーダルstart */
+#dep_table_cover {
+    z-index: 10;
+}
+
+#dep_table_s_item_form {
+    z-index: 10;
+}
+
+#dep_table_error {
+	z-index: 10;
+}
+
+.dep_table_hidden{
+  display: none;
+}
+
+#dep_table_cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgb(0,0,0);
+  opacity: 0.5;
+}
+
+#dep_table_s_item_form{
+  width: 500px;
+  height: 280px;
+  position: absolute;
+  background-color: rgb(255,255,255);
+  border-radius: 5px;
+}
+
+#dep_table_error{
+	width: 500px;
+	height: 230px;
+	position: absolute;
+	background-color: rgb(255,255,255);
+	border-radius: 5px;
+}
+
+#validateErrorsDep {
+    margin: 10px;
+}
+
+.dep_form_row {
+  width: 230px;
+  margin: 5px 10px;
+}
+
+.dep_form_title {
+    position: relative;
+    left: 26px;
+    top: 30px;
+    width: 100px;
+}
+
+.dep_form_label {
+    position: relative;
+    left: 26px;
+    top: 30px;
+    width: 450px;
+}
+
+.dep_titles {
+  text-align: left;
+}
+
+.dep_form_btns {
+  position: absolute;
+  bottom: 10px;
+  left: 95px;
+}
+
+.dep_form_btn {
+  position: absolute;
+  bottom: 10px;
+  left: 195px;
+}
+
+#dep_form_submit {
+  background-color: var(--submit-btn-background);
+}
+
+#dep_error_close {
+  background-color: rgb(255,237,86);
+}
+
+#dep_form_lbl {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/* 請求書・領収書の発行日モーダルend */
+
+#service_code_form_basic,
+#service_code_form_special,
+#service_code_form_incompetent_resident{
+    z-index: 10;
+}
+
+/* 保険外請求モーダル */
+.modal_calendar_area{
+    display: flex;
+    border: 1px solid var(--border-color);
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modalJaCalbox{
+    background-color: var(--table-select-color);
+    border-right: 1px solid var(--border-color);
+    width: 90px;
+    margin:0;
+    padding-right: 5px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.modalJaCalinput{
+    width: 150px;
+    border: hidden;
+}
+
+.required {
+    color: red;
+}
+
+.unclear_required {
+    display: none;
+}
+
+input:checked + label .unclear_required {
+    display: inline-block;
+}

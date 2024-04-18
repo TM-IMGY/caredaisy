@@ -1,0 +1,424 @@
+#container1_approval{
+    background-color: var(--caredaisy-contents-background);
+}
+
+.mandatory-color {
+    color: var(--mandatory-color);
+}
+
+#contents1_approval{
+    width: 1101px;
+    /* margin-left: 10px; */
+}
+
+#contents2_approval{
+    padding: 30px 0px;
+    width: 1012px;
+    text-align: right;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+}
+#table_thead_approval {
+    display: block;
+}
+#table_tbody_approval {
+    display: block;
+    height: 105px;
+    overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+#table_approval{
+    display: block;
+    height: 143px;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+    border-collapse: collapse;
+}
+td{
+    border: solid 1px;
+    height: 25px;
+    background-color: var(--customer_table_body_background);
+}
+#table_approval thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+}
+
+.selectTableApproval{
+    border-color: rgb(238,238,238);
+}
+/* ↓↓テーブルスクロールバー tbodyに設定 ↓↓　■修正箇所*/
+#table_tbody_approval::-webkit-scrollbar-thumb {
+    background-color: var(--caredaisy-table-tbody);
+    border-radius: 5px;
+}
+#table_tbody_approval::-webkit-scrollbar {
+    width: 5px;
+}
+/* ↑↑テーブルスクロールバー tbodyに設定 ↑↑　■修正箇所*/
+
+
+/* テーブル下の線（画面上部と下部を分ける線） */
+#from_approval{
+    border-top: 1px solid rgb(238,238,238);
+    width: auto;
+}
+
+/* テーブルヘッダーの幅 theadに設定 ■修正箇所*/
+.care_level_approval{
+    min-width: 231px;
+}
+.certification_status_approval{
+    min-width: 140px;
+}
+.recognition_date_approval{
+    min-width: 140px;
+}
+.start_date_approval{
+    min-width: 140px;
+}
+.end_date_approval{
+    min-width: 140px;
+}
+.date_confirmation_insurance_card_approval{
+    min-width: 140px;
+}
+.date_qualification_approval{
+    min-width: 140px;
+}
+
+/* テーブルカラムの幅 tdに設定 ■修正箇所*/
+.text_care_level_approval{
+    text-align: left;
+    min-width: 231px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_certification_status_approval{
+    text-align: left;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_recognition_date_approval{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_start_date_approval{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_end_date_approval{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_confirmation_insurance_card_approval{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_qualification_approval{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+
+/* ↓↓　ポップアップ　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#overflow_approval, #overflow_approval3, #overflow_approval4, #overflow_approval5{
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0;/* 起点指定用 */
+    top: 0;/* 起点指定用 */
+    width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+    display: none;      /* 初期は非表示 */
+}
+
+#overflow_approval .conf, #overflow_approval3 .conf, #overflow_approval4 .conf, #overflow_approval5 .conf{
+    /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF;   /* 背景を白色に指定 */
+    padding: 20px;      /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%;           /* 上から50%の位置に配置 */
+    left: 50%;          /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+}
+
+#overflow_approval2{
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0;/* 起点指定用 */
+    top: 0;/* 起点指定用 */
+    width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+    display: none;      /* 初期は非表示 */
+}
+
+#overflow_approval2 .conf{
+    /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF;   /* 背景を白色に指定 */
+    padding: 20px;      /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%;           /* 上から50%の位置に配置 */
+    left: 50%;          /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+}
+.poppu_close_approval{
+    /* 閉じるのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    height: max-content;
+    margin: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btns2{
+    text-align: center;
+}
+
+.poppu_ok_approval, .poppu_ok2_approval{
+    /* はいのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error_text_approval{
+    text-align: center;
+}
+
+.popup_btn_frame {
+    text-align: center;
+}
+
+.poppu_cancel_approval, .poppu_cancel2_approval, .poppu_close_approval2{
+    /* いいえのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.poppu_ok2_approval, .poppu_cancel2_approval{
+    margin: 0px 50px;
+}
+/* ↑↑　ポップアップ　↑↑　━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+/* ↓↓　有効終了日設定関係　↓↓　━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#end_date_box_approval{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.end_date_btn_approval{
+    display: none;
+}
+
+.end_date_label{
+    display: block;
+    float: left;
+    margin: 5px;
+    width: 90px;
+    height: 45px;
+    padding-right: 5px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    border: solid 1px var(--border-color);
+    border-radius: 5px;
+    background: #FFFFFF;
+}
+
+.end_date_btn_approval:checked + .end_date_label{
+    border: solid 1px var(--active-radiobtn-color);
+}
+
+.expiration_date{
+    margin-left: 237px; 
+}
+
+.select_expiration_date{
+    position: relative;
+    background: #e8e8e8;
+    padding: 0 5px 15px 15px;
+    height: 80px;
+}
+
+.select_expiration_date:before{
+    content: '';
+    position: absolute;
+    left: 130px;
+    top: -29px;
+    display: block;
+    border: 12px solid transparent;
+    border-bottom: 20px solid #e8e8e8;
+}
+
+.select_expiration_date .item_name_approval{
+    font-weight: normal;
+}
+/* ↑↑　有効終了日設定関係　↑↑　━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+.item_name_approval{
+    text-align: left;
+    margin-bottom: 0px;
+    font-weight: bold;
+    
+}
+.insurer_no-inline-block_approval{
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+}
+
+.inline-block_approval{
+    position: relative;
+    display: inline-block;
+}
+
+.calendar_area{
+    display: flex;
+    border: 1px solid var(--border-color);
+    margin-right: 32px;
+}
+
+.jaCalbox{
+    background-color: var(--table-select-color);
+    border-right: 1px solid var(--border-color);
+    width: 90px;
+    margin:0;
+    padding-right: 5px;
+    text-align: right;
+}
+
+#text_item1_approval,
+#text_item2_approval,
+#text_item3_approval,
+#text_item4_approval,
+#text_item5_approval{
+    width:150px;
+    border: none;
+}
+
+.text_frame_approval{
+    margin-top: -18px;
+}
+
+#select_list1_approval{
+    text-align-last: left;
+    margin-right: 34px;
+}
+#select_list2_approval{
+    width: 200px;
+    text-align-last: left;
+    margin-right: 32px;
+}
+
+.option_approval {
+    direction: ltr;
+}
+.form_frame_approval{
+    margin-left: 10px;
+    padding-bottom: 18px;
+}
+.form_left_approval{
+    text-align: left;
+    margin-left: 30px;
+}
+.btn_center_approval{
+    text-align: center;
+    margin: 30px;
+}
+#blankBtnApproval{
+    margin-left: 30px;
+    margin-top: 16px;
+    height: 50px;
+}
+.button_approval {
+    height: max-content;
+    margin: 5px;
+    font-weight: bold;
+    /* width: 100px;
+    height: 30px; */
+    margin-right:auto;
+    /* font-size: 14px; */
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+#savebtn_approval {
+    background-color: rgb(255, 237, 86);
+    border: 1px solid rgb(255, 237, 86);
+}
+#cancelbtn_approval, #cancelbtn_approval3{
+    border: 1px solid var(--cancel-button-border-color);
+    color: var( --cancel-button-font-color);
+}
+
+.mandatory::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../../../sozai/hissu.png) no-repeat;/* ←　sozai url先変更　2021/07/30 10:07 */
+    background-size: contain;
+    vertical-align: middle;
+  }

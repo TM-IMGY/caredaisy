@@ -1,0 +1,265 @@
+#container1_service{
+    background-color: var(--caredaisy-contents-background);
+}
+
+#contents1_service{
+    width: 1342px;
+    /* margin-left: 10px; */
+}
+
+#contents2_service{
+    margin-left: 30px;
+    margin-top: 16px;
+    width: 1200px;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+}
+#table_thead_service,
+#table_tbody_service {
+    display: block;
+}
+#table_tbody_service {
+    display: block;
+    height: 105px;
+    min-width: 1200px;
+    overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+#table_service{
+    display: block;
+    height: 143px;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+    border-collapse: collapse;
+}
+td{
+    border: solid 1px;
+    height: 25px;
+    background-color: var(--customer_table_body_background);
+}
+
+#table_service thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+}
+
+/* ↓↓テーブルスクロールバー tbodyに設定 ↓↓　■修正箇所*/
+#table_tbody_service::-webkit-scrollbar-thumb {
+    background-color: var(--caredaisy-table-tbody);
+    border-radius: 5px;
+}
+#table_tbody_service::-webkit-scrollbar {
+    width: 5px;
+}
+/* ↑↑テーブルスクロールバー tbodyに設定 ↑↑　■修正箇所*/
+
+#from_service{
+    border-top: 1px solid rgb(238,238,238);
+    width: auto;
+}
+
+.facility_name_service{
+    min-width: 337px;
+}
+.service_type_name_service{
+    min-width: 483px;
+}
+.usage_situation_service{
+    min-width: 100px;
+}
+.start_date_service{
+    min-width: 200px;
+}
+.end_date_service{
+    min-width: 200px;
+}
+
+.text_data_facility_name_service{
+    text-align: left;
+    min-width: 337px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_data_service_type_name_service{
+    text-align: left;
+    min-width: 483px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_data_usage_situation_service{
+    text-align: left;
+    min-width: 100px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_data_start_date_service{
+    text-align: right;
+    min-width: 200px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_data_end_date_service{
+    text-align: right;
+    min-width: 200px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+
+/* ↓↓　ポップアップ　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#overflow_service {
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0;/* 起点指定用 */
+    top: 0;/* 起点指定用 */
+    width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+    display: none;      /* 初期は非表示 */
+  }
+
+  #overflow_service .conf {
+      /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF;   /* 背景を白色に指定 */
+    padding: 20px;      /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%;           /* 上から50%の位置に配置 */
+    left: 50%;          /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+  }
+
+  .poppu_ok_service{
+      /* はいのボタンCSS */
+      /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .poppu_cancel_service{
+    /* いいえのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+  margin: 5px;
+  font-weight: bold;
+  margin-right:auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ↑↑　ポップアップ　↑↑　━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+.button_frame_service{
+    margin-top: 22px;
+}
+.item_name_service{
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.inline-block_service{
+    position: relative;
+    display: inline-block;
+}
+
+#text_item1_service{
+    width: 150px;
+    text-align: left;
+}
+#text_item2_service{
+    width: 150px;
+    text-align: left;
+}
+
+#select_list1_service{
+    margin-top: 4px;
+    margin-right: 40px;
+    text-align-last: left;
+}
+#select_list2_service{
+    margin-top: 4px;
+    margin-right: 40px;
+    text-align-last: left;
+}
+#select_list3_service{
+    width: 200px;
+    margin-top: 4px;
+    text-align-last: left;
+}
+.option_service{
+    direction: ltr;
+}
+.form_frame_service{
+    margin-left: 10px;
+    /* min-width: 820px;
+    max-width: 820px; */
+    padding-bottom: 18px;
+}
+
+.form_left_service{
+    text-align: left;
+    margin-left: 30px;
+}
+.btn_center_service{
+    text-align: center;
+    margin: 30px;
+}
+.blankBtnService{
+    margin-left: 30px;
+    margin-top: 16px;
+    height: 50px;
+}
+.button_service {
+    height: max-content;
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+#savebtn_service {
+    background-color: rgb(255, 237, 86);
+    border: 1px solid rgb(255, 237, 86);
+}
+#cancelbtn_service {
+    border: 1px solid var(--cancel-button-border-color);
+    color: var( --cancel-button-font-color);
+}
+
+.mandatory::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../sozai/hissu.png) no-repeat;/* ←　sozai url先変更　2021/07/30 10:07 */
+    background-size: contain;
+    vertical-align: middle;
+  }

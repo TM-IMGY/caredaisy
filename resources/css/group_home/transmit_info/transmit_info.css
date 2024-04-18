@@ -1,0 +1,145 @@
+:root {
+    --transmit-menu-width: 330px;
+}
+
+#transmit_menu {
+    box-sizing: border-box;
+    position: absolute;
+    width: var(--transmit-menu-width);
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+    box-shadow: 2px 2px 4px #e8e8e8;
+}
+
+#transmit_contents {
+    position: absolute;
+    width: calc(100% - var(--transmit-menu-width));
+    height: 100%;
+    left: var(--transmit-menu-width);
+}
+
+.link_icon:after {
+    display: inline-block;
+    content: " ";
+    background-image: url("/img/link_icon.svg");
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+    margin-left: 5px;
+}
+
+.modal_open {
+    cursor: pointer;
+}
+
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px 20px;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.modal_container:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.modal_container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal_body {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 880px;
+    width: 90%;
+}
+
+.modal_close_wrap{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal_close {
+    cursor: pointer;
+}
+
+.modal_content {
+    background: #FAFAFA;
+    text-align: left;
+    padding: 25px 25px 5px 25px;
+    border-radius: 10px;
+}
+
+.modal_sub_title {
+    border-left: 6px solid #707070;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal_transmit_info_box {
+    border: 1px solid #CFCECE;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.modal_transmit_file_box {
+    border: 1px solid #CFCECE;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 110px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.modal_transmit_file_box a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.item_wrap {
+    margin-bottom: 20px;
+}
+
+.modal_transmit_exp {
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.modal_transmit_exp_link:before {
+    display: inline-block;
+    content: " ";
+    background-image: url("/img/triangle_icon.svg");
+    background-repeat: no-repeat;
+    width: 6px;
+    height: 6px;
+    background-size: contain;
+    margin-right: 5px;
+}
+
+.transmit_warning {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}

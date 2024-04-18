@@ -1,0 +1,220 @@
+:root{
+  --nh-invalid-cell-color: rgb(153,153,153);
+}
+
+/* ヘッダ */
+.nh_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nh_label{
+  display: flex;
+  margin: 20px;
+  font-weight: bold;
+}
+#nh_label_ym{
+  display: flex;
+  align-items: end;
+}
+
+/* 承認エリア */
+.nh_agreement_area {
+  display: flex;
+}
+.nh_agreement_btn {
+  margin: 5px 20px;
+  border-width: 0px;
+  padding: 5px 20px;
+  width: max-content;
+  font-size: 21px;
+  background-color: var(--submit-btn-background);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 情報テーブル */
+.userinfo_table_area{
+  display: flex;
+  width: max-content;
+  padding: 10px;
+  margin: 20px;
+  background-color: var(--userinfo-background);
+  border-radius: 10px;
+}
+.userinfo_table{
+  border-right: solid 1px #dedede;
+  padding-right: 30px;
+  width: max-content;
+}
+.userinfo_table:last-child {
+  border-right:none;
+}
+.info_table_caption{
+  text-align: left;
+  font-weight: bold;
+}
+.info_table_list table td{
+  padding: 2px 5px;
+}
+.userinfo_table table tr td span:first-child {
+  float: left;
+}
+.userinfo_table table tr td span:last-child {
+  float: right;
+}
+
+.national_health_table_list{
+  margin: 20px;
+  padding-bottom: 100px;
+}
+.nh_benefit_status_lbl,
+.nh_benefit_billing_lbl
+{
+  margin: 5px;
+}
+.nh_benefit_status_lbl::before,
+.nh_benefit_billing_lbl::before
+{
+  content: "";
+  display: inline-block;
+  margin-right: 8px;
+  width: 4px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 2px;
+  vertical-align: -4px;
+}
+.nh_benefit_status,
+.nh_benefit_billing
+{
+  margin: 10px 0px;
+}
+
+
+.nh_table_header {
+  display: block;
+  width: max-content;
+}
+.nh_table_cell {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+}
+
+.nh_billing_td{
+  height: 20px;
+}
+/* セル表示幅 */
+.service_item_name{
+  width: 550px;
+}
+.service_code{
+  width: 90px;
+}
+.unit_number{
+  width: 70px;
+}
+.service_count_date{
+  width: 50px;
+}
+.service_unit_amount{
+  width: 90px;
+}
+.public_expenditure_cnt{
+  width: 81px;
+}
+.public_expenditure_amount{
+  width: 130px;
+}
+/* セル */
+.invalid_cell{
+  background: var(--nh-invalid-cell-color);
+}
+/* .tategaki{
+  writing-mode: vertical-rl;
+  text-align: initial;
+} */
+.number_cell{
+  text-align: right;
+}
+.total{
+  text-align: center;
+}
+.diagonal_line {
+  width: 60%;
+  transform: matrix(1.77, -0.78, 0, 1, 0, 0);
+  -webkit-transform: matrix(1.77, -0.78, 0, 1, 0, 0);
+}
+
+.special_medical_table_element_visible{
+  display: table-cell;
+}
+.special_medical_table_element_hidden,
+.special_medical_element_hidden{
+  display: none;
+}
+.special_medical_element_visible{
+  display: block;
+}
+
+/* 特別診療費 始*/
+.sp_injury_and_illness_name {
+  width: 330px;
+}
+.sp_identification_num {
+  width: 90px;
+}
+.sp_special_medical_name {
+  /* width: 250px; */
+  width: 180px;
+}
+.sp_unit_number {
+  width: 63px;
+}
+.sp_number_of_days {
+  width: 50px;
+}
+.sp_service_unit_amount {
+  width: 100px;
+}
+.sp_public_expenditure_cnt {
+  width: 81px;
+}
+.sp_public_expenditure_amount {
+  width: 130px;
+}
+/* 特別診療費 終*/
+/* 特定入所者介護サービス費 始*/
+.srs_service_item_name {
+  width: 180px;
+}
+.srs_service_item_code {
+  width: 90px;
+}
+.srs_unit_number {
+  width: 121px;
+}
+.srs_burden_limit {
+  width: 115px;
+}
+.srs_service_count_date {
+  width: 60px;
+}
+.srs_total_cost {
+  width: 110px;
+}
+.srs_insurance_benefit {
+  width: 100px;
+}
+.srs_public_spending_count {
+  /* width: 130px; */
+  width: 85px;
+}
+.srs_public_spending_amount {
+  width: 100px;
+}
+.srs_part_payment {
+  width: 126px;
+}
+/* 特定入所者介護サービス費 終*/

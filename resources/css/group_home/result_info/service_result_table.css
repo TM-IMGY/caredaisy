@@ -1,0 +1,190 @@
+:root {
+  --submit-btn-background: rgb(255,237,86);
+}
+
+/* 非表示クラス。 */
+.result_registration_hidden,
+.rrt_record_hidden{
+  display: none;
+}
+
+/* ヘッダ */
+.result_registration_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#result_registration_label{
+  display: flex;
+  margin: 20px;
+  font-weight: bold;
+}
+#result_registration_ym{
+  display: flex;
+  align-items: end;
+}
+
+/* タブ */
+#result_registration_tabs{
+  display: flex;
+}
+#result_registration_basic,
+#result_registration_special,
+#rr_incompetent_resident{
+  padding: 0px 10px;
+}
+.rr_tab_active{
+  background: rgb(71, 71, 71);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+/* サービス実績テーブルのカバー */
+#result_registration_cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgb(0,0,0);
+  opacity: 0.5;
+}
+.sr_table_hidden {
+  display: none;
+}
+
+/* サービス実績テーブルのラベルエリア */
+#result_registration_submit_btns {
+  display: flex;
+}
+#re_count_button{
+  margin: 5px 0;
+  border-width: 0px;
+  border: 1px solid;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fixed_thead{
+  position:sticky;
+  top:0px;
+}
+
+/* 実績登録テーブル */
+#result_registration_table,
+#result_registration_table_special,
+#rrt_incompetent_resident{
+  margin: 10px;
+}
+.result_registration_table_header {
+  background-color: var(--table-header-color);
+}
+.result_registration_table_cell {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+}
+.rrt_date_grey {
+  color: rgb(184,204,228);
+}
+.result_registration_table_trash{width: 50px;}
+.result_registration_table_service{width: 180px;}
+.result_registration_table_unit{width: 70px;}
+.result_registration_table_plan{width: 50px;}
+.result_registration_table_result{width: 50px;}
+.rrt_header_date{width: 30px;}
+.rrt_header_date_special{width: 30px;}
+.rrt_header_date_incompetent_resident{width: 30px;}
+.result_registration_table_header_dow{width: 30px; text-align: center;}
+.result_registration_table_header_dow_special{width: 30px; text-align: center;}
+.rrt_header_dow_incompetent_resident{width: 30px; text-align: center;}
+.rrt_date_daily_rate{width: 30px;}
+.result_registration_table_ddr_input{width: 27px; padding:0px;}
+.result_registration_table_sum{width: 30px;}
+
+/* サービス実績テーブル表示方法 */
+.sr_table_number_cell { text-align: center; }
+.result_registration_table_trash,
+.result_registration_table_unit,
+.rrt_header_date,
+.rrt_header_date_special,
+.rrt_header_date_incompetent_resident,
+.result_registration_table_sum { text-align: center; }
+
+#result_registration_table_plus,
+#rrt_plus_special,
+#rrt_plus_incompetent_resident{
+  margin: 10px;
+  border-width: 0px;
+  width: max-content;
+  height: max-content;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(70, 70, 70);
+  cursor: pointer;
+}
+
+/* サービス実績テーブルのサービスコードフォーム */
+#service_code_form_basic,
+#service_code_form_special,
+#service_code_form_incompetent_resident{
+  width: 1000px;
+  height: 580px;
+  position: absolute;
+  background-color: rgb(255,255,255);
+  border-radius: 5px;
+}
+.service_code_form_label {
+  font-size: 2.0rem;
+  padding: 10px;
+  font-weight: bold;
+}
+.service_code_form_pulldowns{
+  display: flex;
+}
+.service_code_form_row {
+  margin: 5px 20px;
+}
+.service_code_form_pulldown {
+  padding: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+.service_code_form_table_header {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+}
+/* サービスコードフォームのサービスコードテーブル */
+/* サービスコードフォームの特別診療費コードテーブル */
+#service_code_form_basic_tbody,
+#service_code_form_special_tbody{
+  height: 280px;
+}
+/* サービスコードフォームの特定入所者サービスコードテーブル */
+#scf_ir_tbody{
+  height: 170px;
+}
+/* サービスコードテーブルセル幅 */
+.service_code_form_basic_code { width: 300px; }
+.service_code_form_basic_name { width: 550px; }
+/* 特別診療費コードテーブルセル幅 */
+.service_code_form_special_name { width: 300px; }
+.service_code_form_special_contents { width: 550px; }
+/* 特定入所者サービスコードテーブルセル幅 */
+.scf_ir_code { width: 300px; }
+.scf_ir_name { width: 550px; }
+/* サービスコードテーブルの選択セル */
+/* 特別診療費コードテーブルの選択セル */
+/* 特定入所者サービスコードテーブルの選択セル */
+.scfb_table_record_selected,
+.scfs_table_record_selected,
+.scf_ir_table_record_selected{
+  background-color: rgb(228,158,97);
+}
+.service_code_form_submit_btns{
+  display: flex;
+  justify-content: center;
+}
+.service_code_form_register {
+  background-color: var(--submit-btn-background);
+}

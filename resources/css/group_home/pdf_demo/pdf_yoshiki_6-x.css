@@ -1,0 +1,137 @@
+.unit_rate span,.unit_price,.rate span,
+.billing_amount span,.user_burden span,
+.classification_support_benefit_unit,
+.classification_support_benefit_limit_unit,
+.classification_support_limit_units{
+    position:absolute;
+    font-size:28px;
+    letter-spacing:25px;
+}
+
+.classification_support_limit_units{
+    top: 801px;
+    right: 378px;
+}
+
+.classification_support_benefit_limit_unit{
+    top: 824px;
+    right: 378px;
+}
+
+.classification_support_benefit_unit{
+    top: 847px;
+    right: 378px;
+}
+
+.unit_rate .benefit_unit{
+    top: 1363px;
+    right: 580px;
+}
+.unit_rate .public_benefit_unit{
+    top: 1363px;
+    right: 320px;
+}
+.unit_price{
+    top: 1400px;
+    left: 393px;
+}
+.rate .benefit_rate_6x{
+    top: 1435px;
+    right: 708px;
+}
+.rate .public_benefit_rate_6x{
+    top: 1435px;
+    right: 450px;
+}
+.billing_amount .insurance_benefit{
+    top: 1470px;
+    right: 580px;
+}
+.billing_amount .public_spending_amount{
+    top: 1470px;
+    right: 320px;
+}
+.part_payment{
+    top: 1505px;
+    right: 580px;
+}
+.public_payment{
+    top: 1505px;
+    right: 320px;
+}
+
+.sheet_count{
+    position:absolute;
+    top: 1565px;
+    right:58px;
+    font-size:14px;
+    letter-spacing:85px;
+}
+
+.service_type_35 {
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: 479px;
+}
+
+.care_level_12.service_type_35 {
+    left: 375px;
+}
+
+.care_level_13.service_type_35 {
+    left: 460px;
+}
+
+.stay_out_overnight{
+    position: absolute;
+    top: 600px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    right: 168px;
+}
+
+/*//////// 共通部の6x調整箇所 ///////*/
+/*公費受給者番号*/
+.recipient_number_6x{
+    position: absolute;
+    top: 206px;
+    left: 225px;
+    font-size: 38px;
+    letter-spacing: 12.5px;
+}
+
+/* 提出年月 */
+.yaers_6x{
+    position: absolute;
+    top: 158px;
+    left: 888px;
+    font-size: 38px;
+    letter-spacing: 22px;
+}
+.months_6x{
+    position: absolute;
+    top: 158px;
+    left: 1020px;
+    font-size: 38px;
+    letter-spacing: 22px;
+}
+
+/*保険者番号*/
+.insurer_no_6x{
+    position: absolute;
+    top: 210px;
+    left: 935px;
+    font-size: 38px;
+    letter-spacing: 19.5px;
+}
+
+/*被保険者*/
+.insured_no_6x{
+    position: absolute;
+    top: 261px;
+    left: 208px;
+    font-size: 38px;
+    letter-spacing: 17.5px;
+}

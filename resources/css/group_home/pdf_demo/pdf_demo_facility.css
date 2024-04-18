@@ -1,0 +1,158 @@
+/* 印刷時の設定 */
+@page{
+    margin: 0;
+}
+
+/* 画面の設定 */
+.seikyuu,.meisai{
+    position:relative;
+    margin: 0 3px;
+}
+
+/* 対象年月 */
+.yaers_months .yaers{
+    position: absolute;
+    top: 100px;
+    left: 190px;
+    font-size: 50px;
+    letter-spacing: 13px;
+}
+.yaers_months .months{
+    position: absolute;
+    top: 100px;
+    left: 320px;
+    font-size: 50px;
+    letter-spacing: 13px;
+}
+
+/* 印刷を実施した日 */
+.print_date span{
+    position: absolute;
+    top: 358px;
+    font-size: 20px;
+}
+.print_yaer{
+    left: 465px;
+}
+.print_month{
+    left: 525px;
+}
+.print_day{
+    left: 580px;
+}
+
+/* 事業所情報 */
+.facility div{
+    position:absolute;
+}
+.facility_number{
+    top: 180px;
+    left: 815px;
+    font-size: 45px;
+    letter-spacing: 9px;
+}
+.facility_name_kanji{
+    top: 240px;
+    left: 909px;
+    font-size: 15px;
+    word-break: break-word;
+    width: 288px;
+}
+.postal_code{
+    top: 290px;
+    left: 921px;
+    font-size: 30px;
+    letter-spacing: 6px;
+}
+.location{
+    top: 335px;
+    left: 907px;
+    font-size: 15px;
+    word-break: break-word;
+    width: 280px;
+}
+.phone_number{
+    top: 420px;
+    left: 908px;
+    font-size: 25px;
+}
+
+/* 保険請求 */
+.insurance_billing,.insurance_billing_total{
+    position: absolute;
+    top: 616px;
+    left: 297px;
+}
+.insurance_billing span,.insurance_billing_total span{
+    display: inline-block;
+    width: 76px;
+    transform: scale(0.9);
+    font-size: 12px;
+    text-align: right;
+    letter-spacing: normal;
+}
+/* 保険請求合計 */
+.insurance_billing_total{
+    top:734px;
+}
+/* 公費請求 */
+.public_spending{
+    position: absolute;
+    top: 931px;
+    left: 352px;
+    /* letter-spacing: 2.5em; */
+}
+.public_spending span{
+    display:inline-block;
+    transform:scale(0.9);
+    font-size:18px;
+    text-align:right;
+    letter-spacing:normal;
+}
+.public_cnt{
+    width:60px;
+}
+.public_unit_amount{
+    width:120px;
+}
+.public_total_cost{
+    width:115px;
+}
+.public_spending .public_spending_amount{
+    width:115px;
+}
+.particular_cnt{
+    width:130px;
+}
+.particular_total_cost{
+    width:130px;
+}
+.particular_spending_amount{
+    width:130px;
+}
+.class_25{
+    top:1610px;
+}
+.class_81{
+    top: 1330px;
+}
+/* 公費請求合計 */
+.public_spending_total{
+    position:absolute;
+    top:1663px;
+}
+.public_spending_total span{
+    position:absolute;
+    display:inline-block;
+    transform:scale(0.9);
+    font-size:18px;
+    text-align:right;
+}
+.public_spending_amount_total{
+    width: 135px;
+    left: 645px;
+}
+.particular_public_spending_amount_total{
+    width: 135px;
+    left: 1050px;
+}

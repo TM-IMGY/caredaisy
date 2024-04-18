@@ -1,0 +1,6 @@
+service_item_code_id,service_type_code,service_item_code,service_item_name,service_synthetic_unit,service_calculation_unit,service_start_date,service_end_date,service_kind,service_calcinfo_1,service_calcinfo_2,service_calcinfo_3,service_calcinfo_4,service_calcinfo_5,reserve1,reserve2,reserve3,reserve4,rank,classification_support_limit_flg,synthetic_unit_input_flg
+2385,59,5511,介護医療院食費,1445,1,2021/4/1,9999/12/1,1,,,,,,,,,,1,0,0
+2386,59,5521,介護医療院ユニット型個室,2006,1,2021/4/1,9999/12/1,1,,,,,,,,,,1,0,0
+2387,59,5522,介護医療院ユニット型個室的多床室,1668,1,2021/4/1,9999/12/1,1,,,,,,,,,,1,0,0
+2388,59,5523,介護医療院従来型個室,1668,1,2021/4/1,9999/12/1,1,,,,,,,,,,1,0,0
+2389,59,5524,介護医療院多床室,377,1,2021/4/1,9999/12/1,1,,,,,,,,,,1,0,0

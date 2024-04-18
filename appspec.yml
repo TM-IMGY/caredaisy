@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/deploy
+
+permissions:
+  - object: /var/www/deploy
+    owner: apache
+    group: apache
+
+hooks:
+  AfterInstall:
+    - location: ./scripts/after_install.sh
+      timeout: 300
+      runas: root

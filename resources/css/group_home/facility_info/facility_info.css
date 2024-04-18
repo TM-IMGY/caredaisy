@@ -1,0 +1,84 @@
+:root {
+  --billing-menu-width: 390px;
+}
+
+#facility_info_contents{
+  position: absolute;
+  width: calc(100% - var(--billing-menu-width));
+  height: 100%;
+  left: var(--billing-menu-width);
+}
+
+.sub_tab_contents_left{
+  width: 70%;
+}
+
+#billing_menu {
+  box-sizing: border-box;
+  position: absolute;
+  width: var(--billing-menu-width);
+  height: 100%;
+  border: 1px solid var(--top-menu-border-color);
+  border-top: 0px solid #000;
+  box-shadow: 2px 2px 4px #e8e8e8;
+}
+
+ul{
+  list-style-type: none;
+}
+
+#corporate_list{
+  margin: 40px 0 10px 10px;
+  height: calc(100% - 230px);
+}
+
+#corporate_list li{
+  padding-left: 10px
+}
+
+#corporate_list > ul > li > ul,
+#corporate_list > ul > li > ul > li > ul {
+  padding: 0 0 0 10px;
+}
+
+ul.survice {
+  padding-left: 50px;
+  list-style-type: disc;
+}
+
+#corporate_list > ul > li > ul > li > ul > li >ul > li {
+  padding-left: 0;
+}
+
+.corporate{
+  padding-left: 0;
+  overflow-y: auto;
+  height: 100%;
+}
+
+#corporate_list::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+
+#corporate_list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.corporate > li > label {
+  font-weight: bold;
+}
+
+.corporate_name {
+  margin-bottom: 5px;
+}
+
+.facility-name{
+  text-indent: -1.5em;
+  padding-left: 1em;
+  margin: 0;
+}
+
+.active_target {
+  color: #FF830A;
+}

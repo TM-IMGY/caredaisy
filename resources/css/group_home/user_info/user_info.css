@@ -1,0 +1,199 @@
+:root {
+  --facility-user-menu-width: 330px;
+  --caredaisy-table-header-backgroundColor: rgb(255,255,238);
+  --caredaisy-table-tbody: rgb(153,153,153);
+}
+
+#facility_user_menu{
+  box-sizing: border-box;
+  position: absolute;
+  width: var(--facility-user-menu-width);
+  height: 100%;
+  border-right: 1px solid var(--border-color);
+  box-shadow: 2px 2px 4px #e8e8e8;
+}
+
+.fum_pulldown{
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  height: 50px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+/* 利用者テーブル */
+#user_info_fu_table{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 88%;
+  top: 12%;
+  cursor: default;
+}
+
+#user_info_fu_tbody{
+  display: block;
+  margin: auto;
+  height: 100%;
+  overflow: overlay;
+}
+#user_info_fu_tbody::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+#user_info_fu_tbody::-webkit-scrollbar {
+  width: 5px;
+}
+.facility_user_tr {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+}
+.facility_user_td {
+  padding-left: 20px;
+  border-width: 0px;
+}
+.fu_table_selected_record {
+  background-color: var(--table-select-color);
+}
+.fu_table_selected_cell {
+  color: var(--active-radiobtn-color);
+}
+
+.caredaisy_table {
+  border-collapse: collapse;
+}
+.caredaisy_table_thead {
+  display: block;
+  width: max-content;
+}
+.caredaisy_table_cell {
+  border: 1px solid var(--border-color);
+  padding: 5px;
+}
+.caredaisy_table_cell_number {
+  text-align: center;
+}
+.caredaisy_table_header {
+  background-color: var(--caredaisy-table-header-backgroundColor);
+}
+.caredaisy_table_tbody {
+  overflow-y: overlay;
+}
+.caredaisy_table_tbody::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+.caredaisy_table_tbody::-webkit-scrollbar {
+  width: 5px;
+}
+
+#user_info_contents{
+  position: absolute;
+  width: calc(100% - var(--facility-user-menu-width));
+  height: 100%;
+  left: var(--facility-user-menu-width);
+}
+
+.alert_icon {
+  cursor: pointer;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  background-size: contain;
+  vertical-align: middle;
+  top: 5px;
+}
+
+.alert_icon:hover .alert_message_wrap {
+  opacity: 100;
+  z-index: 1;
+}
+
+.pop_icon:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 60px;
+  background-size: contain;
+  position: absolute;
+  left: 5px;
+  top: 17px;
+}
+
+.alert_message {
+  color: #000;
+  margin-left: 15px;
+}
+
+.alert_ninteigire,
+.alert_ninteigire_pop_icon::before {
+  background: url(../../../sozai/alert_ninteigire.png) no-repeat;
+}
+
+.alert_ninteigire_color {
+  color: var(--active-radiobtn-color);
+}
+
+.shinsei,
+.shinsei_pop_icon::before {
+  background: url(../../../sozai/shinsei.png) no-repeat;
+}
+
+.alert_today,
+.alert_today::before {
+  background: url(../../../sozai/alert_one_month.png) no-repeat;
+}
+
+.alert_one_month,
+.alert_one_month_pop_icon::before {
+  background: url(../../../sozai/alert_one_month.png) no-repeat;
+}
+
+.alert_two_months,
+.alert_two_months_pop_icon::before {
+  background: url(../../../sozai/alert_two_months.png) no-repeat;
+}
+
+.alert_three_months,
+.alert_three_months_pop_icon::before {
+  background: url(../../../sozai/alert_three_months.png) no-repeat;
+}
+
+.alert_message_wrap{
+  position: absolute;
+  background: #ffffff;
+  padding: 10px 5px 10px 15px;
+  height: auto;
+  left: 50px;
+  width: 240px;
+  display: flex;
+  z-index: -1;
+  border-radius: 8px;
+  opacity: 0;
+}
+
+.alert_message_wrap:before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -40px;
+  display: flex;
+  border-style: solid;
+  border-width: 5px 10px 5px 30px;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+.alert_message_wrap {
+  -webkit-filter:drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+  -moz-filter:drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+  -ms-filter:drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+  filter:drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.5));
+}

@@ -1,0 +1,236 @@
+/* 特別診療費 */
+#special_medical_expenses{
+    display: none;
+}
+
+#change_view_tab {
+    display: flex;
+}
+
+a.view_tab {
+    display: flex;
+    align-items: center;
+    padding: 0px 8px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+a.active {
+    background: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+a.inactive {
+    background-color: var(--caredaisy-contents-background);
+}
+
+.as_special_medical_expenses_history_selected {
+    background-color: rgb(255, 255, 238);
+}
+
+.mandatory-color {
+    color: var(--mandatory-color);
+}
+
+#special_medical_expenses_history{
+    background-color: var(--caredaisy-contents-background);
+    width: max-content;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+}
+
+#special_medical_expenses_history_thead,
+#special_medical_expenses_history_tbody {
+    display: block;
+}
+#special_medical_expenses_history_tbody {
+    height: 105px;
+    overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+#special_medical_expenses_history_table{
+    display: block;
+    height: 143px;
+    /* width: 978px; */
+    width: max-content;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+    border-collapse: collapse;
+}
+td{
+    border: solid 1px;
+    height: 25px;
+    background-color: var(--customer_table_body_background);
+}
+
+#special_medical_expenses_history_table thead th{
+    min-width: 140px;
+    position: sticky;
+    font-weight: bold;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+}
+
+#special_medical_expenses_history_tbody::-webkit-scrollbar-thumb {
+    background-color: rgb(153,153,153);
+    border-radius: 5px;
+}
+#special_medical_expenses_history_tbody::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* tbody */
+#special_medical_expenses_history_table tbody td{
+    text-align: right;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+
+.history_of_addtion_status_start_date,
+.history_of_addtion_status_end_date{
+    min-width: 140px;
+}
+
+.history_of_special_start_date,
+.history_of_special_end_date{
+    min-width: 147px;
+}
+
+/* 新規登録、保存ボタン部分 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#blankBtnSpecialMedical{
+    display: inline-flex;
+    margin-left: 24px;
+    margin-top: 20px;
+    height: 50px;
+}
+
+.special_medical_expenses_btns {
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn_wrap{
+    margin-top: -18px;
+    margin-left: 10px;
+}
+
+.special_medical_expenses_target_month{
+    font-weight: bold;
+}
+
+/* 型 */
+/* 特別診療費サービスリスト */
+.special_medical_expenses_basic,
+.special_medical_expenses_service{
+    position: relative;
+    display: inline-block;
+    min-width: 500px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: var(--caredaisy-table-header-backgroundColor);
+    border: 1px solid var(--top-menu-border-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
+}
+
+/* ↓↓　ラジオボタンの色Edgeでの表示でも同じ色にする　↓↓ */
+
+.special_medical_expenses_checkbox {
+    margin-left: 25px;
+}
+
+#special_medical_expenses_start,
+#special_medical_expenses_end{
+    width: 110px;
+}
+
+/* サービス名td */
+.special_medical_expenses_sevice_name{
+    min-width: 440px;
+    border-left: none;
+    border-color: rgb(238,238,238);
+    font-weight: bold;
+}
+/* チェックボックスtd */
+.special_medical_expenses_use{
+    min-width: 70px;
+    border-right: none;
+    border-color: rgb(238,238,238);
+    font-weight: bold;
+}
+
+/* チェックボックスのサイズを大きくする */
+input[class=special_medical_checkbox]{
+    transform: scale(1.5);
+}
+
+.mandatory::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../../../sozai/hissu.png) no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+#overflow_sp_medical_expenses_notification{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 100;
+}
+
+.overflow_sp_medical{
+    display: none;
+}
+
+.overflow_sp_medical .conf,
+#overflow_sp_medical_expenses_notification .conf{
+    background: #FFF;
+    padding: 0 20px 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.popup_cancel_sp_medical{
+    height: max-content;
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sp_medical_btns{
+    margin-top: 30px;
+    text-align: center;
+}

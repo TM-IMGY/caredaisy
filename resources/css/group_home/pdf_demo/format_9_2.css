@@ -1,0 +1,443 @@
+
+/* 被保険者 */
+/* 生年月日 */
+/* 和暦 */
+.date_of_birth{
+  position: absolute;
+  top: 246px;
+}
+.date_of_birth_meiji {
+  left: 137px;
+}
+.date_of_birth_taisho {
+  left: 178px;
+}
+.date_of_birth_showa{
+  left: 219px;
+}
+/* 年月日 */
+.date_of_birth_ymd{
+  left: 133px;
+  letter-spacing: 4px;
+  position: absolute;
+  top: 270px;  
+}
+.date_of_birth_year{
+  position: absolute;
+}
+.date_of_birth_month{
+  position: absolute;
+  left: 46px;
+}
+.date_of_birth_day{
+  position: absolute;
+  left: 91px;
+}
+/* 性別 */
+.gender{
+  position: absolute;
+  top: 259px;
+}
+.man{
+  left: 303px;
+}
+.woman{
+  left: 341px;
+}
+
+/* 要介護状態区分 */
+.care_level{
+  position: absolute;
+  top: 294px;
+}
+.care_level_21{
+  left: 237px;
+}
+.care_level_22{
+  left: 253px;
+}
+.care_level_23{
+  left: 270px;
+}
+.care_level_24{
+  left: 286px;
+}
+.care_level_25{
+  left: 303px;
+}
+
+/* 認定有効期間(開始) */
+/* 和暦 */
+.care_perido{
+  left: 131px;
+  position: absolute;
+}
+.care_period_heisei{
+  top: 315px;
+}
+.care_period_reiwa{
+  top: 326px;
+}
+/* 年月日 */
+.care_period_start{
+  font-size: 22px;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 317px;
+}
+.care_period_start_year{
+  left: 178px;
+}
+.care_period_start_month{
+  left: 243px;
+}
+.care_period_start_day{
+  left: 309px;
+}
+
+/* 認定有効期間(終了) */
+/* 年月日 */
+.care_period_end{
+  font-size: 14px;
+  letter-spacing: 12px;
+  position: absolute;
+  top: 344px;
+}
+.care_period_end_year{
+  left: 181px;
+}
+.care_period_end_month{
+  left: 246px;
+}
+.care_period_end_day{
+  left: 311px;
+}
+
+/* 請求事業者 */
+/* 郵便番号 */
+.postal_code{
+  font-size: 18px;
+  left: 515px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 228px;
+}
+
+/* 施設利用者情報 */
+/* 入所年月日 */
+/* 元号 */
+/* 平成 */
+.facility_user_start_date{
+  position: absolute;
+  left: 81px;
+}
+.facility_user_start_date_heisei{
+  top: 361px;
+}
+.facility_user_start_date_reiwa{
+  top: 373px;
+}
+.facility_user_start{
+  font-size: 17px;
+  letter-spacing: 4px;
+  position: absolute;
+  top: 368px;
+}
+.facility_user_start_year{
+  left: 124px;
+}
+.facility_user_start_month{
+  left: 178px;
+}
+.facility_user_start_day{
+  left: 232px;
+}
+/* 退所年月日 */
+.facility_user_end{
+  font-size: 17px;
+  letter-spacing: 4px;
+  position: absolute;
+  top: 368px;
+}
+.facility_user_end_year{
+  left: 332px;
+}
+.facility_user_end_month{
+  left: 385px;
+}
+.facility_user_end_day{
+  left: 436px;
+}
+/* 入所実日数 */
+.actual_number{
+  font-size: 23px;
+  left: 556px;
+  position: absolute;
+  top: 363px;
+}
+/* 外泊日数 */
+.stay_out_overnight{
+  font-size: 23px;
+  left: 641px;
+  position: absolute;
+  text-align: right;
+  top: 363px;
+  /* TODO: そもそもゼロ埋めで表示することを検討する。 */
+  width: 2.0rem;
+}
+/* 入所前の状況 */
+.before_in_status{
+  position: absolute;
+}
+/* 居宅 */
+.before_in_status_1{
+  top: 389px;
+  left: 412px;
+}
+/* 医療機関 */
+.before_in_status_2{
+  top: 389px;
+  left: 443px;
+}
+/* 介護老人福祉施設 */
+.before_in_status_3{
+  top: 389px;
+  left: 490px;
+}
+/* 介護老人保健施設 */
+.before_in_status_4{
+  top: 389px;
+  left: 568px;
+}
+/* 介護療養型医療施設 */
+.before_in_status_5{
+  top: 389px;
+  left: 647px;
+}
+/* 認知症対応型共同生活介護 */
+.before_in_status_6{
+  top: 400px;
+  left: 412px;
+}
+/* 特定施設入居者生活介護 */
+.before_in_status_7{
+  top: 400px;
+  left: 523px;
+}
+/* その他 */
+.before_in_status_8{
+  top: 400px;
+  left: 626px;
+}
+/* 介護医療院 */
+.before_in_status_9{
+  top: 400px;
+  left: 664px;
+}
+/* 退所後の状況 */
+.after_out_status{
+  position: absolute;
+}
+/* 居宅 */
+.after_out_status_1{
+  top: 416px;
+  left: 153px;
+}
+/* 医療機関入院 */
+.after_out_status_2{
+  top: 416px;
+  left: 194px;
+}
+/* 死亡 */
+.after_out_status_3{
+  top: 416px;
+  left: 278px;
+}
+/* その他 */
+.after_out_status_4{
+  top: 416px;
+  left: 318px;
+}
+/* 介護老人福祉施設入所 */
+.after_out_status_5{
+  top: 416px;
+  left: 370px;
+}
+/* 介護老人保健施設入所 */
+.after_out_status_6{
+  top: 416px;
+  left: 496px;
+}
+/* 介護療養型医療施設入院 */
+.after_out_status_7{
+  top: 416px;
+  left: 623px;
+}
+/* 介護医療院入所 */
+.after_out_status_8{
+  top: 428px;
+  left: 153px;
+}
+
+/* 給付費明細欄 */
+.benefit_details{
+  left: 69px;
+  position: absolute;
+  top: 518px;
+}
+.benefit_detail{
+  height: 18px;
+  position: relative;
+  width: 690px;
+}
+/* サービス内容 */
+.service_item_name{
+  font-size: 10px;
+  position: absolute;
+}
+/* サービスコード */
+.service_code{
+  font-size: 13px;
+  left: 146px;
+  letter-spacing: 9px;
+  position: absolute;
+}
+/* 単位数 */
+.unit_number{
+  font-size: 13px;
+  right: 366px;
+  letter-spacing: 9px;
+  position: absolute;
+}
+/* 回数日数 */
+.service_count_date{
+  font-size: 13px;
+  right: 330px;
+  letter-spacing: 9px;
+  position: absolute;
+}
+/* サービス単位数 */
+.service_unit_amount{
+  font-size: 13px;
+  right: 223px;
+  letter-spacing: 9px;
+  position: absolute;
+}
+/* 公費分回数等 */
+.public_spending_count{
+  font-size: 13px;
+  right: 188px;
+  letter-spacing: 9px;
+  position: absolute;
+}
+/* 公費対象単位数 */
+.public_expenditure_unit{
+  font-size: 13px;
+  right: 80px;
+  letter-spacing: 9px;
+  position: absolute;
+}
+/* 合計 */
+/* サービス単位数 */
+.service_unit_amount_sum{
+  font-size: 18px;
+  left: 377px;
+  letter-spacing: 7px;
+  position: absolute;
+  top: 65px;
+}
+/* 公費対象単位数 */
+.public_spending_unit{
+  font-size: 18px;
+  left: 520px;
+  letter-spacing: 7px;
+  position: absolute;
+  top: 65px;
+}
+
+/* 請求額集計欄 */
+/* 単位数合計 */
+/* 保険分 */
+.benefit_unit{
+  font-size: 19px;
+  letter-spacing: 16px;
+  position: absolute;
+  right: 437px;
+  top: 885px;
+}
+/* 公費分 */
+.public_benefit_unit{
+  font-size: 19px;
+  letter-spacing: 16px;
+  position: absolute;
+  right: 296px;
+  top: 885px;
+}
+/* 単位数単価 */
+.unit_price{
+  font-size: 18px;
+  left: 206px;
+  letter-spacing: 16px;
+  position: absolute;
+  top: 904px;
+}
+/* 給付率 */
+/* 保険分 */
+.benefit_rate{
+  font-size: 19px;
+  letter-spacing: 16px;
+  position: absolute;
+  right: 502px;
+  top: 924px;
+}
+/* 公費分 */
+.public_benefit_rate{
+  font-size: 19px;
+  letter-spacing: 16px;
+  position: absolute;
+  right: 365px;
+  top: 924px;
+}
+/* 請求額（円） */
+/* 保険分 */
+.insurance_benefit{
+  font-size: 19px;
+  letter-spacing: 13px;
+  position: absolute;
+  right: 435px;
+  top: 944px;
+}
+/* 公費分 */
+.public_spending_amount{
+  font-size: 19px;
+  letter-spacing: 13px;
+  position: absolute;
+  right: 299px;
+  top: 944px;
+}
+/* 利用者負担額 */
+/* 保険分 */
+.part_payment{
+  position: absolute;
+  font-size: 19px;
+  letter-spacing: 16px;
+  top: 964px;
+  right: 432px;
+}
+/* 公費分 */
+.public_payment{
+  position: absolute;
+  font-size: 19px;
+  letter-spacing: 16px;
+  top: 964px;
+  right: 296px;
+}
+
+/* n 枚中 n枚目 */
+.sheet_count{
+  font-size: 14px;
+  letter-spacing: 25px;
+  position: absolute;
+  right: 43px;
+  top: 1102px;
+}

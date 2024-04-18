@@ -1,0 +1,87 @@
+.info_table_list {
+    padding: 10px;
+    margin: 10px;
+}
+
+.stayout_info_table {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+}
+
+/*↓「当日の欠食」表示の際に下記枠内のcssを削除する↓*/
+.stayout_info_table td {
+    display: inline-block;
+}
+
+.stay_out_time {
+    margin-left: 20px;
+}
+
+#end_time_title {
+    margin-left: 58px;
+}
+/*↑「当日の欠食」表示の際に上記枠内のcssを削除する↑*/
+
+.stayout_info {
+    margin: 10px;
+    padding: 10px;
+}
+
+#so_new_btn, #so_save_btn, #so_delete_btn {
+    margin: 5px 20px;
+    border-width: 0px;
+    padding: 5px 20px;
+    background-color: var(--submit-btn-background);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 21px;
+    width: max-content;
+}
+
+.so_table_cell {
+    width: 170px;
+}
+
+.so_table_cell_reason {
+    width: 350px;
+}
+
+.so_table_cell_remarks{
+    width: 215px;
+}
+
+/*「当日の欠食」表示の際にmargin-right: 150px;を削除*/
+.item_name_stayout{
+    margin-right: 150px;
+    font-weight: bold;
+}
+
+.bi_required{
+    color: var(--mandatory-color);
+}
+
+.title_stayout{
+    font-weight: bold;
+    display: inline-block;
+}
+
+.title_stayout:before{
+    background-color: #000;
+    border-radius: 2px;
+    content: "";
+    display: inline-block;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: -4px;
+    width: 4px;
+}
+
+.stay_select_record{
+    background-color: #ffffee;
+}
+
+.stayout_date_input{
+    width: 150px;
+    border: hidden;
+}

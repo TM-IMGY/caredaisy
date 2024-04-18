@@ -1,0 +1,522 @@
+/* 印刷時の設定 */
+@page{
+    margin: 0;
+}
+
+/* 画面の設定 */
+/* .meisai{
+    height:297mm;
+    width:210mm;
+    position:relative;
+    margin: 0 3px;
+}
+.meisai img {
+    height:100%;
+    width:100%;
+} */
+.seikyuu,.meisai{
+    position:relative;
+    margin: 0 3px;
+}
+
+.bearer_number{
+    position: absolute;
+    top: 155px;
+    left: 225px;
+    font-size: 38px;
+    letter-spacing: 12.5px;
+}
+
+.recipient_number{
+    position: absolute;
+    top: 202px;
+    left: 225px;
+    font-size: 38px;
+    letter-spacing: 12.5px;
+}
+
+.yaers{
+    position: absolute;
+    top: 155px;
+    left: 888px;
+    font-size: 38px;
+    letter-spacing: 22px;
+}
+
+.months{
+    position: absolute;
+    top: 155px;
+    left: 1020px;
+    font-size: 38px;
+    letter-spacing: 22px;
+}
+
+/*保険者番号*/
+.insurer_no{
+    position: absolute;
+    top: 208px;
+    left: 935px;
+    font-size: 38px;
+    letter-spacing: 19.5px;
+}
+
+/*被保険者*/
+.insured_no{
+    position: absolute;
+    top: 259px;
+    left: 208px;
+    font-size: 38px;
+    letter-spacing: 17.5px;
+}
+
+.name_kana{
+    position: absolute;
+    top: 305px;
+    left: 205px;
+    font-size: 18px;
+
+}
+
+.name{
+    position: absolute;
+    top: 336px;
+    left: 205px;
+    font-size: 42px;
+}
+
+.japanese_calender span{
+    position: absolute;
+    top: 399px;
+    font-size: 25px;
+}
+.japanese_calender .meiji{
+    left: 212px;
+}
+.japanese_calender .taisho{
+    left: 276px;
+}
+.japanese_calender .showa{
+    left: 340px;
+}
+
+.date_of_birth span{
+    position: absolute;
+    top: 427px;
+    font-size: 28px;
+    letter-spacing: 4px;
+}
+.date_of_birth .year{
+    left: 204px;
+}
+.date_of_birth .month{
+    left: 274px;
+}
+.date_of_birth .day{
+    left: 346px;
+}
+
+.man{
+    position: absolute;
+    top: 422px;
+    font-size: 24px;
+    left: 473px
+}
+
+.woman{
+    position: absolute;
+    top: 422px;
+    font-size: 24px;
+    left: 532px;
+}
+
+.care_level span{
+    position: absolute;
+    top: 476px;
+    font-size: 22px;
+}
+.care_level .one{
+    left: 368px;
+}
+.care_level .two{
+    left: 394px;
+}
+.care_level .three{
+    left: 420px;
+}
+.care_level .four{
+    left: 447px;
+}
+.care_level .five{
+    left: 472px;
+}
+/* 介護レベルと見かけの数値は異なるので注意する */
+/* 要支援1 */
+.care_level .care_level_12{
+    top: 301px;
+    left: 241px;
+}
+/* 要支援2 */
+.care_level .care_level_13{
+    top:301px;
+    left:295px;
+}
+.care_level .support_two{
+    top: 478px;
+    left: 419.5px;
+}
+
+.period_start_calender div{
+    position: absolute;
+    left: 198px;
+    font-size: 19px;
+}
+.period_start_calender .heisei{
+    top: 510px;
+}
+.period_start_calender .reiwa{
+    top: 535px;
+}
+
+.period_start_date span{
+    position: absolute;
+    top: 512px;
+    font-size: 38px;
+    letter-spacing: 8px;
+}
+.period_start_date .year{
+    left: 258px;
+}
+.period_start_date .month{
+    left: 362px;
+}
+.period_start_date .day{
+    left: 466px;
+}
+
+.period_end_date span{
+    position: absolute;
+    top: 558px;
+    font-size: 21px;
+    letter-spacing: 21.5px;
+}
+.period_end_date .year{
+    left: 261px;
+}
+.period_end_date .month{
+    left: 366px;
+}
+.period_end_date .day{
+    left: 468px;
+}
+
+/* //////請求事業者 //////*/
+.facility_number{
+    position: absolute;
+    top: 259px;
+    left: 785px;
+    font-size: 38px;
+    letter-spacing: 17.5px;
+}
+
+.facility_name_kanji{
+    position: absolute;
+    top: 312px;
+    left: 783px;
+    font-size: 16px;
+    line-height: 18px;
+    word-break: break-word;
+    width: 400px;
+}
+
+.postal_code{
+    position: absolute;
+    top: 364px;
+    left: 799px;
+    font-size: 29px;
+    letter-spacing: 6px;
+}
+
+.location{
+    position: absolute;
+    top: 406px;
+    left: 783px;
+    font-size: 16px;
+    line-height: 18px;
+    word-break: break-word;
+    width: 400px;
+}
+
+.phone_number{
+    position: absolute;
+    top: 530px;
+    left: 860px;
+    font-size: 28px;
+}
+
+/* //////入居年月日等////// */
+.start_calender div{
+    position: absolute;
+    left: 117.5px;
+    font-size: 20px;
+}
+.start_calender .heisei{
+    top: 598px;
+}
+.start_calender .reiwa{
+    top: 617px;
+}
+
+.start_date span{
+    position: absolute;
+    top: 600px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.start_date .year{
+    left: 182px;
+}
+.start_date .month{
+    left: 269px;
+}
+.start_date .day{
+    left: 346px;
+}
+
+.end_date span{
+    position: absolute;
+    top: 600px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.end_date .year{
+    left:555px;
+}
+.end_date .month{
+    left:630px;
+}
+.end_date .day{
+    left:707px;
+}
+
+.actual_number{
+    position: absolute;
+    top: 600px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    left: 882px;
+}
+
+.stay_out_overnight{
+    position: absolute;
+    top: 600px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    right: 168px;
+}
+
+/* //////入居前の状況 //////*/
+.before_in_status_id span{
+    position: absolute;
+    font-size: 24px;
+}
+.before_in_status_id .home{
+    top: 642px;
+    left: 230px;
+}
+.before_in_status_id .medical_institution{
+    top: 642px;
+    left: 295px;
+}
+.before_in_status_id .welfare_facility{
+    top: 642px;
+    left: 392px;
+}
+.before_in_status_id .health_facility{
+    top: 642px;
+    left: 556px;
+}
+.before_in_status_id .medical_facility{
+    top: 642px;
+    left: 719px;
+}
+.before_in_status_id .dementia{
+    top: 642px;
+    left: 900px;
+}
+.before_in_status_id .specific_facility{
+    top: 663px;
+    left: 230px;
+}
+.before_in_status_id .others{
+    top: 663px;
+    left: 444px;
+}
+.before_in_status_id .medical_clinic{
+    top: 663px;
+    left: 525px;
+}
+
+/* //////退居後の状況 //////*/
+.after_out_status_id span{
+    position: absolute;
+    font-size: 24px;
+}
+.after_out_status_id .home{
+    top: 690px;
+    left: 230px;
+}
+.after_out_status_id .medical_institution{
+    top: 690px;
+    left: 294px;
+}
+.after_out_status_id .death{
+    top: 690px;
+    left: 425px;
+}
+.after_out_status_id .others{
+    top: 690px;
+    left: 490px;
+}
+.after_out_status_id .welfare_facility{
+    top: 690px;
+    left: 570px;
+}
+.after_out_status_id .health_facility{
+    top: 690px;
+    left: 767px;
+}
+.after_out_status_id .medical_facility{
+    top: 690px;
+    left: 965px;
+}
+.after_out_status_id .medical_clinic{
+    top: 712px;
+    left: 230px;
+}
+
+/* //////給付費明細欄////// */
+.benefit_status_area{
+    position:absolute;
+    left:67px;
+    top: 508px;
+}
+.benefit_status{
+    position: relative;
+    height: 35.7px;
+    width: 690px;
+    left: 39px;
+    top: 281px;
+}
+.service_item_name{
+    position:absolute;
+    display: inline-block;
+    font-size: 13px;
+    line-height:10px;
+    width: 215px;
+    word-break:break-word;
+    top:2px;
+}
+.benefit_status span:not(.service_item_name){
+    position:absolute;
+    font-size: 26px;
+    letter-spacing: 12px;
+}
+.service_code{
+    right: 296px;
+}
+.unit_number{
+    right: 183px;
+}
+.service_count_date{
+    right: 127px;
+}
+.benefit_status .service_unit_amount{
+    right: -38px;
+}
+.public_spending_count{
+    right: -95px;
+}
+.public_expenditure_unit{
+    right: -264px;
+}
+#death_date{
+    left: 949px;
+    font-size: 21px;
+    letter-spacing: 0px;
+    top: 5px;
+}
+
+.total span{
+    position: absolute;
+    top: 670px;
+    right: -80px;
+    font-size: 26px;
+    letter-spacing: 12px;
+}
+.total .public_spending_unit{
+    right: -303px;
+}
+
+/*///// 請求額集計欄////// */
+.total_number span{
+    position: absolute;
+    top: 1258px;
+    font-size: 26px;
+    letter-spacing: 27px;
+}
+.total_number .service_unit_amount{
+    right: 612px;
+}
+.total_number .public_spending_unit_number{
+    right: 355px;
+}
+.unit_price{
+    position: absolute;
+    top: 1294px;
+    left: 356px;
+    font-size: 26px;
+    letter-spacing: 27px;
+}
+.rate span{
+    position: absolute;
+    top: 1329px;
+    font-size: 26px;
+    letter-spacing: 26px;
+}
+.rate .benefit_rate{
+    left: 400px;
+}
+.rate .public_benefit_rate{
+    left: 615px;
+}
+.billing_amount span{
+    position: absolute;
+    top: 1365px;
+    font-size: 26px;
+    letter-spacing: 27px;
+}
+.billing_amount .insurance_benefit{
+    right: 613px;
+}
+.billing_amount .public_spending_amount{
+    right: 355px;
+}
+.user_burden span{
+    position: absolute;
+    top: 1400px;
+    font-size: 26px;
+    letter-spacing: 27px;
+}
+.part_payment{
+    right: 612px;
+}
+.public_payment{
+    right: 355px;
+}
+.sheet_count{
+    position: absolute;
+    top: 1459px;
+    right: 55px;
+    font-size: 15px;
+    letter-spacing: 82px;
+}

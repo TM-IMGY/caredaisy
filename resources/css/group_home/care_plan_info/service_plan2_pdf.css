@@ -1,0 +1,206 @@
+body{
+  /* width: 365mm;
+  height: 255mm;
+  border: 1px solid black */
+}
+
+/* リスト初期化 */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container{
+  position: relative;
+}
+
+.first_block{
+}
+
+.page,
+.create_date{
+  position: absolute;
+  top: 15px;
+}
+
+.page{
+  left: 30px;
+  padding: 5px 15px;
+  border: solid 1px black;
+}
+
+.create_date{
+  left: 1032px;
+  border-bottom: solid 1px black;
+}
+
+.create_date_ymd,
+.create_date_year,
+.create_date_month{
+  padding-right: 20px;
+}
+
+.create_date_year_val,
+.create_date_month_val,
+.create_date_day_val{
+  padding-right: 5px;
+}
+
+.title{
+  position: absolute;
+  font-size: 22px;
+  top: 45px;
+  width: 100%;
+  text-align: center;
+}
+
+.row_3{
+    position: absolute;
+}
+
+.row_4{
+    position: absolute;
+    top: 200px;
+    margin-left: 76px;
+    margin-right: 76px;
+}
+
+.sp2_pdf_facility_user_name {
+  position: absolute;
+  /* top: 145px; */
+  border-bottom: 1px solid black;
+}
+
+.sp2_pdf_facility_user_name{
+  left: 76px;
+  width: 358px;
+  top: 100px;
+}
+
+.sp2_pdf_facility_user_name > div{
+  display: inline-block;
+}
+
+.name{
+ margin-left: 70px;
+ padding-right: 8px;
+ margin-top: 0;
+ font-size: 20px;
+}
+
+.sama{
+  /* float: right; */
+}
+
+.row_5{
+    position: absolute;
+}
+
+.service_creat{
+  position: absolute;
+  top: 150px;
+  left: 76px;
+  border-bottom: 1px solid black;
+  width: 510px;
+}
+
+.service_creat > div{
+  display: inline-block;
+}
+
+.service_creater,
+.service_creater_name{
+
+}
+
+.service_creater{
+
+}
+
+.service_creater_name{
+  font-size: 20px;
+  margin-left: 70px;
+}
+
+.mark{
+  float: right;
+  padding: 0 10px 0 25px;
+}
+
+.row_6{
+
+}
+
+.row_16{
+  float: right;
+  margin: 15px 10px 0 0;
+}
+
+.last_page{
+  padding: 5px 15px;
+  border: solid 1px black;
+  width: max-content;
+}
+
+
+.plan2_main_table{
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+
+.plan2_main_table th {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.th_1{
+  width: 180px;
+}
+
+.th_2,
+.th_4
+{
+  width: 130px;
+}
+
+.th_3,
+.th_5,
+.th_9{
+  width: 110px;
+}
+
+.th_6{
+  width: 150px;
+}
+
+
+.th_7{
+  width: 90px;
+}
+
+.th_8
+{
+    width: 70px;
+}
+
+.print_pages{
+    page-break-after: always;
+    vertical-align: top;
+}
+/*最後のページは改ページを入れない*/
+.print_pages:last-child{
+    page-break-after: auto;
+}
+
+table tr td {
+  vertical-align: top;
+}

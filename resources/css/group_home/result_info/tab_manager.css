@@ -1,0 +1,43 @@
+:root {
+  --tm-subtab-height: 45px;
+}
+
+#tm_sub_tab {
+  display: flex;
+  height: var(--tm-subtab-height);
+}
+.tm_subtab_btn{
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+.tm_subtab_inactive{
+  background-color: var(--caredaisy-contents-background);
+}
+.tm_subtab_active{
+  background: rgb(71, 71, 71);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+.tm_subtab_hidden{
+  display: none;
+}
+
+.tm_contents_hidden{
+  display: none;
+}
+#tm_contents{
+  width: 100%;
+  height: calc(100% - var(--tm-subtab-height));
+  overflow-y: scroll;
+}
+#tm_contents::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+}
+#tm_contents::-webkit-scrollbar-thumb{
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}

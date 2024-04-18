@@ -1,0 +1,421 @@
+table {
+  border-collapse: collapse;
+}
+
+/* 横向き共通 */
+.landscape {
+  margin: auto;
+  width: 1300px;
+  page-break-after: always;
+  page-break-inside: avoid;
+}
+.landscape:last-child {
+  page-break-after: auto;
+}
+
+/* 介護給付費等支払決定額通知書 7513 */
+.portrait {
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.address {
+  border-radius: 30px;
+  padding: 30px;
+  width: 400px;
+  margin: 0px auto 100px;
+  border: 1px solid;
+}
+.facility {
+  padding: 5px;
+}
+.sama {
+  text-align: right;
+}
+hr {
+  margin: 30px;
+}
+.notice {
+  margin: 3px;
+}
+.info {
+  margin: 0px auto;
+  float: left;
+}
+.property {
+  margin: 0px auto;
+  height: 400px;
+  float: right;
+}
+.when {
+  text-align: right;
+  width: 400px;
+}
+.line {
+  width: 300px;
+  border-top: 1px solid;
+  padding: 0px;
+}
+.amount {
+  width: 600px;
+  padding: 20px;
+  margin: 0px auto;
+  border: 1px solid;
+  clear: both;
+}
+.transfer_amount {
+  width: 580px;
+  margin: 0px auto;
+}
+.summary {
+  margin: 0px auto 30px;
+}
+.table_contets .clear_record {
+  border: none;
+}
+
+.text_align_right {
+  text-align: right;
+}
+
+.text_align_center {
+  text-align: center;
+}
+
+.property_right_td {
+  border: solid 1px;
+  width: 250px;
+}
+
+.property_left_td {
+  border: solid 1px;
+  width: 100px;
+  text-align: center;
+}
+.bottom_line {
+  border-bottom: solid 1px;
+}
+.right_td {
+  width: 350px;
+}
+
+.left_td {
+  width: 150px;
+  text-align: center;
+}
+
+.right2_td {
+  width: 150px;
+}
+
+.left2_td {
+  width: 350px;
+}
+
+.title_7513 {
+  font-size: x-large;
+  margin: 0px 0px 30px 0px;
+}
+
+.bottom {
+  display: none;
+  margin: 30px 0px;
+  float: right;
+}
+
+/* 内訳書 7521 7551*/
+.title {
+  height: 40px;
+}
+.title_left {
+  font-size: small;
+  float: left;
+}
+.title_main {
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+}
+.header_content {
+  height: 80px;
+}
+.header_table td {
+  text-align: center;
+  border: 1px solid;
+}
+.header_table td:nth-child(1) {
+  width: 150px;
+}
+.header_table td:nth-child(2) {
+  width: 300px;
+}
+.header_left{
+  float: left;
+}
+.header_middle {
+  float: left;
+  margin: 0px 100px;
+}
+.header_right_group{
+  float: left;
+}
+.header_right{
+  margin: 0px 00px 0px 300px;
+  text-align: right;
+}
+.header_right p{
+  margin: 0px;
+  text-align: right;
+}
+.table_contets td {
+  border: 1px solid;
+  text-align: center;
+}
+.width1_td {
+  width: 100px;
+}
+.width2_td {
+  width: 250px;
+}
+.width3_td {
+  width: 70px;
+}
+.width4_td {
+  width: 150px;
+}
+.text_small {
+  font-size: x-small;
+}
+.footer p {
+  font-size: small;
+}
+.diagonal {
+  width: 100%;
+}
+td.money {
+  text-align: right;
+}
+p {
+  margin: 0px;
+}
+td.kind_name {
+  text-align: left;
+  font-size: small;
+}
+.record {
+  height: 40px;
+}
+
+
+/* 介護保険審査決定増減表 始*/
+.header_container{
+  display: flex;
+  display: -webkit-box;
+  margin-bottom: 10px;
+}
+
+.width5_td {
+  width: 90px;
+}
+.facility_number{
+  margin-bottom: 5px;
+}
+.facility_number_table td,
+.facility_name_table td{
+  border: 1px solid;
+  text-align: center;
+}
+.facility_number_tr > td,
+.facility_name_tr > td{
+  width: 90px;
+}
+.facility_number_tr > td + td{
+  width: 106px;
+}
+.facility_name_tr > td + td{
+  width: 323px;
+  text-align: left;
+}
+.facility_number_tr,
+.facility_name_tr{
+  height: 32px;
+}
+
+.box_left{
+  display: inline-block;
+  border-right: solid 1px;
+  width: 80px;
+  padding: 5px;
+}
+
+.left_contents{
+  width : 33.33333% ;
+}
+
+.center_contents{
+  text-align: center;
+  width : 33.33333% ;
+
+}
+.right_contents{
+  text-align: right;
+  width : 33.33333% ;
+}
+.justify_content {
+  display: -webkit-inline-box;
+}
+.width1_td.pdf_7211{
+  width: 118px;
+}
+.width1_td.pdf_7211.assessment{
+  width: 115px;
+}
+.width2_td.pdf_7211{
+  width: 100px;
+}
+.width3_td.pdf_7211{
+  width: 75px;
+}
+.facility_name.pdf_7211{
+  width: 420px;
+}
+.table_header{
+  height: 50px;
+}
+.top_record{
+  height: 41px;
+}
+.top_record p{
+  text-align: right;
+  padding-right: 5px;
+}
+span.style_num {
+  margin-left: 905px;
+}
+.rlg_01{
+  padding: 0;
+}
+.diagonal_line1{
+  border-top: solid 1px;
+  width: 100%;
+  transform: matrix(1, -0.69, 0, 1, 0, 0);
+  -webkit-transform:matrix(1, -0.53, 0, 1, 0, 0);
+}
+.diagonal_line2{
+  border-top: solid 1px;
+  width: 100%;
+  transform: matrix(1, -0.5, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, -0.37, 0, 1, 0, 0);
+}
+/* 介護保険審査決定増減表 終*/
+
+/* 請求明細書・給付管理票返戻（保留）一覧表 7411 始*/
+.top_record.pdf_7411{
+  height: 27px;
+}
+.record.pdf_7411{
+  height: 36px;
+}
+.center_contents.pdf_7411 {
+  width: 37.33333%;
+}
+.right_contents.pdf_7411 {
+  width: 29.33333%;
+  margin-top: 30px;
+}
+.left_contents.pdf_7411 {
+  margin-top: 30px;
+}
+.facility_number.pdf_7411 {
+  width: 390px;
+}
+.facility_name.pdf_7411 {
+  width: 600px;
+}
+.box_left.pdf_7411 {
+  width: 160px;
+}
+.facility_number_tr.pdf_7411 > td,
+.facility_name_tr.pdf_7411 > td{
+  width: 163px;
+}
+.facility_number_tr.pdf_7411 > td + td{
+  width: 151px;
+  text-align: left;
+}
+.facility_name_tr.pdf_7411 > td + td{
+  width: 390px;
+  text-align: left;
+}
+.facility_number_tr,
+.facility_name_tr{
+  height: 32px;
+}
+.insured_td {
+  width: 164px;
+}
+.insure_td {
+  width: 225px;
+}
+.type_td {
+  width: 33px;
+}
+.service_date_td,
+.service_type_td,
+.service_item_td {
+  width: 64px;
+}
+.unit_td {
+  width: 90px;
+}
+.reason_td {
+  width: 40px;
+}
+.content_td {
+  width: 460px;
+}
+.remark_td {
+  width: 64px;
+}
+td.unit_td > p:nth-child(2){
+  font-size: 10px;
+}
+.content.pdf_7411{
+  font-size: small;
+  text-align: left;
+}
+.style_num.pdf_7411 {
+  margin-left: 490px;
+}
+.top_record.pdf_7411 > .text_align_left{
+  text-align: left;
+}
+
+/* 請求明細書・給付管理票返戻（保留）一覧表 7411 終*/
+
+/* 介護予防・日常生活支援総合事業審査決定増減表 7231 start */
+.main_title_7231 {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+
+.table_contets.pdf_7231 {
+  table-layout: fixed;
+}
+.table_header .td_width1_7231 { width: 100px; }
+.table_header .td_width2_7231 { width: 80px; }
+.table_header .td_width3_7231 { width: 120px; }
+.diagonal_line1_7231{
+  border-top: solid 1px;
+  -webkit-transform: matrix(1, -0.48, 0, 1, 0, 0);
+  transform: matrix(1, -0.48, 0, 1, 0, 0);
+}
+.diagonal_line2_7231{
+  border-top: solid 1px;
+  -webkit-transform: matrix(1, -0.32, 0, 1, 0, 0);
+  transform: matrix(1, -0.32, 0, 1, 0, 0);
+}
+
+.footer .end_content_7231 { text-align: right; }
+/* 介護予防・日常生活支援総合事業審査決定増減表 7231 end */

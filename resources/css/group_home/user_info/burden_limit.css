@@ -1,0 +1,141 @@
+.blankBtnBurdenLimit {
+  margin-left: 30px;
+  margin-top: 16px;
+  height: 50px;
+}
+
+.button_burden_limit {
+    margin: 5px;
+    font-weight: bold;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.in-block {
+    display: inline-block;
+    margin: 10px 0;
+    width: 26%;
+  }
+
+.bl_calendar_area{
+  margin: 0 32px 0 0;
+}
+
+.input-text {
+  display: inline-block;
+  border-radius: 5px;
+  width: 135px;
+}
+
+.info_block {
+  margin-left: 0px;
+  width: 1100px;
+}
+
+/* 履歴 */
+.log_info_burden_limit {
+  width: 802px;
+}
+
+.table_burden_limit{
+  display: block;
+  height: 143px;
+  border: 2px solid;
+  border-color: rgb(238,238,238);
+  border-collapse: collapse;
+}
+
+.table_burden_limit thead th{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: solid;
+  border-width: 0px 2px 1px 0px;
+  border-color: var(--border-color);
+  background: var(--table-header-color);
+  border-top:#FFFFFF;
+}
+
+.burden_limit_th{
+  min-width: 196px;
+}
+
+.table_tbody_burden_limit {
+  display: block;
+}
+
+.table_tbody_burden_limit {
+  display: block;
+  height: 105px;
+  overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+  overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+
+.table_tbody_burden_limit::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+
+.table_tbody_burden_limit::-webkit-scrollbar {
+  width: 5px;
+}
+
+.text_data_burden_limit {
+  min-width: 196px;
+  border-top: 2px solid;
+  border-width: 2px 2px 2px 0px;
+  border-color: rgb(238,238,238);
+  text-align: right;
+}
+
+.burden_limit_select_record {
+  background-color: var(--table-select-color);
+}
+
+/* ポップアップ */
+#overflow_burden_limit, #overflow_burden_limit_yearpopup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 100;
+  display: none;
+}
+
+#overflow_burden_limit .conf, #overflow_burden_limit_yearpopup .conf {
+  background: #FFF;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.burden-limit-btns {
+  margin-top: 30px;
+}
+
+.burden_limit_popup_btn, .burden_limit_yearpopup_btn {
+  height: max-content;
+  margin: 5px;
+  margin-right:auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.burden_limit_yearpopup_btn {
+  margin: 5px 50px;
+}

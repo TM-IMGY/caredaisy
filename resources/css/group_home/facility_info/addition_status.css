@@ -1,0 +1,459 @@
+/* author: ttakenaka */
+
+.as_care_reward_history_table_record_selected {
+  background-color: rgb(255, 255, 238);
+}
+
+.mandatory-color {
+    color: var(--mandatory-color);
+}
+
+#container1_addition_status{
+    background-color: var(--caredaisy-contents-background);
+}
+#container1_addition_status{
+    width: 1000px;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+}
+#table_thead_addition_status,
+#table_tbody_addition_status {
+    display: block;
+}
+#table_tbody_addition_status {
+    display: block;
+    height: 105px;
+    overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+#table_addition_status{
+    display: block;
+    height: 143px;
+    width: 978px;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+    border-collapse: collapse;
+}
+td{
+    border: solid 1px;
+    height: 25px;
+    background-color: var(--customer_table_body_background);
+}
+
+#table_addition_status thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+
+}
+#from_addition_status{
+    border-top: 1px solid rgb(238,238,238);
+    min-width: auto;
+}
+
+.table_value_addition_status1{
+    min-width: 280px;
+    position: sticky;
+    font-weight: bold;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+}
+.table_value_addition_status2{
+    min-width: 400px;
+    position: sticky;
+    font-weight: bold;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+}
+.table_value_addition_status3,
+.table_value_addition_status4{
+    min-width: 140px;
+    position: sticky;
+    font-weight: bold;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+}
+
+/* ↓↓　tbody部分　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* ↓↓テーブルスクロールバー tbodyに設定 ↓↓ */
+#table_tbody_addition_status::-webkit-scrollbar-thumb {
+    background-color: rgb(153,153,153);
+    border-radius: 5px;
+}
+#table_tbody_addition_status::-webkit-scrollbar {
+    width: 5px;
+}
+/* ↑↑テーブルスクロールバー tbodyに設定 ↑↑ */
+
+
+/* ↓↓　カラム関係　↓↓ */
+.text_value_addition_status1{
+    min-width: 280px;
+    text-align: left;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_value_addition_status2{
+    text-align: left;
+    min-width: 400px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_value_addition_status3{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_value_addition_status4{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+
+
+/* ↑↑　tbody部分　↑↑ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+
+/* ↓↓　ポップアップ　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#overflow_addition_status1 {
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0;/* 起点指定用 */
+    top: 0;/* 起点指定用 */
+    width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+    display: none;      /* 初期は非表示 */
+  }
+
+  #overflow_addition_status1 .conf {
+      /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF;   /* 背景を白色に指定 */
+    padding: 20px;      /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%;           /* 上から50%の位置に配置 */
+    left: 50%;          /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+  }
+  #overflow_addition_status2 {
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0;/* 起点指定用 */
+    top: 0;/* 起点指定用 */
+    width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+    display: none;      /* 初期は非表示 */
+  }
+
+  #overflow_addition_status2 .conf {
+      /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF;   /* 背景を白色に指定 */
+    padding: 20px;      /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%;           /* 上から50%の位置に配置 */
+    left: 50%;          /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+  }
+  #overflow_addition_status3 {
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0;/* 起点指定用 */
+    top: 0;/* 起点指定用 */
+    width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+  }
+
+  #overflow_addition_status3 .conf {
+      /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF;   /* 背景を白色に指定 */
+    padding: 20px;      /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%;           /* 上から50%の位置に配置 */
+    left: 50%;          /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+  }
+
+  .poppu_close_addition_status{
+      /* 閉じるのボタンCSS */
+      /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    height: max-content;
+    margin: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .popup_btn_frame{
+      text-align: center;
+  }
+/* ↑↑　ポップアップ　↑↑　━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+.button_frame_addition_status{
+    margin-top: 22px;
+}
+.inline_block_addition_status{
+    position: relative;
+    display: inline-block;
+    margin: 0px 20px;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+}
+
+#text_item2_addition_status{
+    width: 130px;
+    margin-top: 4px;
+    margin-right: 20px;
+    text-align: left;
+}
+/* 新規登録、保存ボタン部分 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#blankBtnAdditionStatus{
+    display: inline-flex;
+    margin-left: 24px;
+    margin-top: 20px;
+    height: 50px;
+}
+.button_addition_status {
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.text_frame_addition_status{
+    margin-top: -18px;
+    margin-left: 10px;
+}
+.text_start_addition_status,
+.text_end_addition_status{
+    font-weight: bold;
+}
+
+/* ↓↓　画面下部　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+.form_left_addition_status1{
+    position: relative;
+    display: inline-block;
+    min-width: 1100px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: var(--caredaisy-table-header-backgroundColor);
+    border: 1px solid var(--top-menu-border-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
+}
+.form_left_addition_status2{
+    position: relative;
+    display: inline-block;
+    min-width: 1100px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: var(--caredaisy-table-header-backgroundColor);
+    border: 1px solid var(--top-menu-border-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px grey;
+}
+
+/* ↓↓　ラジオボタンの色Edgeでの表示でも同じ色にする　↓↓ */
+
+.radio_design_addition_status {
+    margin-left: 4px;
+  }
+
+  .radio_design_addition_status input[type="radio"] {
+    display: none;
+  }
+  .radio_mark_addition_status:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 2px;
+    background-clip: content-box;
+  }
+
+  input[type="radio"]:not(:checked) + .radio_mark_addition_status:before {
+    border-color: #72767b;
+  }
+
+  input[type="radio"]:checked + .radio_mark_addition_status:before {
+    border-color: rgb(0, 117, 255);
+    background-color: rgb(5, 120, 255);
+  }
+
+/* ↑↑　ラジオボタンの色Edgeでの表示でも同じ色にする　↑↑ */
+
+#search_start_addition_status,
+#search_end_addition_status{
+    width: 110px;
+    border: hidden;
+}
+
+.radio_addition_status1{
+    min-width: 440px;
+    border-left: none;
+    border-color: rgb(238,238,238);
+    font-weight: bold;
+}
+.radio_addition_status2{
+    min-width: 656px;
+    border-right: none;
+    border-color: rgb(238,238,238);
+    font-weight: bold;
+}
+
+#select_list1_addition_status{
+    width: 260px;
+    height: 28px;
+    margin-top: 4px;
+    margin-right: 40px;
+    text-align-last: left;
+}
+#select_list2_addition_status{
+    display: inline-block;
+    width: 150px;
+    height: 28px;
+    margin-top: 4px;
+    margin-right: 40px;
+    text-align-last: left;
+}
+.item_name_addition_status{
+    width: 150px;
+    height: 24px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+/* ↑↑　画面下部　↑↑ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+.option_addition_status{
+    direction: ltr;
+}
+.btn_center_addition_status{
+    text-align: center;
+    margin: 30px;
+}
+
+#savebtn_addition_status {
+    background-color: rgb(255, 237, 86);
+    border: 1px solid rgb(255, 237, 86);
+}
+#cancelbtn_addition_status {
+    border: 1px solid var(--cancel-button-border-color);
+    color: var( --cancel-button-font-color);
+}
+
+.mandatory::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../../../sozai/hissu.png) no-repeat;/* ←　sozai url先変更　2021/07/30 10:07 */
+    background-size: contain;
+    vertical-align: middle;
+  }
+
+/* ポップアップ -start- */
+#overflow_addition_status {
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0; /* 起点指定用 */
+    top: 0; /* 起点指定用 */
+    width: 100%; /* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%; /* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100; /* ウィンドウの全面に表示 */
+    display: none; /* 初期は非表示 */
+}
+
+#overflow_addition_status .conf {
+    /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF; /* 背景を白色に指定 */
+    padding: 20px; /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%; /* 上から50%の位置に配置 */
+    left: 50%; /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+}
+
+.poppu_ok_addition_status {
+    /* はいのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.poppu_cancel_addition_status {
+    /* いいえのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ポップアップ -end- */

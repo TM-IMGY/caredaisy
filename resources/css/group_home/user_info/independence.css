@@ -1,0 +1,256 @@
+.mandatory-color {
+    color: var(--mandatory-color);
+}
+
+#container1_independence{
+    background-color: var(--caredaisy-contents-background);
+}
+
+#contents1_independence{
+    width: 827px;
+    /* margin-left: 10px; */
+}
+
+#contents2_independence{
+    padding: 30px 0px;
+    width: 580px;
+    text-align: right;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+}
+#table_thead_independence,
+#table_tbody_independence {
+    display: block;
+}
+#table_tbody_independence {
+    display: block;
+    height: 105px;
+    overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+#table_independence{
+    display: block;
+    height: 143px;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+    border-collapse: collapse;
+}
+td{
+    border: solid 1px;
+    height: 25px;
+    background-color: var(--customer_table_body_background);
+}
+#table_independence thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    background: var(--table-header-color);
+    border-top:#FFFFFF;
+
+}
+
+/* ↓↓テーブルスクロールバー tbodyに設定 ↓↓　■修正箇所*/
+#table_tbody_independence::-webkit-scrollbar-thumb {
+    background-color: var(--caredaisy-table-tbody);
+    border-radius: 5px;
+}
+#table_tbody_independence::-webkit-scrollbar {
+    width: 5px;
+}
+/* ↑↑テーブルスクロールバー tbodyに設定 ↑↑　■修正箇所*/
+
+#from_independence{
+    border-top: 1px solid rgb(238,238,238);
+    width: auto;
+}
+
+.judgment_date_independence{
+    min-width: 140px;
+}
+.independent_independence{
+    min-width: 210px;
+}
+.dementia_independence{
+    min-width: 189px;
+}
+.judge_independence{
+    min-width: 270px;
+}
+
+.text_judgment_date_independence{
+    text-align: right;
+    min-width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_independent_independence{
+    text-align: left;
+    min-width: 210px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_dementia_independence{
+    text-align: left;
+    min-width: 189px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+.text_judge_independence{
+    min-width: 270px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+
+/* ↓↓　ポップアップ　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#overflow_independence {
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0;/* 起点指定用 */
+    top: 0;/* 起点指定用 */
+    width: 100%;/* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%;/* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+    display: none;      /* 初期は非表示 */
+  }
+
+  #overflow_independence .conf {
+      /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #FFF;   /* 背景を白色に指定 */
+    padding: 20px;      /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%;           /* 上から50%の位置に配置 */
+    left: 50%;          /* 左から50%の位置に配置 */
+    transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+  }
+
+  .poppu_ok_independence{
+      /* はいのボタンCSS */
+      /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .poppu_cancel_independence{
+    /* いいえのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+  margin: 5px;
+  font-weight: bold;
+  margin-right:auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ↑↑　ポップアップ　↑↑　━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+.item_name_independence{
+    text-align: left;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+.inline-block_independence{
+    position: relative;
+    display: inline-block;
+}
+
+#text_item1_independence{
+    width: 150px;
+}
+#text_item2_independence{
+    width: 194px;
+    margin-top: 4px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+#select_list1_independence{
+    margin-top: 4px;
+    text-align-last: left;
+    margin-right: 36px;
+}
+#select_list2_independence{
+    margin-top: 4px;
+    text-align-last: left;
+}
+option{
+    direction: ltr;
+}
+.form_frame_independence{
+    max-width: 607px;
+    min-width: 607px;
+    margin-left: 10px;
+    padding-bottom: 18px;
+}
+
+.form_left_independence{
+    text-align: left;
+    margin-left: 30px;
+}
+.btn_center_independence{
+    text-align: center;
+    margin: 30px;
+}
+
+#blankBtnIndependence{
+    margin-left: 30px;
+    margin-top: 16px;
+    height: 50px;
+}
+.button_independence {
+    height: max-content;
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+#savebtn_independence {
+    background-color: rgb(255, 237, 86);
+    border: 1px solid rgb(255, 237, 86);
+}
+#js-updata-popup_independence {
+    background-color: rgb(255, 237, 86);
+    border: 1px solid rgb(255, 237, 86);
+}
+#cancelbtn_independence {
+    border: 1px solid var(--cancel-button-border-color);
+    color: var( --cancel-button-font-color);
+}
+
+.mandatory::after{
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../../../sozai/hissu.png) no-repeat;/* ←　sozai url先変更　2021/07/30 10:07 */
+    background-size: contain;
+    vertical-align: middle;
+  }

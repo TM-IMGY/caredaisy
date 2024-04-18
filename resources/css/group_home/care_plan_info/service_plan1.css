@@ -1,0 +1,562 @@
+.first_service_plans_area{
+    width: max-content;
+}
+
+.mandatory-color {
+  color: var(--mandatory-color);
+}
+
+/* 履歴情報 */
+.log_info_plan1{
+  width: 1402px;
+}
+
+.table_service_plan1{
+  display: block;
+  height: 143px;
+  border: 2px solid;
+  border-color: rgb(238,238,238);
+  border-collapse: collapse;
+}
+
+.history_th{
+  min-width: 196px;
+}
+
+.table_tbody_service_plan1{
+  display: block;
+  height: 105px;
+  overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+  overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+
+.table_tbody_service_plan1::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+
+.table_tbody_service_plan1::-webkit-scrollbar {
+  width: 5px;
+}
+
+.table_service_plan1 thead th{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: solid;
+  border-width: 0px 2px 1px 0px;
+  border-color: var(--border-color);
+  background: var(--table-header-color);
+  border-top:#FFFFFF;
+}
+
+.table_thead_service_plan1{
+  display: block;
+}
+
+#from_service_plan1{
+  border-top: 1px solid rgb(238,238,238);
+  width: calc(1900px - var(--billing-menu-width));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text_data_service_plan1{
+  min-width: 196px;
+  border-top: 2px solid;
+  border-width: 2px 2px 2px 0px;
+  border-color: rgb(238,238,238);
+}
+
+.text_data_service_plan1:nth-of-type(-n+3){
+  text-align: right;
+}
+
+.text_data_service_plan1:nth-of-type(n+5):nth-of-type(-n+6){
+  text-align: right;
+}
+/* 利用者情報ヘッダ */
+.sp1_facility_user_info_header{
+  align-items: end;
+}
+.block{
+  margin: 20px 0 0 20px;
+}
+
+/* 初回・紹介・継続 */
+#plan-division-item{
+  display: inline-block;
+  margin: 30px 20px 0 0 ;
+}
+
+.care-plan-info-block{
+  display: flex;
+  width: max-content;
+  align-items: flex-start;
+}
+
+.block-content-item{
+  margin-right: 20px;
+}
+
+.next-plan{
+  margin-top: auto;
+}
+
+/* テキストエリア 3項目*/
+#service_plan1_table{
+  border-collapse: collapse;
+  width: 1100px;
+}
+
+.classification-title{
+  resize: none;
+  width: 300px;
+  height: 100px;
+  vertical-align:top;
+  box-sizing: border-box;
+  font: 300 100% 'Noto Sans Japanese';
+}
+
+.service-plan1-classification-td,
+.service-plan1-contents-td{
+  padding: 5px 0 5px 0;
+  border: none;
+}
+
+.service-plan1-classification-td{
+  width: 300px;
+  height: 50px;
+}
+
+.service-plan1-classification-input{
+  width: 400px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 16px;
+}
+
+.service-plan1-contents-td{
+  width: 800px;
+  height: 50px;
+}
+
+.first-plan-text{
+  resize: none;
+  width: 800px;
+  height: 100px;
+  vertical-align:top;
+  box-sizing: border-box;
+  font: 300 100% 'Noto Sans Japanese';
+}
+
+#classification4{
+  display: none;
+}
+
+.calculate-reason-wrap{
+  display: flex;
+  justify-content: flex-start;
+  border: solid 1px;
+  padding-top: 6px;
+  height: 39px;
+  width: 835px;
+}
+
+.handicapped-item,
+.living_alone-item{
+  margin-right: 70px;
+}
+
+#other{
+  padding: 10px 0 10px 0;
+}
+
+#other_reason{
+  resize: none;
+  margin-left: 3px;
+  width: 332px;
+  margin-top: 0px;
+  height: 30px;
+}
+
+.plan_period {
+  width: 197px;
+}
+
+.item-name {
+  margin: 0px;
+  font-weight: bold;
+}
+
+.calculate_reason {
+  margin-top: 12px;
+  display: flex;
+}
+
+.calculate-reason-label {
+  margin-right: 20px;
+  line-height: 34px;
+}
+
+.other_reason {
+  line-height: 150%;
+}
+
+.item-name-calculate_reason {
+  margin: auto 0;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* ボタン装飾 */
+#next_plan_button{
+  width: 180px;
+  margin-right: 5px;
+  border-width: 0px;
+  padding: 5px 5px;
+  background-color: var(--active-color);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status-wrap button{
+  margin-right: 5px;
+  border-width: 0px;
+  border: 1px solid;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#status_done:hover,#status_confirm:hover{
+  background-color: var(--active-color);
+  border: 1px solid var(--active-color);
+}
+
+#status_done:disabled,
+#status_confirm:disabled{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid;
+}
+
+/* ポップアップ */
+.overflow_service_plan1,
+#overflow_service_plan1_create_notification{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 100;
+}
+
+.overflow_service_plan1{
+  display: none;
+}
+
+.overflow_service_plan1 .conf,
+#overflow_service_plan1_create_notification .conf{
+  background: #FFF;
+  padding: 0 50px 10px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 296px;
+  transform: translate(-50%,-282.5px);
+}
+
+/* 交付済みボタン */
+.delivery-date-paragraph{
+  margin-bottom: 0;
+}
+
+.delivery-date-input{
+  border: solid 1px;
+  width: 290px;
+  height: 30px;
+}
+
+.delivery-date-remarks{
+  height: 70px;
+  font: 300 100% 'Noto Sans Japanese';
+}
+
+.delivery-date-paragraph{
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+/* 確定ボタン */
+.fixed_date-input{
+  border: solid 1px;
+  width: 190px;
+  height: 30px;
+}
+
+.fixed_date-paragraph{
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.change_plan_message {
+  margin-left: 80px;
+}
+
+/* pdf出力・プレビューボタン */
+.pdf-radio{
+  margin-top: 10px;
+}
+
+#service_plan1_year_preview,
+#service_plan1_japanese_year_preview,
+#service_plan1_year_dl,
+#service_plan1_japanese_year_dl{
+  width: 20px;
+  height: 20px;
+}
+
+.preview-label,
+.dl-label{
+  font-size: 20px;
+}
+
+.sp1-btns,
+.close_btn{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.popup_ok_service_plan1,
+.popup_cancel_service_plan1{
+  height: max-content;
+  margin: 5px;
+  font-weight: bold;
+  margin-right:auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#sp1_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#sp1_facility_user_info {
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--userinfo-background);
+  border-radius: 5px;
+}
+
+.sp1_label {
+  display: block;
+  float: left;
+  margin: 5px;
+  width: 100px;
+  height: 45px;
+  padding-right: 5px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  border: solid 1px var(--border-color);
+  border-radius: 5px;
+}
+
+.plan_division {
+  display: none;
+}
+
+.sp1_label:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  padding: 2px;
+  background-clip: content-box;
+}
+
+.plan_division:not(:checked) + .sp1_label:before {
+  border-color: var(--border-color);
+}
+
+.plan_division:checked + .sp1_label:before {
+  border-color: var(--border-color);
+  background-color: var(--active-radiobtn-color);
+}
+
+.plan_division:checked + .sp1_label{
+  border: solid 1px var(--active-radiobtn-color);
+}
+
+.sp1_last_update {
+  text-align: right;
+  margin: 0 30px 10px 0;
+}
+
+.sp1_select_record{
+  background-color: #ffffee;
+}
+
+.plan1_head_btns{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sp1_pdf_btn{
+  margin-right: 5px;
+  font-weight: bold;
+  border-width: 0px;
+  border-bottom: 2px solid #e8e8e8;;
+  padding: 5px;
+  background-color: #e8e8e8;;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#sp1_creation_author_domain{
+  display: flex;
+}
+
+/* 有効期間自動入力 */
+.sp1_api,
+.sp1_approval_api{
+  position: relative;
+  height: 80px;
+  padding: 0 5px 15px 15px;
+  background: #e8e8e8;
+}
+.sp1_api::before{
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: -29px;
+  border: 12px solid transparent;
+  border-bottom: 20px solid #e8e8e8;
+}
+/* 選択すると有効終了日が自動で入力されます。 */
+.sp1_api_lbl,
+.sp1_approval_api_lbl{
+  margin-bottom: 0px;
+}
+/* 有効期間自動入力ラジオボタン */
+.sp1_api_radio_btn,
+.sp1_approval_api_radio_btn{
+  display: none;
+}
+/* 有効期間自動入力ラジオボタンラベル */
+.sp1_api_radio_btn_lbl,
+.sp1_approval_api_radio_btn_lbl{
+  float: left;
+  width: 100px;
+  margin: 5px;
+  border: solid 1px var(--border-color);
+  padding-right: 5px;
+  background: #FFFFFF;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sp1_api_radio_btn_lbl:before,
+.sp1_approval_api_radio_btn_lbl:before{
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  padding: 2px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  background-clip: content-box;
+}
+.sp1_api_radio_btn:checked + .sp1_api_radio_btn_lbl,
+.sp1_approval_api_radio_btn:checked + .sp1_approval_api_radio_btn_lbl{
+  border: solid 1px var(--active-radiobtn-color);
+}
+.sp1_api_radio_btn:not(:checked) + .sp1_api_radio_btn_lbl:before,
+.sp1_approval_api_radio_btn:not(:checked) + .sp1_approval_api_radio_btn_lbl:before{
+  margin-left: 8px;
+  border-color: var(--border-color);
+}
+.sp1_api_radio_btn:checked + .sp1_api_radio_btn_lbl:before,
+.sp1_approval_api_radio_btn:checked + .sp1_approval_api_radio_btn_lbl:before{
+  margin-left: 8px;
+  border-color: var(--border-color);
+  background-color: var(--active-radiobtn-color);
+}
+
+td{
+  border: solid 1px;
+  height: 25px;
+  background-color: var(--customer_table_body_background);
+}
+
+/* 認定情報 */
+.approval_info_block{
+  display: flex;
+}
+.approval{
+  padding: 0 15px 0 0;
+}
+select#care_level {
+  width: 213px;
+  height: 49px;
+}
+#certification_status{
+  width: 213px;
+  height: 49px;
+}
+.approval_date{
+  width: 197px;
+}
+.sp1_approval_api {
+  margin-left: -276px;
+}
+.sp1_approval_api::before {
+  content: '';
+  position: absolute;
+  right: 185px;
+  top: -29px;
+  border: 12px solid transparent;
+  border-bottom: 20px solid #e8e8e8;
+}
+
+.popup_yes{
+  height: 50px;
+  margin: 5px 20px;
+  border-width: 0px;
+  padding: 5px 20px;
+  background-color: var(--active-color);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.popup_cancel{
+  height: 50px;
+  margin: 5px 20px;
+  border-width: 0px;
+  padding: 5px 20px;
+  width: max-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup_btn_position {
+  text-align: center;
+}
+

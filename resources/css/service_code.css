@@ -1,0 +1,131 @@
+﻿:root {
+    --caredaisy-contents-background: rgb(250,250,250);
+    --submit-background: rgb(255,237,86);
+    --caredaisy-contents-header-submit-border-color: rgb(238,219,59);
+    --target-year-month-pulldown-border-color: rgb(238,238,238);
+    --search-clear-background: rgb(217,217,217);
+    --customer_table_head_background: rgb(255,255,238);
+    --customer_table_border: rgb(238,238,238);
+    --customer-table-scrollbar-color: rgb(153,153,153);
+    --view-width: 1400px;
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-family: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#caredaisy_contents {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--caredaisy-contents-background);
+}
+
+#caredaisy_contents_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    width: var(--view-width);
+    box-sizing: border-box;
+    margin: auto;
+}
+
+#caredaisy_contents_header_caption {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+#servicecode_ui {
+    margin: auto;
+    width: 600px;
+}
+
+.office select, .service_type select {
+    width: 300px;
+    height: 30px;
+    border: 1px solid var(--target-year-month-pulldown-border-color);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.select_placeholder {
+    display: none;
+}
+
+.caption {
+    font-weight: bold;
+}
+
+
+#table {
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+
+#table th, #table td {
+    border: solid 1px #eeeeee;
+}
+
+#table_thead {
+    background-color: #ffffee;
+}
+
+#table_tbody {
+    background-color: #FFFFFF;
+}
+
+#table_thead,
+#table_tbody {
+    display: block;
+}
+
+#table_tbody {
+    height: 400px;
+    overflow-y: overlay;
+}
+
+#table_tbody::-webkit-scrollbar-thumb {
+    background-color: var(--customer-table-scrollbar-color);
+    border-radius: 5px;
+}
+
+#table_tbody::-webkit-scrollbar {
+    width: 5px;
+}
+
+.service_code{
+    width:120px;
+}
+
+.service_contents {
+    width: 500px;
+}
+
+/*#table_tbody tr:hover {
+    background-color: #CCFFCC;
+    cursor:default;
+}*/
+
+.button {
+    height: max-content;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 90px;
+    height: 30px;
+}
+#savebtn {
+    background-color: var(--submit-background);
+    border: 1px solid var(--submit-background);
+}
+#cancelbtn {
+    border: 1px solid var(--cancel-button-border-color);
+    color: var( --cancel-button-font-color);
+}

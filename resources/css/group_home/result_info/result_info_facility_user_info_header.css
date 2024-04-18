@@ -1,0 +1,18 @@
+.facility_user_info_header_stay_out_period {
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 690px;
+}
+
+.stay_out_period_leader {
+  visibility: hidden;
+  margin-left: 5px;
+}
+
+.stay_out_period_detail{
+  display: none;
+}
+
+.facility_user_info_header_stay_out_period_detail{
+  max-width: 1410px;
+}

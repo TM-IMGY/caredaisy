@@ -1,0 +1,187 @@
+#injury_and_illness_name{
+    /* display: flex;
+    flex-wrap: wrap; */
+    max-width: 1600px;
+    min-width: 1600px; /*画面解像度によるリサイズ対策*/
+}
+
+.injury_and_illness_button_block {
+    margin-left: 30px;
+    margin-top: 16px;
+    display: inline-block;
+}
+
+.injury_and_illness_date_input{
+    width: 150px;
+    border: none;
+}
+
+.injury_and_illness_start_date_input,
+.injury_and_illness_end_date_input{
+    width: 150px;
+}
+
+.calendar_area{
+    display: flex;
+    border: 1px solid var(--border-color);
+    margin: 0px 10px;
+    border-radius: 5px;
+}
+
+/* 履歴情報 */
+#injury_and_illness_history{
+    width: 1202px;
+}
+
+.table_injury_and_illness{
+    display: block;
+    height: 143px;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+    border-collapse: collapse;
+}
+
+.table_injury_and_illness thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    background: var(--table-header-color);
+    border-top:#FFFFFF;
+}
+
+.thead_injury_and_illness{
+    display: block;
+}
+
+.tbody_injury_and_illness {
+    display: block;
+    height: 105px;
+    overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+
+.tbody_injury_and_illness::-webkit-scrollbar-thumb {
+    background-color: var(--caredaisy-table-tbody);
+    border-radius: 5px;
+}
+
+.tbody_injury_and_illness::-webkit-scrollbar {
+    width: 5px;
+}
+
+.injury_and_illness_history_th{
+    min-width: 196px;
+}
+
+.td_of_injury_and_illness{
+    min-width: 196px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+}
+
+.item_of_date{
+    text-align: right;
+}
+
+.select_record {
+    background-color: var(--table-select-color);
+}
+
+.injury_and_illness_calendar_area{
+    margin: 0;
+}
+
+.wrap {
+    /* display: flex;
+    gap: 90px; */
+    margin-left: 30px;
+    margin-bottom: 19px;
+    border: 1px solid;
+    width: 1600px;
+    padding: 10px 15px;
+}
+
+.special {
+    margin-top: 20px;
+}
+
+input.injury_and_illness_name_item {
+    width: 1000px;
+}
+
+.injury_and_illness_name_item {
+    display: flex;
+}
+
+.special_item {
+    display: flex;
+}
+
+select.special_item {
+    width: 280px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/* 共通化推奨 */
+.save_button{
+    margin: 5px;
+    font-weight: bold;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#overflow{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 100;
+}
+
+.overflow{
+    display: none;
+}
+
+#overflow .conf{
+    background: #FFF;
+    padding: 0 20px 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.popup_cancel{
+    height: max-content;
+    margin: 5px;
+    font-weight: bold;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btns_frame{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.duplicate {
+    background-color: #ffd9e1;
+}

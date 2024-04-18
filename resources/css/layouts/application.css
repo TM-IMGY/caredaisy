@@ -1,0 +1,342 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+:root {
+  --view-min-width: 1440px;
+  --view-min-height :810px;
+  --top-menu-height: 93px;
+  --top-menu-border-color: rgb(238,238,238);
+  --inactive-color: rgb(230,230,230);
+  --user-id-color: rgb(136,136,136);
+  --caredaisy-contents-background: rgb(250,250,250);
+  --active-color: rgb(255,237,86); /* 黄色。ボタンなど。カラーコード#ffed56 */
+  --active-radiobtn-color: rgb(255,131,10); /* オレンジ */
+  --border-color: rgb(228, 228, 228);
+  --color-green: rgb(19, 193, 27); /* 緑。承認など。#13c11b */
+  --mandatory-color:rgb(255,38,84); /* 赤。必須の色など */
+  --font-color:rgb(18,18,18);
+  --table-header-color:rgb(242,242,242);
+  --table-select-color: rgb(255, 255, 238); /* クリーム色。テーブル選択時の色など  */
+  --userinfo-background:rgb(237,237,237); /* ユーザー情報表示部分の背景色 */
+}
+
+.headers {
+  padding: 10px;
+}
+
+.facility_logos {
+  font-weight: bold;
+}
+
+.user_logos {
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+body {
+  min-width: var(--view-min-width);
+  min-height: var(--view-min-height);
+  margin: 0;
+  overflow: hidden;
+  color: var(--font-color);
+  font:300 21px 'Noto Sans Japanese';
+}
+
+#top_menu {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: var(--top-menu-height);
+  border-bottom: 1px solid var(--top-menu-border-color);
+}
+#top_menu_left {
+  display: flex;
+}
+
+#caredaisy_logo {
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+#category_main {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+.category_main_btn{
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+.category_main_btn_active{
+  text-decoration: none;
+  color: var(--active-radiobtn-color);
+  font-weight: bold;
+}
+.category_main_btn_inactive{
+  text-decoration:none;
+  color: var(--font-color);
+  font-weight: bold;
+}
+
+#top_menu_right{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#top_menu_inquiry{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#top_menu_inquiry_num li{
+  width: 370px;
+  padding: 5px;
+}
+#top_menu_inquiry_num li>a{
+  text-decoration: none;
+}
+#top_menu_inquiry_num{
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  background: rgb(255,255,255);
+  z-index: 10;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 5px;
+}
+#top_menu_inquiry:hover + #top_menu_inquiry_num,
+#top_menu_inquiry_num:hover {
+  display: block;
+}
+
+#top_menu_user{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#user_icon{
+  padding: 5px;
+  margin: 10px;
+}
+#top_menu_logout{
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  background: rgb(255,255,255);
+  z-index: 10;
+}
+#top_menu_user:hover + #top_menu_logout,
+#top_menu_logout:hover {
+  display: block;
+}
+#top_menu_logout li{
+  padding: 5px;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 5px;
+}
+#top_menu_logout li a {
+  text-decoration: none;
+}
+
+#top_menu_manual{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#top_manual_download{
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: rgb(255,255,255);
+  z-index: 10;
+}
+#top_menu_manual:hover + #top_manual_download,
+#top_manual_download:hover {
+  display: block;
+}
+#top_manual_download li{
+  padding: 5px;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 5px;
+}
+#top_manual_download li a {
+  text-decoration: none;
+}
+
+
+
+#caredaisy_contents{
+  position: absolute;
+  width: 100%;
+  top: var(--top-menu-height);
+  min-width: var(--view-min-width);
+  height: calc(100% - var(--top-menu-height));
+  background-color: var(--caredaisy-contents-background);
+}
+
+.inquiry, .manual{
+  margin: 20px 20px 20px 0;
+  font-weight: bold;
+}
+
+/* ケアデイジー共通仕様 */
+button {
+  font: bold 100% 'Noto Sans Japanese';
+  width: 120px;
+  height: 50px;
+}
+input, select, textarea {
+  border: solid 1px var(--border-color);
+  font: 300 100% 'Noto Sans Japanese';
+}
+th {
+  background: var(--table-header-color);
+  border-color: var(--border-color);
+}
+
+
+.facility_user_info_header {
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--userinfo-background);
+  border-radius: 5px;
+}
+
+.facility_user_info_header_lbl {
+  display: flex;
+}
+
+.facility_user_info_header_row {
+  display: flex;
+}
+
+.caredaisy_submit_btn{
+  margin: 5px;
+  border-width: 0px;
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* 更新中ダイアログ */
+.update_dialog{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.0);
+  z-index: 100;
+}
+.update_dialog_hidden{
+  display: none;
+}
+.update_dialog_window{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.loading_icon {
+  background-image: url("/img/loading.gif");
+  width: 200px;
+  height: 200px;
+}
+
+/* 確認ダイアログ */
+.caredaisy_confirmation_dialog{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 100;
+}
+.caredaisy_confirmation_dialog_hidden{
+  display: none;
+}
+.caredaisy_confirmation_dialog_window{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  background: rgb(255, 255, 255);
+}
+.caredaisy_confirmation_dialog_btn{
+  margin: 5px;
+  border-width: 0px;
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ポップアップ */
+#caredaisy_popup{
+  background-color: rgba(0,0,0,.8);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+#caredaisy_popup_window{
+  background: rgb(255, 255, 255);
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+#caredaisy_popup_close{
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.confirm_dialog{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 100;
+}
+.confirm_dialog_hidden{
+  display: none;
+}
+.confirm_dialog_window{
+  position: absolute;
+  width: 610px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  background: rgb(255, 255, 255);
+}
+.confirm_dialog_button_group {
+  margin: auto;
+  width: 270px;
+}
+
+/* ワーニングメッセージ*/
+.warning{
+  color: red;
+}

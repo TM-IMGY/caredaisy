@@ -1,0 +1,4 @@
+legal_number,legal_name,benefit_rate,priority,service_type_code_id,effective_start_date,expiry_date
+25,中国残留邦人等,100,13,2,2021/9/1,9999/12/31
+12,生活保護の医療,100,14,2,2021/9/1,9999/12/31
+81,被爆者助成,100,12,2,2021/9/1,9999/12/31

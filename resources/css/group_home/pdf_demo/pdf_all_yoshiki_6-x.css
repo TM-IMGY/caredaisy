@@ -1,0 +1,88 @@
+.unit_rate_33 span,.unit_price_33,.rate_33 span,
+.billing_amount_33 span,.user_burden_33 span,
+.classification_support_benefit_unit_33,
+.classification_support_benefit_limit_unit_33,
+.classification_support_limit_units_33{
+    position:absolute;
+    font-size: 28px;
+    letter-spacing: 25px;
+}
+
+.classification_support_limit_units_33{
+    top: 1255px;
+    right: 595px;
+}
+
+.classification_support_benefit_limit_unit_33{
+    top: 1290px;
+    right: 595px;
+}
+
+.classification_support_benefit_unit_33{
+    top: 1325px;
+    right: 595px;
+}
+
+.unit_rate_33 .benefit_unit_33{
+    top: 1365px;
+    right: 599px;
+    font-size: 28px;
+    letter-spacing: 25px;
+}
+.unit_rate_33 .public_benefit_unit_33{
+    top: 1365px;
+    right: 335px;
+}
+.unit_price_33{
+    top: 1400px;
+    right: 685px;
+
+}
+.rate_33 .benefit_rate_33{
+    top: 1435px;
+    right: 727px;
+}
+.rate_33 .public_benefit_rate_33{
+    top: 1435px;
+    right: 465px;
+}
+.billing_amount_33 .insurance_benefit_33{
+    top: 1470px;
+    right: 599px;
+}
+.billing_amount_33 .public_spending_amount_33{
+    top: 1470px;
+    right: 335px;
+}
+.part_payment_33{
+    top: 1505px;
+    right: 599px;
+}
+.public_payment_33{
+    top: 1505px;
+    right: 335px;
+}
+
+.sheet_count_33{
+    position: absolute;
+    top: 1562px;
+    right: 92px;
+    font-size: 15px;
+    letter-spacing: 82px;
+}
+
+.service_type_35 {
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: 479px;
+}
+
+.care_level_12.service_type_35 {
+    left: 375px;
+}
+
+.care_level_13.service_type_35 {
+    left: 460px;
+}

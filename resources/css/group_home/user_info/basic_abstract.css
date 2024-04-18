@@ -1,0 +1,118 @@
+/* 履歴情報 */
+#basic_abstract_history{
+  width: 803px;
+}
+
+.table_basic_abstract{
+  display: block;
+  height: 143px;
+  border: 2px solid;
+  border-color: rgb(238,238,238);
+  border-collapse: collapse;
+}
+
+.table_basic_abstract thead th{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: solid;
+  border-width: 0px 2px 1px 0px;
+  border-color: var(--border-color);
+  background: var(--table-header-color);
+  border-top:#FFFFFF;
+}
+
+.thead_basic_abstract{
+  display: block;
+}
+
+.tbody_basic_abstract {
+  display: block;
+  height: 105px;
+  overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+  overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+
+.tbody_basic_abstract::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+
+.tbody_basic_abstract::-webkit-scrollbar {
+  width: 5px;
+}
+
+.basic_abstract_history_th{
+  min-width: 196px;
+}
+
+.td_of_basic_abstract{
+  min-width: 196px;
+  border-top: 2px solid;
+  border-width: 2px 2px 2px 0px;
+  border-color: rgb(238,238,238);
+  text-align: right;
+}
+
+.item_of_date{
+  text-align: right;
+}
+
+.select_record {
+  background-color: var(--table-select-color);
+}
+
+/* 新規登録ボタン・保存ボタン */
+.button_block{
+  margin-left: 30px;
+  margin-top: 16px;
+}
+
+#new_register,
+#basic_abstract_save{
+  margin: 5px;
+  font-weight: bold;
+  margin-right: auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block1,
+.block2 {
+  display: flex;
+  gap: 90px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+select#user_status_code{
+  width: 250px;
+}
+
+input#dpc_code {
+  width: 244px;
+}
+
+.basic_abstract_date_input{
+  width: 150px;
+  border: none;
+}
+
+.calendar_area{
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.BA_calendar_area{
+  margin: 0px;
+}
+
+.basic_abstract_start_date_input,
+.basic_abstract_end_date_input{
+  width: 150px;
+}

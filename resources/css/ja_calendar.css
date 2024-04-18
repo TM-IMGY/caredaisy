@@ -1,0 +1,13 @@
+.calendar_area{
+  display: flex;
+  border: 1px solid var(--border-color);
+}
+
+.jaCalbox{
+  background-color: var(--table-select-color);
+  border-right: 1px solid var(--border-color);
+  width: 90px;
+  margin:0;
+  padding-right: 5px;
+  text-align: right;
+}

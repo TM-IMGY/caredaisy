@@ -1,0 +1,586 @@
+body{
+  /* width: 365mm;
+  height: 255mm;
+  border: 1px solid black */
+}
+
+/* リスト初期化 */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container{
+  position: relative;
+}
+
+.sp1_pdf_first_block{
+  height: 435px;
+}
+
+.page,
+.create_date{
+  position: absolute;
+  top: 15px;
+}
+
+.page{
+  left: 30px;
+  padding: 5px 15px;
+  border: solid 1px black;
+}
+
+.create_date{
+  left: 1032px;
+  border-bottom: solid 1px black;
+}
+
+.create_date_ymd,
+.create_date_year,
+.create_date_month{
+  padding-right: 20px;
+}
+
+.create_date_year_val,
+.create_date_month_val,
+.create_date_day_val{
+  padding-right: 5px;
+}
+
+.title{
+  position: absolute;
+  font-size: 22px;
+  top: 45px;
+  width: 100%;
+  text-align: center;
+}
+
+.sp1_pdf_row_3{
+
+}
+
+.division,
+.status{
+  position: absolute;
+  border: solid 1px black;
+  top: 85px;
+}
+
+.division{
+  left: 76px;
+  padding: 5px 35px;
+}
+
+.status{
+  left: 310px;
+  padding: 5px 35px;
+}
+
+.sp1_pdf_row_4{
+
+}
+
+.facility_user_name,
+.birthday,
+.address{
+  position: absolute;
+  top: 145px;
+  border-bottom: 1px solid black;
+}
+
+.facility_user_name{
+  left: 76px;
+  width: 358px;
+  top: 140px;
+}
+
+.facility_user_name > div{
+  display: inline-block;
+}
+
+.name{
+ margin-left: 70px;
+ padding-right: 8px;
+ margin-top: 0;
+ font-size: 20px;
+}
+
+.sama{
+  /* float: right; */
+}
+
+.birthday{
+  left: 450px;
+}
+
+.birthday_ymd,
+.birthday_year,
+.birthday_month{
+  padding-right: 20px;
+}
+
+.birthday_year_val,
+.birthday_month_val,
+.birthday_day_val{
+  padding-right: 5px;
+}
+
+.address{
+  left: 770px;
+  width: 550px;
+}
+
+.sp1_pdf_row_5{
+
+}
+
+.service_create{
+  position: absolute;
+  top: 195px;
+  left: 76px;
+  border-bottom: 1px solid black;
+  width: 510px;
+}
+
+.service_create > div{
+  display: inline-block;
+}
+
+.service_creater,
+.service_creater_name{
+
+}
+
+.service_creater{
+
+}
+
+.service_creater_name{
+  font-size: 20px;
+  margin-left: 70px;
+}
+
+.mark{
+  float: right;
+  padding: 0 10px 0 25px;
+}
+
+.sp1_pdf_row_6{
+
+}
+
+.facility{
+  position: absolute;
+  top: 245px;
+  left: 76px;
+  border-bottom: solid 1px black;
+  width: 1245px;
+}
+
+.sp1_pdf_row_7 {
+
+}
+
+.service_plan,
+.first_service_plan{
+  position: absolute;
+  top: 295px;
+  border-bottom: solid 1px black;
+}
+
+.service_plan{
+  left: 76px;
+}
+
+.service_plan_ymd,
+.service_plan_year,
+.service_plan_month{
+  padding-right: 20px;
+}
+
+.service_plan_year_val,
+.service_plan_month_val,
+.service_plan_day_val{
+  padding-right: 5px;
+}
+
+.first_service_plan{
+  left: 550px;
+  width: 427px;
+}
+
+.first_service_plan_ymd,
+.first_service_plan_year,
+.first_service_plan_month{
+  padding-right: 20px;
+}
+
+.first_service_plan_year_val,
+.first_service_plan_month_val,
+.first_service_plan_day_val{
+  padding-right: 5px;
+}
+
+.first_plan_date_space{
+  margin-left: 25px;
+}
+
+.sp1_pdf_row_8{
+
+}
+
+.recognition_date,
+.recognition_period{
+  position: absolute;
+  top: 345px;
+  border-bottom: solid 1px black;
+}
+
+.recognition_date{
+  width: 262px;
+  left: 76px;
+}
+
+.recognition_date_ymd,
+.recognition_date_year,
+.recognition_date_month{
+  padding-right: 20px;
+}
+
+.recognition_date_year_val,
+.recognition_date_month_val,
+.recognition_date_day_val{
+  padding-right: 5px;
+}
+
+.recognition_date_space{
+  margin-left: 25px;
+}
+
+.recognition_period{
+  left: 350px;
+  width: 592px;
+}
+
+.period,
+.care_period_start,
+.care_period_end{
+  padding-right: 20px;
+}
+
+.wave{
+  padding: 0 20px;
+}
+
+.care_period_start_val,
+.care_period_end_val{
+  padding-right: 5px;
+}
+
+.period_start_space,
+.period_end_space{
+  margin-left: 25px;
+}
+
+.sp1_pdf_row_9{
+
+}
+
+.care_level{
+  position: absolute;
+  top: 385px;
+  left: 76px;
+}
+
+.care_level > div{
+  display: inline-block;
+  min-height: 27px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.level_division{
+  border-style:solid;
+  border-width:thin;
+  width: 200px;
+}
+
+.level{
+  border-style:solid;
+  border-width:thin;
+  border-left: none;
+  width: 1045px;
+  margin-left: -5px;
+}
+
+.level > span{
+  margin: 0 30px;
+}
+
+.second_block{
+
+}
+
+.sp1_pdf_row_10,
+.sp1_pdf_row_11,
+.sp1_pdf_row_12,
+.sp1_pdf_row_13{
+  margin-left: 76px;
+}
+.sp1_pdf_row_10 > div,
+.sp1_pdf_row_11 > div,
+.sp1_pdf_row_12 > div,
+.sp1_pdf_row_13 > div{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.title_1,
+.title_2,
+.title_3,
+.title_4{
+  border-style:solid;
+  border-width:thin;
+  min-height: 100px;
+  width: 200px;
+  vertical-align: top;
+}
+
+.content_1,
+.content_2,
+.content_3,
+.content_4{
+  border-style:solid;
+  border-width:thin;
+  border-left: none;
+  min-height: 100px;
+  width: 1045px;
+  margin-left: -5px;
+  vertical-align: top;
+}
+
+.sp1_pdf_row_14{
+  margin: 10px 0 0 76px;
+
+}
+
+.calculation_reason > div{
+  display: inline-block;
+}
+
+.reason,
+.reason_name{
+  padding: 10px 0;
+}
+
+.reason{
+  border-style:solid;
+  border-width:thin;
+  width: 200px;
+  text-align: center;
+}
+
+.reason_name{
+  border-style:solid;
+  border-width:thin;
+  border-left: none;
+  width: 1045px;
+  margin-left: -5px;
+}
+
+.reason_name > span{
+  margin: 0 30px;
+}
+
+.other_reason_form {
+  float: right;
+  margin-right: 35px;
+}
+
+.sp1_pdf_row_15{
+  margin: 10px 0 0 76px;
+}
+
+.agree > div:nth-child(1) {
+  /* display: inline-block;  */
+  border-style:solid;
+  border-width:thin;
+}
+
+.agree > div:nth-child(n+2) {
+  /* display: inline-block; */
+  border-style:solid;
+  border-width:thin;
+  border-left: none;
+  margin-left: -6px;
+}
+
+.agree > div{
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+.agree_date{
+  width: 178px;
+  text-align: right;
+}
+
+.agree_name{
+  width: 198px;
+  padding: 10px 0px;
+}
+
+.agree_day{
+  padding-right: 20px;
+}
+
+.sp1_pdf_row_16{
+  float: right;
+  /*算定理由表示時はmargin: 66pxを15pxに変更する*/
+  margin: 66px 10px 0 0;
+}
+
+.last_page{
+  padding: 5px 15px;
+  border: solid 1px black;
+  width: max-content;
+}
+
+
+/* 〇の位置調整 */
+
+.division_circul{
+  height: 25px;
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+/* 計画書区分 */
+.division > span:first-child{
+  position:absolute;
+}
+
+.div_status_1{
+  left: 23px;
+  top: 1px;
+}
+
+.div_status_2{
+  left: 83px;
+  top: 1px;
+}
+
+.div_status_3{
+  left: 143px;
+  top: 1px;
+}
+
+.div_status_5{
+  height: 30px;
+  width: 110px;
+  border: 2px solid black;
+  border-radius: 50%;
+  top: -2px;
+  left: 83px;
+}
+
+/* 認定度 申請状況 */
+.certification_status_circul{
+  height: 27px;
+  width: 57px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.status > span:first-child{
+  position:absolute;
+  top: 0px;
+}
+
+.certification_status_1{
+  left: 103px;
+}
+
+.certification_status_2{
+  left: 28px;
+}
+
+/* 介護度 */
+#care_level_circle{
+  height: 33px;
+  width: 74px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.level > span:first-child{
+  position:absolute;
+  top:1px;
+}
+
+.care_level_1{
+  left: 450px;
+}
+
+.care_level_21{
+  left: 244px;
+}
+
+.care_level_22{
+  left: 449px;
+}
+
+.care_level_23{
+  left: 654px;
+}
+
+.care_level_24{
+  left: 859px;
+}
+
+.care_level_25{
+  left: 1064px;
+}
+
+.care_level_12{
+  left: 650px;
+}
+
+.care_level_13{
+  left: 654px;
+}
+
+.care_level_13.service_type_code_35{
+  left: 855px;
+}
+
+.care_level_other{
+  display: none;
+}
+
+.reason_circul{
+  height: 30px;
+  width: 30px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.living_alone,
+.handicapped,
+.other{
+  position:absolute;
+  top:4px;
+}
+
+.living_alone{
+  left: 265px;
+}
+
+.handicapped{
+  left: 431px;
+}
+
+.other{
+  left: 676px;
+}

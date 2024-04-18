@@ -1,0 +1,3 @@
+classification_support_limit_id,service_type_code_id,care_level_id,classification_support_limit_units,start_date,end_date
+6,5,4,5032,2021/04/01,9999/12/31
+7,5,5,10531,2021/04/01,9999/12/31

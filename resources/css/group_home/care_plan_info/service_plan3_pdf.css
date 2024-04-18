@@ -1,0 +1,177 @@
+.container {
+  padding:0 16px;
+}
+
+header {
+  text-align: center;
+}
+
+header::after{
+  clear: both;
+}
+
+.page {
+  border: 1px solid black;
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.page, 
+.facility_user_name {
+  float: left;
+}
+
+.create_date {
+  float: right;
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+#calendarWrapper {
+  position: relative;
+}
+
+#calendar {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th.mainwork {
+  width: 200px;
+}
+
+th.timezone-cell {
+  width: 20px;
+  border-right: none;
+}
+
+th.time-cell {
+  width: 40px;
+  border-left: none;
+}
+
+td.time {
+  vertical-align: top;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+th, td {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+td.timezone {
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+td {
+  height: 13px;
+}
+
+tr:nth-child(odd) td:not(.timezone):not(.time):not(.main) {
+  border-bottom-style:dashed ;
+}
+
+th, .timezone, .time {
+  background-color: rgb(219, 236, 255);
+}
+.main {
+  font-size: 0.7rem;
+  overflow: hidden;
+  height: 26px;
+}
+.weeklyArea {
+  position: absolute;
+  top: 23px;
+  left: 60px;
+  right: 200px;
+  bottom: 0px;
+}
+
+.sceleton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.sceleton:nth-child(1) {
+  left:0px;
+  right:938px;
+}
+
+.sceleton:nth-child(2) {
+  left:156px;
+  right:782px;
+}
+.sceleton:nth-child(3) {
+  left:312px;
+  right:626px;
+}
+.sceleton:nth-child(4) {
+  left:468px;
+  right:470px;
+}
+.sceleton:nth-child(5) {
+  left:624px;
+  right:314px;
+}
+.sceleton:nth-child(6) {
+  left:780px;
+  right:157px;
+}
+.sceleton:nth-child(7) {
+  left:937px;
+  right:0px;
+}
+
+.weeklyArea::after{
+  clear: both;
+}
+
+.sceleton div {
+  position: absolute;
+  padding: 1px;
+  overflow: hidden;
+  border: 1px solid black;
+  font-size: 0.7rem;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.otherArea{
+  font-size: 0.7rem;
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+.otherArea div {
+  line-height: 30px;
+  background-color: rgb(219, 236, 255);
+  margin-right: 10px;
+  border-right: 1px solid black;
+  width: 120px;
+  float: left;
+  height: 30px;
+  padding: 4px;
+}
+
+.otherArea span {
+  display: block;
+  padding: 4px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.otherArea::after{
+  clear: both;
+}

@@ -1,0 +1,7 @@
+service_item_code_id,service_type_code,service_item_code,service_item_name,service_synthetic_unit,service_calculation_unit,service_start_date,service_end_date,service_kind,service_calcinfo_1,service_calcinfo_2,service_calcinfo_3,service_calcinfo_4,service_calcinfo_5,reserve1,reserve2,reserve3,reserve4,rank,classification_support_limit_flg,synthetic_unit_input_flg
+2390,32,6114,認知症対応型ベースアップ等支援加算,0,30,2022/10/1,9999/12/1,2,23,,,,,,,,,4,0,0
+2391,37,6114,予認知症対応型ベースアップ等支援加算,0,30,2022/10/1,9999/12/1,2,23,,,,,,,,,4,0,0
+2392,33,6141,特定施設ベースアップ等支援加算,0,30,2022/10/1,9999/12/1,2,15,,,,,,,,,4,0,0
+2393,36,6141,地域特定施設ベースアップ等支援加算,0,30,2022/10/1,9999/12/1,2,15,,,,,,,,,4,0,0
+2394,35,6141,予防特定施設ベースアップ等支援加算,0,30,2022/10/1,9999/12/1,2,15,,,,,,,,,4,0,0
+2395,55,6114,医療院ベースアップ等支援加算,0,30,2022/10/01,9999/12/01,2,5,,,,,,,,,4,0,0

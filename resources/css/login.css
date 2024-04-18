@@ -1,0 +1,82 @@
+
+:root{
+  --login-input-color: rgb(204,204,204);
+  --login-btn_back-color: rgb(217,217,217);
+  --password-request-link-color: rgb(55,154,216);
+  --login-input-focus-color: rgb(255,237,86);
+  --error-color: rgb(255,0,0);
+  --error-back-color: rgb(255,239,239);
+}
+
+#caredaisy_login{
+  margin: 10% auto;
+  text-align: center;
+}
+
+#caredaisy_logo{
+  width: 100px;
+  padding: 20px;
+}
+
+.login_input{
+  box-sizing: border-box;
+  display: block;
+  width: 250px;
+  padding: 5px;
+  border: 1px solid var(--login-input-color);
+  border-radius: 5px;
+  margin: 5px auto;
+}
+.login_input::placeholder {
+  color: var(--login-input-color);
+}
+.login_input:focus{
+  outline: 0;
+  border: 1px solid var(--login-input-focus-color);
+}
+
+#loging_btn{
+  display: block;
+  width: 250px;
+  height: 40px;
+  border-width: 0;
+  border-radius: 5px;
+  margin: 25px auto;
+  background-color: var(--login-btn_back-color);
+  font-weight: bold;
+}
+
+#password_request_link{
+  color: var(--password-request-link-color);
+  text-decoration: none;
+}
+
+.login_error{
+  display: flex;
+  width: 250px;
+  margin: 5px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.login_error_icon{
+  width: 14px;
+  padding: 0 2px;
+}
+
+.login_error_message{
+  font-size: 12px;
+  color: var(--error-color);
+}
+
+.is-invalid{
+  border: 1px solid var(--error-color);
+  background-color: var(--error-back-color);
+}
+.is-invalid::placeholder {
+  color: var(--error-color);
+}
+.is-invalid:focus{
+  border: 1px solid var(--error-color);
+}
+

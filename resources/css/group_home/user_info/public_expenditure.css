@@ -1,0 +1,258 @@
+.public_expenditure_button_block{
+    margin-left: 30px;
+    margin-top: 16px;
+}
+
+/* コピーして登録 */
+.public_expense_copy{
+  background-color: rgb(255, 237, 86);
+  cursor: pointer;
+  border-radius: 5px;
+  border-width: 0px;
+  margin: 5px;
+  margin-right: auto;
+  padding: 4px 14px;
+  width: 175px;
+}
+/* コピーして登録(非活性) */
+.public_expense_copy_inactive{
+  background-color: rgb(100, 100, 100);
+  cursor: initial;
+  pointer-events: none;
+}
+
+#expenditure_register,
+#expenditure_update{
+    margin: 5px;
+    font-weight: bold;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.public_expenditure_info{
+  width: 1150px;
+}
+
+.public_expenditure_innrer_block {
+  margin: 20px 20px 20px 30px;
+}
+
+.wrap-block{
+  margin: 30px 0 0 30px;
+}
+
+.wrap-block::-webkit-scrollbar-thumb {
+  background-color: rgb(153,153,153);
+  border-radius: 5px;
+}
+
+.wrap-block::-webkit-scrollbar {
+  width: 5px;
+}
+
+.content-block{
+    display: inline-block;
+    margin: 10px 17px;
+    width: 212px;
+}
+
+.second-paragraph .calendar_area {
+  margin-right: 0;
+}
+
+.content-date-block{
+    display: inline-block;
+    margin: 10px 17px;
+    /* width: 212px; */
+}
+
+.content-start{
+  display: inline-block;
+  margin: 15px 37px 20px 49px;
+}
+
+.content-end{
+  display: inline-block;
+  margin: 15px 0 20px 35px;
+}
+
+.content-start input,
+.content-end input{
+  text-align: right;
+}
+
+.public_number_input{
+  width: 206px;
+  text-align: left;
+}
+
+.public_expenditure_input{
+  width: 206px;
+}
+
+.item_name{
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.expenditure_date_input{
+  width: 150px;
+  border: none;
+}
+
+#amount_borne_person_block div{
+  display: flex;
+}
+
+#amount_borne_person{
+  width: 206px;
+  margin-right: 5px;
+  text-align: right;
+}
+
+/* 履歴情報 */
+.log_info_public{
+  width: 1252px;
+}
+
+.table_public_expenditure{
+  display: block;
+  height: 143px;
+  border: 2px solid;
+  border-color: rgb(238,238,238);
+  border-collapse: collapse;
+}
+
+.table_tbody_public_expenditure{
+  display: block;
+  height: 105px;
+  overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+  overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+
+.table_tbody_public_expenditure::-webkit-scrollbar-thumb {
+  background-color: var(--caredaisy-table-tbody);
+  border-radius: 5px;
+}
+
+.table_tbody_public_expenditure::-webkit-scrollbar {
+  width: 5px;
+}
+
+.table_public_expenditure thead th{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border: solid;
+  border-width: 0px 2px 1px 0px;
+  border-color: var(--border-color);
+  background: var(--table-header-color);
+  border-top:#FFFFFF;
+}
+
+.table_thead_public_expenditure{
+  display: block;
+}
+
+.bearer_number_public{
+  min-width: 167px;
+}
+
+.recipient_number_public{
+  min-width: 167px;
+}
+
+.legal_name_public{
+  min-width: 167px;
+}
+
+.effective_start_date_public{
+  min-width: 167px;
+}
+
+.expiry_date_public{
+  min-width: 167px;
+}
+
+.created_public{
+  min-width: 167px;
+}
+
+.text_data_public_expenditure{
+  min-width: 167px;
+  border-top: 2px solid;
+  border-width: 2px 2px 2px 0px;
+  border-color: rgb(238,238,238);
+}
+
+.remarks,
+.text_data_public_expenditure:last-child{
+  min-width: 220px;
+}
+
+.text_data_public_expenditure:nth-of-type(n+4):nth-of-type(-n+7){
+  text-align: right;
+}
+
+#from_public_expenditure{
+  border-top: 1px solid rgb(238,238,238);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ポップアップ */
+#overflow_public_expenditure,
+#overflow_public_expenditure_yearpopup{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+  z-index: 100;        /* ウィンドウの全面に表示 */
+  display: none;      /* 初期は非表示 */
+}
+
+#overflow_public_expenditure .conf,
+#overflow_public_expenditure_yearpopup .conf{
+  background: #FFF;   /* 背景を白色に指定 */
+  padding: 20px;      /* 余白を20pxに指定 */
+  position: absolute; /* 装置位置に指定 */
+  top: 50%;           /* 上から50%の位置に配置 */
+  left: 50%;          /* 左から50%の位置に配置 */
+  transform: translate(-50%,-50%); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+  text-align: center;
+}
+
+.btns_public_expenditure {
+  margin-top: 30px;
+}
+
+.public_expenditure_popup_btn,
+.public_expenditure_yearpopup_btn{
+  height: max-content;
+  margin: 5px;
+  margin-right:auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.public_expenditure_yearpopup_btn{
+  margin: 5px 50px;
+}
+
+.public_expenditure_select_record {
+  background-color: var(--table-select-color);
+}

@@ -1,0 +1,350 @@
+.page {
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+.page:last-child {
+    page-break-after: auto;
+}
+
+.page {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    font-size: 15px;
+}
+
+.container span {
+    position: absolute;
+    z-index: 5;
+}
+
+/* 自ページ番号 */
+.current_page {
+    top: 103px;
+    right: 93px;
+}
+
+/* 全ページ数 */
+.max_page {
+    top: 103px;
+    right: 57px;
+}
+
+/* 自ページ番号（2ページ目以降） */
+.current_page2 {
+    top: 65px;
+    right: 93px;
+}
+
+/* 全ページ数（2ページ目以降） */
+.max_page2 {
+    top: 65px;
+    right: 57px;
+}
+
+/* 事業所名 */
+.facility_name {
+    top: 83px;
+    left: 108px;
+}
+
+/* 発行日 */
+.system_timestamp {
+    top: 83px;
+    right: 19px;
+    width: 157px;
+}
+
+/* サービス提供年月 */
+.service_period {
+    top: 100px;
+    left: 210px;
+    font-size: 20px;
+    width: 250px;
+}
+
+/* ヘッダー部 */
+.header_data {
+    top: 178px;
+}
+
+/* 利用者数合計 */
+.total_user_count {
+    right: 1165px;
+}
+
+/* 利用者氏名 */
+.fullname {
+    left:   37px;
+    font-size: 16px;
+}
+
+/* 利用者敬称 */
+.honorifics{
+    left:   225px;
+    font-size: 16px;
+}
+
+/* 保険分 負担割合 */
+.benefit_rate {
+    right: 1027px;
+}
+
+/* 保険分 単位数合計 */
+.total_unit {
+    right: 907px;
+}
+
+/* 保険分 費用合計 */
+.total_amount {
+    right: 789px;
+}
+
+/* 保険分 保険分請求額 */
+.billing_insurance_benefit {
+    right: 673px;
+}
+
+/* 保険分 利用者負担額 */
+.billing_part_payment {
+    right: 557px;
+}
+
+/* 保険分（公費） 公費分請求額 */
+.billing_public_insurance_benefit {
+    right: 441px;
+}
+
+/* 保険分（公費） 本人支払額 */
+.billing_public_part_payment {
+    right: 325px;
+}
+
+/* 保険外分 利用者負担額 */
+.uninsured_self_total {
+    right: 208px;
+}
+
+/* 利用者負担額合計 */
+.total_amount_self {
+    right: 40px;
+}
+
+/* 画像ファイル */
+.image_file {
+    width: 1380px;
+}
+
+/* 明細部（1ページ目） 1行目～24行目 */
+.detail-0 {
+    top: 269px;
+}
+
+.detail-1 {
+    top: 296px;
+}
+
+.detail-2 {
+    top: 325px;
+}
+
+.detail-3 {
+    top: 354px;
+}
+
+.detail-4 {
+    top: 383px;
+}
+
+.detail-5 {
+    top: 412px;
+}
+
+.detail-6 {
+    top: 440px;
+}
+
+.detail-7 {
+    top: 470px;
+}
+
+.detail-8 {
+    top: 498px;
+}
+
+.detail-9 {
+    top: 528px;
+}
+
+.detail-10 {
+    top: 556px;
+}
+
+.detail-11 {
+    top: 585px;
+}
+
+.detail-12 {
+    top: 613px;
+}
+
+.detail-13 {
+    top: 642px;
+}
+
+.detail-14 {
+    top: 670px;
+}
+
+.detail-15 {
+    top: 699px;
+}
+
+.detail-16 {
+    top: 728px;
+}
+
+.detail-17 {
+    top: 757px;
+}
+
+.detail-18 {
+    top: 786px;
+}
+
+.detail-19 {
+    top: 815px;
+}
+
+.detail-20 {
+    top: 844px;
+}
+
+.detail-21 {
+    top: 872px;
+}
+
+.detail-22 {
+    top: 900px;
+}
+
+.detail-23 {
+    top: 929px;
+}
+
+/* 明細部（2ページ目以降） 1行目～28行目 */
+.detail2-0 {
+    top: 135px;
+}
+
+.detail2-1 {
+    top: 164px;
+}
+
+.detail2-2 {
+    top: 193px;
+}
+
+.detail2-3 {
+    top: 222px;
+}
+
+.detail2-4 {
+    top: 251px;
+}
+
+.detail2-5 {
+    top: 281px;
+}
+
+.detail2-6 {
+    top: 309px;
+}
+
+.detail2-7 {
+    top: 338px;
+}
+
+.detail2-8 {
+    top: 367px;
+}
+
+.detail2-9 {
+    top: 396px;
+}
+
+.detail2-10 {
+    top: 424px;
+}
+
+.detail2-11 {
+    top: 454px;
+}
+
+.detail2-12 {
+    top: 482px;
+}
+
+.detail2-13 {
+    top: 512px;
+}
+
+.detail2-14 {
+    top: 540px;
+}
+
+.detail2-15 {
+    top: 569px;
+}
+
+.detail2-16 {
+    top: 597px;
+}
+
+.detail2-17 {
+    top: 626px;
+}
+
+.detail2-18 {
+    top: 654px;
+}
+
+.detail2-19 {
+    top: 683px;
+}
+
+.detail2-20 {
+    top: 712px;
+}
+
+.detail2-21 {
+    top: 741px;
+}
+
+.detail2-22 {
+    top: 770px;
+}
+
+.detail2-23 {
+    top: 799px;
+}
+
+.detail2-24 {
+    top: 828px;
+}
+
+.detail2-25 {
+    top: 856px;
+}
+
+.detail2-26 {
+    top: 884px;
+}
+
+.detail2-27 {
+    top: 913px;
+}

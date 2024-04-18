@@ -1,0 +1,150 @@
+.staff_info {
+    display: flex;
+}
+
+.mandatory-color {
+    color: var(--mandatory-color);
+}
+
+#blankBtnStaffInfo {
+    margin-left: 30px;
+    margin-top: 16px;
+    height: 50px;
+}
+.staff_info_btn {
+    height: max-content;
+    margin: 5px;
+    font-weight: bold;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    /* display: none; */
+}
+#uba_get_facility_user_btn {
+    margin: 0px 0px 0px 220px;
+    height: max-content;
+    font-weight: bold;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* スタッフ一覧 */
+.staff_list_table {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 88%;
+    top: 12%;
+    cursor: default;
+}
+.staff_list_tbody {
+    display: block;
+    margin: auto;
+    height: 100%;
+    overflow: overlay;
+}
+.stf_table_selected_record {
+    background-color: var(--table-select-color);
+}
+.stf_table_selected_cell {
+    color: var(--active-radiobtn-color);
+}
+
+.staff_list_tr {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+}
+.staff_list_td {
+    padding-left: 20px;
+    border-width: 0px;
+}
+
+/* 基本情報履歴 */
+.log_info {
+    width: 1402px;
+}
+
+.table_staff_info {
+    display: block;
+    height: 143px;
+    border: 2px solid;
+    border-color: rgb(238, 238, 238);
+    border-collapse: collapse;
+}
+
+.staff_info_column {
+    min-width: 196px;
+}
+
+.table_tbody_staff_info {
+    display: block;
+    height: 105px;
+    overflow-y: overlay; /* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden; /* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+
+.table_tbody_staff_info::-webkit-scrollbar-thumb {
+    background-color: var(--caredaisy-table-tbody);
+    border-radius: 5px;
+}
+
+.table_tbody_staff_info::-webkit-scrollbar {
+    width: 5px;
+}
+
+.table_staff_info thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    background: var(--table-header-color);
+    border-top: #ffffff;
+}
+
+.table_thead_staff_info {
+    display: block;
+}
+
+.stf_select_record {
+    background-color: #ffffee;
+}
+
+.text_data_staff {
+    min-width: 196px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238, 238, 238);
+}
+
+.basic_form_card {
+    width: 300px;
+}
+/* 権限情報 */
+.auth_info_table {
+    border: 1px solid;
+    border-color: var(--border-color);
+}
+.auth_info_table td {
+    white-space: nowrap
+}
+.auth_info_tbody td {
+    border: 1px solid;
+    border-color: var(--border-color);
+    border-width: 0px 2px 1px 0px;
+}

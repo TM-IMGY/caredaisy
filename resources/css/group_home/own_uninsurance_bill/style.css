@@ -1,0 +1,433 @@
+.page {
+    page-break-after: always;
+    page-break-inside: avoid;
+}
+
+.page:last-child {
+    page-break-after: auto;
+}
+
+.page {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    font-size: 18px;
+}
+
+.container span {
+    position: absolute;
+    z-index: 5;
+}
+
+.fullname {
+    top: 355px;
+    left: 307px;
+    font-size: 20px;
+}
+
+.account_payable_bank_info {
+    top: 400px;
+    left: 837px;
+    display: none;
+}
+
+.account_payable_info {
+    top: 430px;
+    left: 837px;
+    display: none;
+}
+
+.account_payable_remarks {
+    top: 465px;
+    left: 690px;
+    display: none;
+}
+
+/* 備考 */
+.remarks_for_receipt_and_bill {
+    top: 1592px;
+    left: 164px;
+    position: absolute;
+    width: 710px;
+    word-wrap: break-word;
+}
+
+.benefit_rate {
+    top: 1520px;
+    right: 236px;
+    font-size: 17px;
+}
+
+.facility_user_id {
+    top: 417px;
+    right: 458px;
+    font-size: 17px;
+}
+
+.user_postal_code {
+    top: 73px;
+    left: 138px;
+    font-size: 19px;
+}
+
+.user_location1 {
+    top: 93px;
+    left: 138px;
+    font-size: 20px;
+}
+
+.user_location2 {
+    top: 114px;
+    left: 138px;
+    font-size: 20px;
+}
+
+.print_time {
+    top: 93px;
+    left: 945px;
+    letter-spacing: -2px;
+}
+
+.contractor_number {
+    top: 73px;
+    left: 945px;
+    letter-spacing: -2px;
+}
+
+.current_page {
+    position: absolute;
+    top: 113px;
+    left: 985px;
+    width: 20px;
+    height: 20px;
+}
+
+.total_page {
+    top: 113px;
+    left: 1023px;
+    width: 20px;
+    height: 20px;
+}
+
+/* 利用者情報 */
+.username {
+    top: 160px;
+    left: 134px;
+    width: 440px;
+    font-size: 27px;
+}
+
+/* サービス対象期間 */
+.service_period {
+    top: 305px;
+    left: 150px;
+}
+
+.service_period_start {
+    top: 305px;
+    left: 340px;
+}
+
+.service_period_end {
+    top: 305px;
+    left: 565px;
+}
+
+/* 施設情報 */
+.facility_name {
+    top: 140px;
+    left: 685px;
+    width: 460px;
+    line-height: 17px;
+}
+
+.facility_postal_code {
+    top: 170px;
+    left: 685px;
+}
+
+.facility_location {
+    top: 190px;
+    left: 685px;
+    width: 490px;
+    font-size: 16px;
+    line-height: 17px;
+}
+
+.phone_number {
+    top: 223px;
+    left: 720px;
+}
+
+.fax_number {
+    top: 223px;
+    left: 945px;
+}
+
+.billing_amount {
+    top: 348px;
+    right: 135px;
+    font-size: 33px;
+}
+
+.font-size-13 {
+    font-size: 13px;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+/* 利用料内訳 */
+.detail-item {
+    position: absolute;
+    left: 133px;
+    width: 338px;
+    height: 38px;
+    line-height: 38px;
+    overflow: hidden;
+}
+
+.detail-item span {
+    position: absolute;
+    left: 6px;
+}
+
+.detail-unit-cost {
+    position: absolute;
+    left: 485px;
+    width: 120px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.detail-unit-cost span {
+    position: absolute;
+    right: 6px;
+}
+
+.detail-quantity {
+    position: absolute;
+    left: 610px;
+    width: 72px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.detail-quantity span {
+    position: absolute;
+    right: 6px;
+}
+
+.detail-total-cost {
+    position: absolute;
+    left: 682px;
+    width: 194px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.detail-total-cost span {
+    position: absolute;
+    right: 6px;
+}
+
+.detail-0 {
+    top: 432px;
+}
+
+.detail-1 {
+    top: 467px;
+}
+
+.detail-2 {
+    top: 502px;
+}
+
+.detail-3 {
+    top: 537px;
+}
+
+.detail-4 {
+    top: 572px;
+}
+
+.detail-5 {
+    top: 607px;
+}
+
+.detail-6 {
+    top: 642px;
+}
+
+.detail-7 {
+    top: 677px;
+}
+
+.detail-8 {
+    top: 712px;
+}
+
+.detail-9 {
+    top: 747px;
+}
+
+.detail-10 {
+    top: 782px;
+}
+
+.detail-11 {
+    top: 817px;
+}
+
+.detail-12 {
+    top: 852px;
+}
+
+.detail-13 {
+    top: 887px;
+}
+
+.detail-14 {
+    top: 922px;
+}
+
+.detail-15 {
+    top: 957px;
+}
+
+.detail-16 {
+    top: 992px;
+}
+
+.detail-17 {
+    top: 1027px;
+}
+
+.detail-18 {
+    top: 1062px;
+}
+
+.detail-19 {
+    top: 1097px;
+}
+
+.detail-20 {
+    top: 1132px;
+}
+
+.detail-21 {
+    top: 1167px;
+}
+
+.detail-22 {
+    top: 1202px;
+}
+
+.detail-23 {
+    top: 1237px;
+}
+
+.detail-24 {
+    top: 1272px;
+}
+
+.detail-25 {
+    top: 1307px;
+}
+
+.detail-26 {
+    top: 1342px;
+}
+
+.detail-27 {
+    top: 1377px;
+}
+
+.detail-28 {
+    top: 1412px;
+}
+
+.detail-29 {
+    top: 1447px;
+}
+
+.fee_items_table {
+    font-size: 27px;
+}
+
+.fee_items span {
+    top: 435px;
+    left: 135px;
+}
+
+.insured_amount_self_label {
+    top: 474px;
+    left: 138px;
+}
+
+.insured_amount_self {
+    top: 468px;
+    right: 361px;
+}
+
+.uninsured_row {
+    font-size: 27px;
+}
+
+.fee_name {
+    left: 137px;
+    font-size: 13px;
+}
+
+.unit_cost {
+    right: 650px;
+}
+
+.quantity {
+    right: 578px;
+}
+
+.uninsured_amount {
+    right: 384px;
+}
+/* 保険対象内訳 */
+.service_item_name {
+}
+
+.unit_price {
+}
+
+.service_count_date {
+}
+
+.unit_price_total {
+}
+
+/* 保険対象請求分・自費請求分 */
+.total_unit {
+    top: 1520px;
+    right: 812px;
+}
+
+.total_amount {
+    top: 1520px;
+    right: 618px;
+}
+
+.amount_self {
+    top: 1520px;
+    right: 424px;
+}
+
+.total_amount_self {
+    top: 1561px;
+    right: 812px;
+}

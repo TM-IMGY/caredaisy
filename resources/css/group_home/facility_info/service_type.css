@@ -1,0 +1,273 @@
+/* author: ttakenaka */
+
+#container1_service_type {
+    background-color: var(--caredaisy-contents-background);
+}
+
+#contents1_service_type {
+    width: 925px;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+}
+#table_thead_service_type,
+#table_tbody_service_type {
+    display: block;
+}
+#table_tbody_service_type {
+    display: block;
+    height: 105px;
+    min-width: 920px;
+    overflow-y: overlay; /* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden; /* スクロールバーＸ軸非表示 ■修正箇所*/
+}
+#table_service_type {
+    display: block;
+    height: 143px;
+    border: 2px solid;
+    border-color: rgb(238, 238, 238);
+    border-collapse: collapse;
+}
+td {
+    border: solid 1px;
+    height: 25px;
+    background-color: var(--customer_table_body_background);
+}
+
+#table_service_type thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top: #ffffff;
+}
+
+.table_value0_service_type {
+    width: 100px;
+}
+.table_value1_service_type {
+    width: 140px;
+}
+.table_value2_service_type {
+    width: 422px;
+}
+.table_value3_service_type {
+    width: 120px;
+}
+.table_value4_service_type {
+    width: 120px;
+}
+/* ↓↓　tbody部分　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* ↓↓テーブルスクロールバー tbodyに設定 ↓↓ */
+#table_tbody_service_type::-webkit-scrollbar-thumb {
+    background-color: rgb(153, 153, 153);
+    border-radius: 5px;
+}
+#table_tbody_service_type::-webkit-scrollbar {
+    width: 5px;
+}
+/* ↑↑テーブルスクロールバー tbodyに設定 ↑↑ */
+
+/* ↓↓　カラム関係　↓↓ */
+.text_value0_service_type {
+    text-align: right;
+    width: 100px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238, 238, 238);
+}
+.text_value1_service_type {
+    text-align: right;
+    width: 140px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238, 238, 238);
+}
+.text_value2_service_type {
+    text-align: left;
+    width: 422px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238, 238, 238);
+}
+.text_value3_service_type {
+    text-align: left;
+    width: 120px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238, 238, 238);
+}
+.text_value4_service_type {
+    text-align: right;
+    width: 120px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238, 238, 238);
+}
+
+/* ↑↑　tbody部分　↑↑ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* ↓↓　ポップアップ　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#overflow_service_type {
+    /* ↓↓黒の背景部分↓↓ */
+    position: fixed;
+    left: 0; /* 起点指定用 */
+    top: 0; /* 起点指定用 */
+    width: 100%; /* 全体の幅（黒背景を左サイドバー部分も含める為） */
+    height: 100%; /* 全体の高さ（黒背景を左サイドバー部分も含める為） */
+    background-color: rgba(0, 0, 0, 0.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100; /* ウィンドウの全面に表示 */
+    display: none; /* 初期は非表示 */
+}
+
+#overflow_service_type .conf {
+    /* ↓↓中央白のポップアップ部分↓↓ */
+    background: #fff; /* 背景を白色に指定 */
+    padding: 20px; /* 余白を20pxに指定 */
+    position: absolute; /* 装置位置に指定 */
+    top: 50%; /* 上から50%の位置に配置 */
+    left: 50%; /* 左から50%の位置に配置 */
+    transform: translate(
+        -50%,
+        -50%
+    ); /* コンテンツの半分だけ位置を戻して上下左右中央に配置 */
+}
+
+.poppu_ok_service_type {
+    /* はいのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.poppu_cancel_service_type {
+    /* いいえのボタンCSS */
+    /* ↓↓この部分は他の黄色で押下できるボタンの使いまわし ↓↓*/
+    margin: 5px;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* ↑↑　ポップアップ　↑↑　━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+.button_frame_service_type {
+    margin-top: 22px;
+}
+.inline_block_service_type {
+    position: relative;
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+#text_item1_service_type {
+    width: 110px;
+    border: hidden;
+}
+
+#text_item2_service_type {
+    width: 130px;
+    margin-top: 4px;
+    margin-right: 20px;
+    text-align: left;
+}
+/* 新規登録、保存ボタン部分 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+#blankBtnServiceType {
+    margin-left: 24px;
+    margin-top: 20px;
+    height: 50px;
+}
+.button_service_type {
+    margin: 5px;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    /* ボタンの非表示設定(初期は非表示) */
+    display: none;
+}
+
+/* ↓↓　画面下部　↓↓ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+.input_style {
+    border: solid 1px var(--border-color);
+}
+.form_frame_service_type {
+    margin-left: 30px;
+    max-width: 750px;
+    min-width: 1050px;
+}
+.form_left_service_type {
+    position: relative;
+    display: inline-block;
+    min-height: 100px;
+    min-width: 796px;
+    padding-bottom: 20px;
+}
+
+#select_list1_service_type {
+    margin-top: 4px;
+    margin-right: 40px;
+    text-align-last: left;
+}
+
+#select_list2_service_type {
+    margin-top: 4px;
+    margin-right: 40px;
+    text-align-last: left;
+}
+.item_name_service_type {
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+/* ↑↑　画面下部　↑↑ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/
+
+.option_service_type {
+    direction: ltr;
+}
+.btn_center_service_type {
+    text-align: center;
+    margin: 30px;
+}
+
+#savebtn_service_type {
+    background-color: rgb(255, 237, 86);
+    border: 1px solid rgb(255, 237, 86);
+}
+#cancelbtn_service_type {
+    border: 1px solid var(--cancel-button-border-color);
+    color: var(--cancel-button-font-color);
+}
+
+.mandatory::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-left: 5px;
+    background: url(../sozai/hissu.png) no-repeat; /* ←　sozai url先変更　2021/07/30 10:07 */
+    background-size: contain;
+    vertical-align: middle;
+}
+.mandatory-color {
+    color: var(--mandatory-color);
+}

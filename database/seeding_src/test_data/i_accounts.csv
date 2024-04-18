@@ -1,0 +1,7 @@
+account_id,employee_number,password,account_name,auth_id,staff_id
+1,test_authority@0000000001.care-daisy.com,password,テスター管理権限,1,1
+2,multiple_institutions_authority@0000000002.care-daisy.com,password,複数施設管理権限,1,2
+3,service_type_addition_tester@0000000006.care-daisy.com,password,種別追加テスター,1,3
+4,new_account@0000000007.care-daisy.com,password,作成直後のアカウント,1,4
+5,hospital@0000000008.care-daisy.com,password,介護医療院サービス,1,5
+6,transmit_test@0000000009.care-daisy.com,password,伝送テスター,1,1

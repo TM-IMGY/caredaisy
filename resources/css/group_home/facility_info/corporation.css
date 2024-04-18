@@ -1,0 +1,122 @@
+/**
+ * 法人、施設、事業所
+ * @author eikeda
+ */
+
+.input_container{
+  margin: 30px;
+  height: 100%;
+  width: 600px;
+  padding: 20px;
+}
+.row{
+  margin-bottom: 10px;
+}
+.item_name{
+  margin: 0px;
+  font-weight: bold;
+}
+
+/* 事業所 */
+.info_office{
+  display: flex;
+  width: 980px;
+}
+.info_left_office{
+  margin-right: 20px;
+}
+
+/*入力欄サイズ*/
+.width_180px{
+  width: 180px;
+}
+.width_390px{
+  width: 390px;
+}
+.width_550px{
+  width: 550px;
+}
+.phone_width{
+  width: 150px;
+}
+.fax_width{
+  width: 150px;
+}
+.postalcode_width{
+  width: 100px;
+}
+.facility_number_width{
+  width: 125px;
+}
+.insurer_no_width{
+  width: 80px;
+}
+.remarks{
+  resize: none;
+  width:390px;
+  height:50px;
+  border:solid 1px var(--border-color);
+}
+.manager, .job_title {
+  width: 12.5em;
+}
+
+.savebtn{
+  margin: 5px;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btnposition{
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+
+/* ポップアップ */
+.popuparea {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 100;
+  display: none;
+}
+
+.popuparea .conf {
+  background: #FFF;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.poppu_ok_btn{
+  height: max-content;
+  margin: 5px;
+  margin-right:auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.poppu_cancel_btn{
+  height: max-content;
+  margin: 5px;
+  margin-right:auto;
+  border-width: 0px;
+  border-bottom: 2px solid rgb(255, 237, 86);
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}

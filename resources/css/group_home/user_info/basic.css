@@ -1,0 +1,132 @@
+.basic_top_ui{
+  display: flex;
+  justify-content: space-between;
+}
+
+.caredaisy_submit_btn{
+  margin: 5px;
+  border-width: 0px;
+  padding: 4px 14px;
+  background-color: rgb(255, 237, 86);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 基本情報のフォーム */
+#basic_form{
+  display: flex;
+}
+.basic_form_lbl{
+  font-weight: bold;
+}
+.basic_form_lbl:before{
+  background-color: #000;
+  border-radius: 2px;
+  content: "";
+  display: inline-block;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: -4px;
+  width: 4px;
+}
+.basic_form_card{
+  margin: 10px;
+  width: 600px;
+  height: max-content;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.basic_form_row{
+  display: flex;
+}
+.basic_form_item{
+  margin: 5px;
+}
+.bi_form_item_lbl{
+  margin: 0px 10px;
+  font-weight: bold;
+}
+.bi_required{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.bi_required_radio{
+  display: inline-flex;
+  font-weight: bold;
+}
+.bi_required::after,
+.bi_required_radio::after{
+  content: '※必須';
+  display: inline-block;
+  margin-left: 5px;
+  color: var(--mandatory-color);
+  font-weight: bold;
+}
+.bi_input{
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+.bi_date_input{
+  width: 150px;
+  border: none;
+}
+.bi_calendar_area{
+  display: flex;
+  border: 1px solid var(--border-color);
+  margin: 0px 10px;
+  border-radius: 5px;
+}
+.basic_location{
+  width: 420px;
+}
+/* 保険者番号と被保険者番号の入力UI */
+#bi_insured_no,
+#bi_insurer_no
+{
+  width: 120px;
+}
+/* 保険者名 */
+#bi_insurer_name{
+  display: flex;
+  align-items: flex-end;
+  width: 165px;
+  padding-bottom: 6px;
+}
+
+/* 確認ダイアログ */
+#bi_dialog{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 100;
+}
+.bi_dialog_hidden{
+  display: none;
+}
+#bi_dialog_window{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+  background: white;
+}
+
+#bi_dialog_btns{
+  text-align: center;
+}
+
+.basic_postal_code{
+  width: 100px;
+}
+
+/* 利用者情報 請求先情報の備考 */
+.remarks_textarea_receipt_and_bill {
+  width: 825px;
+  resize: none;
+  overflow: hidden;
+}

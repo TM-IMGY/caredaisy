@@ -1,0 +1,149 @@
+# Template PHP Build
+
+# This template allows you to validate your PHP application.
+# The workflow allows running tests and code linting on the default branch.
+
+image: php:7.4-fpm
+
+definitions:
+  steps:
+    # DEV環境へのデプロイ
+    - step: &deploy_dev
+        name: Deploy to Development
+        deployment: development
+        caches:
+          - node
+        script:
+          - apt-get update && apt-get install -y curl gnupg gnupg2 && curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install nodejs-legacy && apt-get install -y nodejs && npm ci
+          - sh ./scripts/pipelines-deploy.sh
+          - aws deploy create-deployment
+            --application-name caredaisy-dev-codedeploy
+            --deployment-group-name dev-caredaisy-web
+            --s3-location bucket=$S3_BUCKET,key=laravel.zip,bundleType=zip
+    # STG環境へのデプロイ
+    - step: &deploy_stage
+        name: Deploy to Staging
+        deployment: stage
+        caches:
+          - node
+        script:
+          - apt-get update && apt-get install -y curl gnupg gnupg2 && curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install nodejs-legacy && apt-get install -y nodejs && npm ci
+          - sh ./scripts/pipelines-deploy.sh
+          - aws deploy create-deployment
+            --application-name caredaisy-stg-codedeploy
+            --deployment-group-name stg-caredaisy-web
+            --s3-location bucket=$S3_BUCKET,key=laravel.zip,bundleType=zip
+    # PRD環境へのデプロイ
+    - step: &deploy_prd
+        name: Deploy to Staging
+        deployment: production
+        caches:
+          - node
+        trigger: manual
+        script:
+          - apt-get update && apt-get install -y curl gnupg gnupg2 && curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install nodejs-legacy && apt-get install -y nodejs && npm ci
+          - sh ./scripts/pipelines-deploy.sh
+          - aws deploy create-deployment
+            --application-name caredaisy-prd-codedeploy
+            --deployment-group-name prd-caredaisy-web
+            --s3-location bucket=$S3_BUCKET,key=laravel.zip,bundleType=zip
+    # パイロット環境へのデプロイ
+    - step: &deploy_stg
+        name: Deploy to Pilot
+        deployment: pilot
+        caches:
+          - node
+        script:
+          - apt-get update && apt-get install -y curl gnupg gnupg2 && curl -sL https://deb.nodesource.com/setup_16.x | bash - && apt-get install nodejs-legacy && apt-get install -y nodejs && npm ci
+          - sh ./scripts/pipelines-deploy.sh
+          - aws deploy create-deployment
+            --application-name caredaisy-stg-pilot-codedeploy
+            --deployment-group-name stg-pilot-caredaisy-web
+            --s3-location bucket=$S3_BUCKET,key=laravel.zip,bundleType=zip
+
+    - step: &test
+        name: LaravelDuskTest
+        image: php:7.4-fpm-alpine
+        caches:
+          - composer
+        script:
+          - apk add --update --no-cache $PHPIZE_DEPS libzip-dev zlib-dev cyrus-sasl-dev mysql-client npm
+          - docker-php-ext-install bcmath mysqli pdo_mysql zip
+
+          ### composer install
+          - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+          - composer install
+
+          ### export env settings(primary)
+          - APP_ENV=testing
+          - export DUSK_DRIVER_URL=http://localhost:4444/wd/hub # need if use selenium
+
+          - cp .env.dusk.testing .env
+          - php artisan key:generate
+
+          ### make database
+          - mysql -h 127.0.0.1 --user=root --password=pipeline -e "CREATE DATABASE pipeline_confidential;"
+
+          ### init test data
+          - php artisan migrate --seed
+          - php artisan db:seed --class=TestDataSeeder
+
+          ### dusk install
+          - php artisan dusk:install || true
+          - php artisan dusk:chrome-driver
+
+          ### compile js
+          - npm install
+          - npm run dev
+
+          ### run Laravel Passport
+          - php artisan passport:install
+
+          ### run test
+          - vendor/bin/phpunit
+          - php artisan serve & # need if via browser
+          - php artisan dusk
+
+        services:
+          - mysql
+          - selenium
+
+  services:
+    mysql:
+      image: mysql:5.7
+      environment:
+        MYSQL_DATABASE: "pipeline"
+        MYSQL_ROOT_PASSWORD: "pipeline"
+
+    selenium:
+      image: "selenium/standalone-chrome"
+      ports:
+        - "4444:4444"
+      volumes:
+        - "/dev/shm:/dev/shm"
+
+pipelines:
+  # pull-requests:
+  #   feature/*:
+  #     - step: *deploy_dev
+  #   hotfixes/*:
+  #     - step: *deploy_dev
+  #   develop:
+  #     - step: *deploy_dev
+  #  pull-requests:
+#    "**": # すべてのbranchに対してのpull-requestをトリガーとする
+#      - step: *test
+  branches:
+    develop:
+      - step: *deploy_dev
+    staging:
+      - step: *deploy_stage
+  tags:
+    release*:
+      - step:
+          name: Ready to deploy to Production
+          script:
+            - echo "Release"
+      - step: *deploy_prd
+    pilot*:
+      - step: *deploy_stg

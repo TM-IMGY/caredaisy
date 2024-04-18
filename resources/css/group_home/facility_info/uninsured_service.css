@@ -1,0 +1,372 @@
+.uninsured-histroy{
+    margin-left: 30px;
+    margin-top: 16px;
+    width: 304px;
+}
+
+/* テーブル */
+#table_thead_uninsured_histroy,
+#table_tbody_uninsured_histroy {
+    display: block;
+}
+
+#table_tbody_uninsured_histroy {
+    height: 105px;
+    overflow-y: overlay;/* スクロールバーＹ軸表示 ■修正箇所*/
+    overflow-x: hidden;/* スクロールバーＸ軸非表示 ■修正箇所*/
+    width: 304px;
+}
+
+#table_uninsured_histroy{
+    display: block;
+    height: 143px;
+    border: 2px solid;
+    border-color: rgb(238,238,238);
+    border-collapse: collapse;
+}
+
+#table_uninsured_histroy thead th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 2px 1px 0px;
+    border-color: var(--border-color);
+    border-top:#FFFFFF;
+    width: 150px;
+}
+
+#table_tbody_uninsured_histroy::-webkit-scrollbar-thumb {
+    background-color: rgb(153,153,153);
+    border-radius: 5px;
+}
+#table_tbody_uninsured_histroy::-webkit-scrollbar {
+    width: 5px;
+}
+
+.text-data-uninsured-histroy{
+    text-align: right;
+    min-width: 120px;
+    border-top: 2px solid;
+    border-width: 2px 2px 2px 0px;
+    border-color: rgb(238,238,238);
+    width: 146px;
+}
+
+.uninsured-item-list-table {
+    cursor: pointer;
+}
+
+.uninsured-btn {
+    min-height: 120px;
+}
+
+#uninsured_btn_register{
+    margin: 5px;
+    font-weight: bold;
+    width: 154px;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: visible;
+}
+
+#uninsured_btn_register:disabled{
+    margin: 5px;
+    font-weight: bold;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    visibility: visible;
+}
+
+#uninsured_btn_update,
+#uninsured_btn_cant_delete,
+#uninsured_btn_delete{
+    margin: 5px;
+    font-weight: bold;
+    margin-right: auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#uninsured_btn_update{
+    visibility: hidden;
+}
+
+#uninsured_btn_cant_delete,
+#uninsured_btn_delete{
+    display: none;
+}
+
+.uninsured-first-block {
+    display: flex;
+    margin: 60px 0 30px 40px;
+    align-items: end;
+}
+
+.first-content-item {
+    margin-right: 100px;
+}
+
+.start-month,
+.end-month{
+    margin: 0;
+}
+
+#uninsured_start_month,
+#uninsured_end_month{
+    width: 194px;
+}
+
+.item-name{
+    font-weight: bold;
+}
+
+.unisured-btn_updel{
+    width: 300px;
+    display: block;
+}
+
+/* サービスリスト */
+table.table-uninsured-item-list{
+    width: 1480px;
+    margin-left: 40px;
+}
+
+th.uninsured_item_name{
+    border: 1px solid;
+    border-color: var(--border-color);
+    width: 122px;
+}
+
+th.item.uninsured_item_name{
+    width: 250px;
+}
+
+td.uninsured-first-item.long_name_item{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 250px;
+}
+
+td.uninsured-first-item,
+td.uninsured-item-unit_cost,
+td.uninsured-item-unit,
+td.uninsured-item{
+    border: 1px solid;
+    border-color: var(--border-color);
+}
+
+td.uninsured-first-item{
+    width: 250px;
+}
+
+td.uninsured-item-unit_cost,
+td.uninsured-item-unit{
+    width: 122px;
+	text-align: right;
+}
+
+td.uninsured-item{
+    width: 122px;
+    text-align: center;
+}
+
+.uninsured-table-plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 32px;
+    height: 32px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 255 / 10%);
+    border: 1px solid rgb(200,200,200);
+    background-color: rgb(255,255,255);
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.billing_reflect_flg{
+    padding-top: 10px;
+}
+
+/* ポップアップ */
+#overflow_add_uninsured_list,
+#overflow_delete_uninsured_item,
+#overflow_cant_delete_uninsured_item,
+#overflow_alert_uninsured_item{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8); /* 背景を半透明の黒い背景にする */
+    z-index: 100;        /* ウィンドウの全面に表示 */
+    display: none;
+}
+
+#overflow_add_uninsured_list .conf{
+    background: #FFF;
+    padding: 0px 0px 10px 70px;
+    width: 350px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#overflow_delete_uninsured_item .conf{
+    background: #FFF;
+    padding: 0 50px 10px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#overflow_cant_delete_uninsured_item .conf{
+    background: #FFF;
+    padding: 0 50px 10px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#overflow_alert_uninsured_item .conf{
+    background: #FFF;
+    padding: 0 50px 10px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 110px;
+}
+
+.add_uninsured_list_paragraph{
+    margin-bottom: 0;
+}
+
+.add_group input,
+.set_one_check input,
+.billing_reflect_flg input{
+    position: relative;
+    top: 3px;
+}
+
+.uninsured-service-cant-btns,
+.uninsured-service-btns{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.uninsured-service-cant-btns{
+    text-align: center;
+}
+
+.add_unit{
+    width: 200px;
+    color: black;
+}
+
+input#unit_cost_check {
+    margin-left: 30px;
+}
+
+.unit_cost_block{
+    display: flex;
+}
+
+input#add_item_name {
+    width: 230px;
+}
+
+.popup-text{
+    width: 194px;
+}
+
+.set_one_check{
+    margin-top: 16px;
+}
+
+.add_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 120px;
+}
+
+.add_group label {
+    width: 140px;
+}
+
+.add_uninsured_list_poppu_ok,
+.delete_uninsured_item_poppu_ok{
+    margin: 5px;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add_uninsured_list_poppu_cancel,
+.delete_uninsured_item_poppu_cancel{
+    margin: 5px;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alert_uninsured_item_poppu_cancel{
+    margin: 5px;
+    margin-right:auto;
+    border-width: 0px;
+    border-bottom: 2px solid rgb(255, 237, 86);
+    padding: 4px 14px;
+    background-color: rgb(255, 237, 86);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#validateErrorsUninsuredCost{
+    list-style-type: disc;
+}
+
+.uninsured_cost_select_record {
+    background-color: var(--table-select-color);
+}
+
+.ui-sortable-helper,
+.ui-sortable-placeholder {
+    display: table;
+}

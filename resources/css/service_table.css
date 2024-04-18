@@ -1,0 +1,382 @@
+﻿/*共通*/
+:root {
+    --caredaisy-contents-background: rgb(250,250,250);
+    --submit-background: rgb(255,237,86);
+    --caredaisy-contents-header-submit-border-color: rgb(238,219,59);
+    --target-year-month-pulldown-border-color: rgb(238,238,238);
+    --search-clear-background: rgb(217,217,217);
+    --customer_table_head_background: rgb(255,255,238);
+    --customer_table_border: rgb(238,238,238);
+    --customer-table-scrollbar-color: rgb(153,153,153);
+    --view-width: 1600px;
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    font-family: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#caredaisy_contents {
+    position: absolute;
+    width: 100%;
+    background-color: var(--caredaisy-contents-background);
+}
+#caredaisy_contents_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    width: var(--view-width);
+    box-sizing: border-box;
+    margin: auto;
+}
+#caredaisy_contents_header_caption {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+
+/*情報表示エリア*/
+.infoarea {
+    font-size: 18px;
+    background-color: #FFFFFF;
+    height: 250px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+    width: var(--view-width);
+    border-radius: 5px;
+}
+.infobox {
+    display: inline-block;
+    vertical-align: top;
+    border-right: solid 1px #dedede;
+    height: 100%;
+    width: 24%;
+}
+.infobox:last-child{
+    border-right:none;
+}
+
+.infoarea table th, .infoarea table td {
+    vertical-align: top;
+    text-align: left;
+}
+
+caption {
+    text-align: left;
+    font-weight: bold;
+}
+.infoitem {
+    width: 120px;
+}
+
+
+/*//////ボタン関係//////*/
+/*ボタン*/
+#btnarea {
+    margin:30px  auto;
+    width: var(--view-width);
+}
+/* .changebtn {
+    font-size: 18px;
+    margin-top: 40px;
+    width: 200px;
+    height: 40px;
+} */
+/* .changebtn:first-child {
+    border-radius: 5px 0 0 5px;
+    border-right:none;
+} */
+/* .changebtn:last-child {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+} */
+/*非選択ボタン*/
+/* .defaultbtn {
+    background-color: #FFFFFF;
+    border: 1.5px solid #acacac;
+    border-bottom: 5px solid #acacac;
+} */
+/*選択ボタン*/
+/* .selectbtn {
+    background-color: #464646;
+    color: #FFFFFF;
+    border:none;
+} */
+
+/*黄色いボタン*/
+/* .yellowbtn {
+    font-size: 18px;
+    border-width: 0px;
+    border-bottom: 2px solid var(--caredaisy-contents-header-submit-border-color);
+    padding: 5px 25px;
+    background-color: var(--submit-background);
+    border-radius: 5px;
+    font-weight: bold;
+} */
+
+
+/*要素を左右に配置*/
+/* .flex {
+    display: flex;
+} */
+.item-right {
+    display: inline-block;
+    width:80%;
+}
+.float-right {
+    float: right;
+}
+
+/*サービスコード追加ボタン*/
+.servicecodebtn {
+    background-color: #464646;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+
+
+/*////サービスコード/////*/
+
+
+#servicecode_ui {
+    font-size: 18px;
+    margin: auto;
+    width: 700px;
+}
+
+.office select, .service_type select {
+    font-size: 18px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid var(--target-year-month-pulldown-border-color);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.select_placeholder {
+    display: none;
+}
+
+.caption2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#table {
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+
+#table th, #table td {
+    border: solid 1px #eeeeee;
+}
+
+#table_thead {
+    background-color: #ffffee;
+}
+
+#table_tbody2 {
+    background-color: #FFFFFF;
+}
+
+#table_thead,
+#table_tbody2 {
+    display: block;
+}
+
+#table_tbody2 {
+    height: 400px;
+    overflow-y: overlay;
+}
+
+#table_tbody2::-webkit-scrollbar-thumb {
+    background-color: var(--customer-table-scrollbar-color);
+    border-radius: 5px;
+}
+
+#table_tbody2::-webkit-scrollbar {
+    width: 5px;
+}
+
+.service_code{
+    font-size: 16px;
+    width:140px;
+    text-align: left;
+}
+
+.service_contents {
+    font-size: 16px;
+    width: 480px;
+    text-align: left;
+}
+
+/*#table_tbody tr:hover {
+    background-color: #CCFFCC;
+    cursor:default;
+}*/
+
+
+.button {
+    height: max-content;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 120px;
+    height: 40px;
+}
+#savebtn {
+    font-size: 18px;
+    background-color: var(--submit-background);
+    border: 1px solid var(--submit-background);
+}
+#cancelbtn {
+    font-size: 18px;
+    border: 1px solid var(--cancel-button-border-color);
+    color: var( --cancel-button-font-color);
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+
+
+/*////テーブル/////*/
+/*実績記録エリア*/
+#table {
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+
+#tablearea th, #tablearea td {
+    font-size: 16px;
+    border: solid 1px #eeeeee;
+}
+#table_thead {
+    background-color: #ffffee;
+}
+#table_tbody1 {
+    background-color: #FFFFFF;
+   
+}
+#table_thead,
+#table_tbody1 {
+    display: block;
+}
+
+#table_tbody1 {
+    height: 400px;
+    overflow-y: overlay;
+}
+
+#table_tbody1::-webkit-scrollbar-thumb {
+    background-color: var(--customer-table-scrollbar-color);
+    border-radius: 5px;
+}
+
+#table_tbody1::-webkit-scrollbar {
+    width: 5px;
+}
+.servicecontents {
+    width: 300px;
+}
+.serviceoffice {
+    width: 180px;
+}
+.plan_result {
+    width: 40px;
+}
+.flg_cell {
+    width: 25px;
+};
+.total {
+    width: 150px
+}
+
+#servicecodebtnarea {
+    margin: auto auto auto 60px;
+    width: var(--view-width);
+}
+.service_title{
+    font-size: 36px;
+    font-weight: bold;
+}
+.popup {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 9999;
+opacity: 0;
+visibility: hidden;
+transition: .6s;
+}
+.popup.is-show {
+opacity: 1;
+visibility: visible;
+}
+.popup-inner {
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+width: 80%;
+max-width: 600px;
+padding: 50px;
+background-color: #fff;
+z-index: 2;
+}
+.popup-inner img {
+width: 100%;
+}
+.close-btn {
+position: absolute;
+right: 0;
+top: 0;
+width: 40px;
+height: 40px;
+text-align: center;
+cursor: pointer;
+}
+.close-btn span {
+position: absolute;
+font-size: 400%;
+color: #333;
+-webkit-transform : translate(-50%,-50%,-50%,-50%);
+transform : translate(-50%,-55%);
+
+}
+.black-background {
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,.8);
+z-index: 1;
+cursor: pointer;
+}
+
+.clear-decoration {
+font-size: 16px;
+width: 25px;
+height: 16px;
+text-align: right;
+cursor: pointer; /* マウスカーソルを乗せると指になる */
+border: none;  /* 枠線を消す */
+outline: none; /* クリックしたときに表示される枠線を消す */
+background: transparent; /* 背景の灰色を消す */
+
+}

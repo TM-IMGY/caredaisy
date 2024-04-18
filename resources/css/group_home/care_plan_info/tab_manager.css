@@ -1,0 +1,30 @@
+:root {
+  --tm-subtab-height: 45px;
+}
+
+#tm_sub_tab {
+  display: flex;
+  height: var(--tm-subtab-height);
+}
+.tm_subtab_btn{
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+.tm_subtab_inactive{
+  background-color: var(--caredaisy-contents-background);
+}
+.tm_subtab_active{
+  background: rgb(71, 71, 71);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+.tm_contents_hidden{
+  display: none;
+}
+#tm_contents{
+  height: calc(100% - var(--tm-subtab-height));
+  overflow: scroll;
+}

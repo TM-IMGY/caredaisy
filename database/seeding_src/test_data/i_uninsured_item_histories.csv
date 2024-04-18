@@ -1,0 +1,6 @@
+id,uninsured_item_id,item,unit_cost,unit,set_one,fixed_cost,variable_cost,welfare_equipment,meal,daily_necessary,hobby,escort,reserved1,reserved2,reserved3,reserved4,reserved5,billing_reflect_flg,sort
+1,1,朝食,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+2,1,昼食,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+3,1,夕食,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3
+4,1,おやつ,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+5,1,夜食,,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
